@@ -1,13 +1,11 @@
 <script lang="ts">
-	import type { Tech } from '$lib/data/tech';
+	import type { Project } from '$lib/data/projects';
 
-	export let href: string;
-
-	export let tech: Tech[];
+	export let project: Project;
 </script>
 
 <a
-	{href}
+	href="projects/{project.slug}"
 	class="project-box flex flex-col items-center justify-center border-[1px] border-solid border-stone-500 w-72 overflow-hidden relative rounded-lg p-[5px] box-content hover:scale-[1.03] transition-all duration-200 fill-stone-400 hover:fill-white text-stone-400 hover:text-white"
 >
 	<div class="project-box-bg absolute top-0 left-0 right-0 bottom-0 w-full h-full" />
@@ -18,13 +16,13 @@
 		<div
 			class="relative img-wrapper text-stone-300 fill-stone-300 rounded-[2px] overflow-hidden h-40 w-full"
 		>
-			<slot name="image" />
+			<img src={project.images[0]} alt={project.name} />
 
 			<div
 				class="description-box absolute bottom-0 left-0 right-0 z-50 p-2 text-center hidden h-full w-full"
 				role="presentation"
 			>
-				<slot name="description" />
+				{project.description}
 
 				<div
 					class="gradient-link p-2 rounded-sm m-2 text-orange-600 uppercase text-sm overflow-hidden relative"
@@ -37,15 +35,15 @@
 		<div
 			class="flex flex-row justify-center pt-2 flex-nowrap overflow-hidden min-h-16 bg-stone-900 mx-4 w-full mt-2"
 		>
-			{#each tech as { icon }}
+			{#each project.tech as { icon }}
 				<div class="flex flex-row items-center justify-center mr-2 mb-2 tech-icon w-4 shrink-0">
-					<svelte:component this={icon} class="w-4 h-4 mr-1" />
+					{@html icon}
 				</div>
 			{/each}
 		</div>
 
 		<h1 class="text-lg font-bold mt-1">
-			<slot name="name" />
+			{project.name}
 		</h1>
 	</div>
 </a>

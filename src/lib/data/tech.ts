@@ -1,13 +1,13 @@
-import svelte from '$lib/icons/svelte.svelte';
-import react from '$lib/icons/react.svelte';
-import next from '$lib/icons/next.svelte';
-import maplibre from '$lib/icons/maplibre.svelte';
-import type { SvelteComponent } from 'svelte';
+import svelteIcon from '$lib/icons/svelte.svg?raw';
+import reactIcon from '$lib/icons/react.svg?raw';
+import nextIcon from '$lib/icons/next.svg?raw';
+import maplibreIcon from '$lib/icons/maplibre.svg?raw';
 
 export type Tech = {
 	name: string;
-	icon: SvelteComponent;
+	icon: string;
 	star: boolean;
+	slug: string;
 };
 
 export type Techs = 'svelte' | 'sveltekit' | 'react' | 'next' | 'maplibre';
@@ -15,27 +15,32 @@ export type Techs = 'svelte' | 'sveltekit' | 'react' | 'next' | 'maplibre';
 const tech: Record<Techs, Tech> = {
 	svelte: {
 		name: 'Svelte',
-		icon: svelte,
+		icon: svelteIcon,
+		slug: 'svelte',
 		star: true
 	},
 	sveltekit: {
 		name: 'SvelteKit',
-		icon: svelte,
+		icon: svelteIcon,
+		slug: 'sveltekit',
 		star: true
 	},
 	react: {
 		name: 'React',
-		icon: react,
+		icon: reactIcon,
+		slug: 'react',
 		star: true
 	},
 	next: {
 		name: 'Next.js',
-		icon: next,
+		icon: nextIcon,
+		slug: 'next',
 		star: true
 	},
 	maplibre: {
 		name: 'MapLibre',
-		icon: maplibre,
+		icon: maplibreIcon,
+		slug: 'maplibre',
 		star: false
 	}
 };

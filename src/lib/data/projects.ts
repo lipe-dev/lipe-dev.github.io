@@ -1,7 +1,7 @@
 import tech, { type Tech } from './tech';
 
 export type Project = {
-	id: string;
+	slug: string;
 	name: string;
 	description: string;
 	tech: Tech[];
@@ -10,7 +10,7 @@ export type Project = {
 
 const projects: Project[] = [
 	{
-		id: 'irriplans.com',
+		slug: 'irriplans.com',
 		name: 'Irriplans.com',
 		description: 'Irrigation system mapping tool',
 		tech: [
@@ -27,7 +27,7 @@ const projects: Project[] = [
 		images: ['/images/projects/legacy_irriplans.com/1.png']
 	},
 	{
-		id: 'irriplans.com-legacy',
+		slug: 'irriplans.com-legacy',
 		name: 'Legacy Irriplans.com in Next.js',
 		description: 'First version of Irriplans.com in Next.js, now deprecated',
 		tech: [

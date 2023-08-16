@@ -1,9 +1,11 @@
 <script lang="ts">
-	export let href: string;
+	import type { Tech } from '$lib/data/tech';
+
+	export let tech: Tech;
 </script>
 
 <a
-	{href}
+	href="/tech/{tech.slug}"
 	class="coolbox relative overflow-hidden flex flex-col items-center justify-center rounded-lg p-1 transition-all duration-200 ease-in-out hover:scale-105"
 >
 	<div class="coolbox-bg z-10" />
@@ -11,11 +13,11 @@
 		class="p-4 rounded-[6px] border-[1px] border-solid border-stone-500 flex flex-col items-center justify-center w-24 h-24 bg-stone-900 z-50 coolbox-content"
 	>
 		<div class="icon-wrapper text-stone-300 fill-stone-300">
-			<slot name="icon" />
+			{@html tech.icon}
 		</div>
 
 		<div class="uppercase mt-2">
-			<slot />
+			{tech.name}
 		</div>
 	</div>
 </a>

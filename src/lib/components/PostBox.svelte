@@ -1,7 +1,11 @@
 <script lang="ts">
 	import type { Post } from '$lib/data/posts';
+	import { parseISO } from 'date-fns';
+	import format from 'date-fns/format';
 
 	export let post: Post;
+
+	console.log(post);
 </script>
 
 <a
@@ -11,7 +15,7 @@
 	<div class="blog-box-bg absolute top-0 left-0 right-0 bottom-0 w-full h-full" />
 
 	<div
-		class="rounded-[4px] z-50 blog-box-content w-full h-full bg-stone-900 flex flex-col justify-stretch items-center p-1"
+		class="rounded-[4px] z-50 blog-box-content w-full h-full bg-stone-900 flex flex-col justify-stretch items-stretch p-1"
 	>
 		<div
 			class="relative img-wrapper text-stone-300 fill-stone-300 rounded-[2px] overflow-hidden h-40 w-full"
@@ -33,11 +37,11 @@
 		</div>
 
 		<div
-			class="flex flex-row justify-center pt-2 flex-nowrap overflow-hidden min-h-16 bg-stone-900 mx-4 w-full mt-2"
+			class="flex flex-row justify-center pt-2 flex-nowrap overflow-hidden min-h-16 bg-stone-900 mx-4 mt-2"
 		>
 			{#each post.tech as { icon }}
 				<div class="flex flex-row items-center justify-center mr-2 mb-2 tech-icon w-4 shrink-0">
-					<svelte:component this={icon} class="w-4 h-4 mr-1" />
+					{@html icon}
 				</div>
 			{/each}
 		</div>
@@ -46,8 +50,8 @@
 			{post.title}
 		</h1>
 
-		<div class="text-sm text-stone-300 mt-1">
-			{post.date}
+		<div class="text-xs mt-1 text-orange-300 -mt-1">
+			{format(post.date, 'PP')}
 		</div>
 
 		<div class="text-sm text-stone-300 mt-1">
