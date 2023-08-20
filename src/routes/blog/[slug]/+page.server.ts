@@ -39,3 +39,15 @@ export const load: ServerLoad = async ({ params }) => {
 		nextPost
 	};
 };
+
+/** @type {import('./$types').EntryGenerator} */
+export async function entries() {
+	const entries = [];
+	for (const modulePath in postModules) {
+		const p = { ...((await postModules[modulePath]()) as PostMDType) };
+
+		entries.push({ slug: p.metadata.slug });
+	}
+
+	return entries;
+}

@@ -39,3 +39,8 @@ export const load: ServerLoad = async ({ params }) => {
 		posts
 	};
 };
+
+/** @type {import('./$types').EntryGenerator} */
+export async function entries() {
+	return Object.keys(tech).map((slug) => ({ slug }));
+}
