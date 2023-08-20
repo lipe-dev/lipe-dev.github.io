@@ -1,4 +1,6 @@
 <script>
+	export const prerender = true;
+
 	import '../app.postcss';
 	import '@fontsource-variable/nunito';
 	import '@fontsource-variable/manrope';
