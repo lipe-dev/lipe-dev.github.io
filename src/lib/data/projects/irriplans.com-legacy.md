@@ -1,5 +1,5 @@
 ---
-slug: irriplans.com
+slug: "irriplans.com-legacy"
 name: Irriplans.com Legacy
 description: Legacy version of the Irrigation system mapping tool
 techSlugs: [

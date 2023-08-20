@@ -57,10 +57,10 @@
 	};
 </script>
 
-<div class="bg-gray-950/95 w-screen h-screen">
+<div class="bg-gray-950/95 w-screen min-h-screen">
 	<div class="flex flex-row items-stretch w-full h-full">
 		<div
-			class="flex flex-col items-start w-[520px] shrink-0 gap-4 dotted border-gray-900 border-solid border-r-2"
+			class="flex flex-col items-start w-[520px] shrink-0 gap-4 dotted border-gray-900 border-solid border-r-2 fixed h-screen"
 		>
 			<div
 				class="rounded-full gradient w-48 h-48 p-1 relative overflow-hidden mx-16 mb-8 mt-16"
@@ -166,7 +166,7 @@
 			</div>
 		</div>
 
-		<div class="p-16 grow overflow-auto relative" use:sideShine>
+		<div class="p-16 grow relative ml-[520px]" use:sideShine>
 			<slot />
 		</div>
 	</div>

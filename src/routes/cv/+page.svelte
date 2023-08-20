@@ -87,9 +87,10 @@
 	</p>
 
 	<p>
-		Agile Methodologies
+		Project Management
 		<br />
 		<span class="bg-gray-700 rounded-sm p-1">SCRUM</span>
+		<span class="bg-gray-700 rounded-sm p-1">Agile Methodologies</span>
 	</p>
 
 	<p>
@@ -106,9 +107,8 @@
 	</p>
 
 	<p>
-		Project Management
+		UI/UX Design
 		<br />
-		<span class="bg-gray-700 rounded-sm p-1">UI/UX Design</span>
 		<span class="bg-gray-700 rounded-sm p-1">Material Design</span>
 		<span class="bg-gray-700 rounded-sm p-1">Atomic Design</span>
 		<span class="bg-gray-700 rounded-sm p-1">Illustrator</span>

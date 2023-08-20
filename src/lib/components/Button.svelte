@@ -13,7 +13,11 @@
 <style lang="postcss">
 	.button {
 		background: var(--gradient);
-		transition: all 0.2s ease-in-out;
+		transition: all 100ms ease-in-out;
+
+		&:hover {
+			transform: scale(1.05);
+		}
 
 		&:before {
 			background: theme(colors.gray.900);

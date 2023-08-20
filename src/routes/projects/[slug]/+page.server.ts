@@ -8,15 +8,15 @@ export const load: ServerLoad = async ({ params }) => {
 	const slug = params.slug || '';
 
 	for (const modulePath in projectModules) {
-		if (modulePath.includes(slug)) {
-			const p = { ...((await projectModules[modulePath]()) as ProjectMDType) };
+		const p = { ...((await projectModules[modulePath]()) as ProjectMDType) };
 
-			p.metadata.tech = p.metadata.techSlugs.map((t) => tech[t as unknown as Techs]);
+		if (p.metadata.slug !== slug) continue;
 
-			return {
-				project: p.metadata,
-				path: modulePath
-			};
-		}
+		p.metadata.tech = p.metadata.techSlugs.map((t) => tech[t as unknown as Techs]);
+
+		return {
+			project: p.metadata,
+			path: modulePath
+		};
 	}
 };
