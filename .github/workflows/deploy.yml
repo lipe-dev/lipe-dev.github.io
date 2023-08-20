@@ -8,19 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x]
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
@@ -46,7 +36,7 @@ jobs:
 
       - name: build
         env:
-          BASE_PATH: '/your-repo-name'
+          BASE_PATH: 'https://lipe.dev'
         run: |
           pnpm run build
           touch build/.nojekyll
@@ -54,7 +44,6 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v1
         with:
-          # this should match the `pages` option in your adapter-static options
           path: 'build/'
 
   deploy:
