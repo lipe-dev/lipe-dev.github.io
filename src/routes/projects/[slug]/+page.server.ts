@@ -20,3 +20,15 @@ export const load: ServerLoad = async ({ params }) => {
 		};
 	}
 };
+
+/** @type {import('./$types').EntryGenerator} */
+export async function entries() {
+	const entries = [];
+	for (const modulePath in projectModules) {
+		const p = { ...((await projectModules[modulePath]()) as ProjectMDType) };
+
+		entries.push({ slug: p.metadata.slug });
+	}
+
+	return entries;
+}
