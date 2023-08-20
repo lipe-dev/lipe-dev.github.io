@@ -2,7 +2,7 @@ export default function antiHoverSiblings(node: HTMLElement) {
 	const parent = node.parentElement;
 	if (!parent) return;
 
-	node.onmouseenter = () => {
+	node.onmouseenter = (e: MouseEvent) => {
 		const children = Array.from(parent.children);
 		children.forEach((child) => {
 			if (child !== node) {

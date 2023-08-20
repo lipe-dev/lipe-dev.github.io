@@ -7,13 +7,10 @@ export default function sideShine(node: HTMLElement) {
 	node.appendChild(shine);
 
 	const moveShine = (event: MouseEvent) => {
-		const y = event.pageY - node.offsetTop;
+		const y = event.pageY - node.getBoundingClientRect().top;
 
-		// get shine height
-		const shineHeight = shine.offsetHeight;
-
-		// calculate the position of the shine
-		const top = y - shineHeight / 2;
+		// add vertical scroll of any scrollable ancestor
+		const top = y + node.scrollTop - shine.getBoundingClientRect().height / 2;
 
 		shine.style.top = `${top}px`;
 	};

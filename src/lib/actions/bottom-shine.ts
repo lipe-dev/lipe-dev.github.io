@@ -7,15 +7,11 @@ export default function bottomShine(node: HTMLElement) {
 	node.appendChild(shine);
 
 	const moveShine = (event: MouseEvent) => {
-		const x = event.pageX - node.offsetLeft;
+		// how far is the mouse from the left edge of the node
+		const x =
+			event.clientX - node.getBoundingClientRect().left - shine.getBoundingClientRect().width / 2;
 
-		// get shine width
-		const shineWidth = shine.offsetWidth;
-
-		// calculate the position of the shine
-		const left = x - shineWidth / 2;
-
-		shine.style.left = `${left}px`;
+		shine.style.left = `${x}px`;
 	};
 
 	// when the mouse moves over the node

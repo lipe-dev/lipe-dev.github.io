@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width" />
+	%sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">%sveltekit.body%</div>
+
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+		style="position: fixed; top: -1000px">
+		<defs>
+			<radialGradient id="Gradient1" cx="99%" cy="13%" r="170%" fx="67%" fy="89%"
+				gradientTransform="rotate(0, 0.5, 0.5)">
+				<stop offset="0%" stop-color="rgba(255, 123, 1, 1)" />
+				<stop offset="20.771%" stop-color="#ef061b" />
+				<stop offset="27.062%" stop-color="#f3074f" />
+				<stop offset="72%" stop-color="#db411d" />
+				<stop offset="100%" stop-color="#e12a0f" />
+				<animateTransform attributeName="gradientTransform" type="rotate" from="0, 0.3, 0.5" to="360, 0.3, 0.5"
+					dur="2s" repeatCount="indefinite" />
+			</radialGradient>
+		</defs>
+	</svg>
+</body>
+
 </html>

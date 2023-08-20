@@ -57,13 +57,13 @@
 	};
 </script>
 
-<div class="bg-stone-900 w-screen h-screen">
+<div class="bg-gray-950/95 w-screen h-screen">
 	<div class="flex flex-row items-stretch w-full h-full">
 		<div
-			class="flex flex-col items-start w-[520px] gap-4 dotted border-stone-900 border-solid border-r-2"
+			class="flex flex-col items-start w-[520px] shrink-0 gap-4 dotted border-gray-900 border-solid border-r-2"
 		>
 			<div
-				class="rounded-full from-orange-400 to-orange-700 bg-gradient-to-br w-48 h-48 p-1 relative overflow-hidden mx-16 mb-8 mt-16"
+				class="rounded-full gradient w-48 h-48 p-1 relative overflow-hidden mx-16 mb-8 mt-16"
 				use:sheen
 				role="presentation"
 			>
@@ -89,10 +89,10 @@
 
 			<nav class="mt-8 relative w-full overflow-hidden" use:sideShine>
 				<ul class="flex flex-col text-stone-300 text-2xl px-16 menu items-stretch">
-					<li use:antiHoverSiblings><a href="/cv">Resume</a></li>
-					<li use:antiHoverSiblings><a href="/cv">Contact</a></li>
-					<li use:antiHoverSiblings><a href="/cv">Posts</a></li>
-					<li use:antiHoverSiblings><a href="/cv">Projects</a></li>
+					<li use:antiHoverSiblings><a href="/cv" class="z-50">Resume</a></li>
+					<li use:antiHoverSiblings><a href="/tech">Tech</a></li>
+					<li use:antiHoverSiblings><a href="/projects">Projects</a></li>
+					<li use:antiHoverSiblings><a href="/blog">Posts</a></li>
 				</ul>
 			</nav>
 
@@ -101,10 +101,10 @@
 				use:bottomShine
 			>
 				<div
-					class="rounded-full from-orange-400 hover:from-orange-600 to-orange-700 hover:to-orange-300 bg-gradient-to-br w-12 h-12 p-[2px] relative overflow-hidden transition-all duration-200 hover:scale-105"
+					class="rounded-full gradient hover:shadow-lg hover:shadow-orange-800 w-12 h-12 p-[2px] relative overflow-hidden transition-all duration-200 hover:scale-105"
 					role="presentation"
 				>
-					<div class="rounded-full w-full h-full bg-stone-800 overflow-hidden p-1">
+					<div class="rounded-full w-full h-full bg-gray-900 overflow-hidden p-1">
 						<a
 							href="https://github.com/lipe-dev"
 							class="rounded-full w-11 h-11 flex items-center justify-center"
@@ -117,10 +117,10 @@
 				</div>
 
 				<div
-					class="rounded-full from-orange-400 hover:from-orange-600 to-orange-700 hover:to-orange-300 bg-gradient-to-br w-12 h-12 p-[2px] relative overflow-hidden transition-all duration-200 hover:scale-105"
+					class="rounded-full gradient hover:shadow-lg hover:shadow-orange-800 w-12 h-12 p-[2px] relative overflow-hidden transition-all duration-200 hover:scale-105"
 					role="presentation"
 				>
-					<div class="rounded-full w-full h-full bg-stone-800 overflow-hidden p-1">
+					<div class="rounded-full w-full h-full bg-gray-900 overflow-hidden p-1">
 						<a
 							href="https://www.linkedin.com/in/felipeicp/"
 							class="rounded-full w-11 h-11 flex items-center justify-center"
@@ -133,16 +133,32 @@
 				</div>
 
 				<div
-					class="rounded-full from-orange-400 hover:from-orange-600 to-orange-700 hover:to-orange-300 bg-gradient-to-br w-12 h-12 p-[2px] relative overflow-hidden transition-all duration-200 hover:scale-105"
+					class="rounded-full gradient hover:shadow-lg hover:shadow-orange-800 w-12 h-12 p-[2px] relative overflow-hidden transition-all duration-200 hover:scale-105"
 					role="presentation"
 				>
-					<div class="rounded-full w-full h-full bg-stone-800 overflow-hidden p-1">
+					<div class="rounded-full w-full h-full bg-gray-900 overflow-hidden p-1">
 						<a
 							href="mailto:fe@lipe.dev"
 							class="rounded-full w-11 h-11 flex items-center justify-center"
 						>
 							<div class="rounded-full w-full h-full overflow-hidden pt-[1px] pl-[2px]">
 								<iconify-icon icon="line-md:email-twotone" class="text-orange-400 text-[32px]" />
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<div
+					class="rounded-full gradient hover:shadow-lg hover:shadow-orange-800 w-12 h-12 p-[2px] relative overflow-hidden transition-all duration-200 hover:scale-105"
+					role="presentation"
+				>
+					<div class="rounded-full w-full h-full bg-gray-900 overflow-hidden p-1">
+						<a
+							href="https://discordapp.com/users/lipe_dev"
+							class="rounded-full w-11 h-11 flex items-center justify-center"
+						>
+							<div class="rounded-full w-full h-full overflow-hidden pt-[1px] pl-[2px]">
+								<iconify-icon icon="line-md:discord" class="text-orange-400 text-[32px]" />
 							</div>
 						</a>
 					</div>
@@ -158,9 +174,9 @@
 
 <style lang="postcss">
 	.dotted {
-		background-image: radial-gradient(theme(colors.stone.900) 10%, transparent 10%),
-			radial-gradient(theme(colors.stone.900) 10%, transparent 10%);
-		background-color: theme(colors.stone.950);
+		background-image: radial-gradient(theme(colors.gray.900) 10%, transparent 10%),
+			radial-gradient(theme(colors.gray.900) 10%, transparent 10%);
+		background-color: theme(colors.gray.950);
 		background-position: 0 0;
 		background-size: 48px 48px;
 	}
@@ -182,9 +198,27 @@
 			padding-top: theme(space.2);
 			padding-bottom: theme(space.2);
 
+			a {
+				z-index: 1;
+			}
+
 			&:hover {
 				padding-left: theme(space.4);
-				background: linear-gradient(to right, theme(colors.orange.400), theme(colors.orange.700));
+				background: linear-gradient(
+						162deg,
+						rgba(232, 153, 1, 0.82) 0%,
+						transparent 40.281%,
+						rgba(236, 27, 116, 0.94) 100%
+					),
+					radial-gradient(
+							at 50% 50%,
+							#f41ff1 0%,
+							#ef061b 10.771%,
+							#f3074f 27.062%,
+							#db411d 72%,
+							#e12a0f 100%
+						)
+						67% 89%/170% 198%;
 				background-clip: text;
 				-webkit-background-clip: text;
 				text-fill-color: transparent;
@@ -200,10 +234,20 @@
 					width: 2px;
 					height: 100%;
 					background: linear-gradient(
-						to bottom,
-						theme(colors.orange.400),
-						theme(colors.orange.700)
-					);
+							162deg,
+							rgba(232, 153, 1, 0.82) 0%,
+							transparent 40.281%,
+							rgba(236, 27, 116, 0.94) 100%
+						),
+						radial-gradient(
+								at 99% 13%,
+								#f41ff1 0%,
+								#ef061b 10.771%,
+								#f3074f 27.062%,
+								#db411d 72%,
+								#e12a0f 100%
+							)
+							67% 89%/170% 198%;
 				}
 
 				&:after {
@@ -214,6 +258,7 @@
 					top: 0;
 					bottom: 0;
 					width: 0%;
+					z-index: -1;
 					height: 100%;
 					background: #ffffff05;
 					animation: expand-right 0.2s ease-in-out both;
@@ -222,20 +267,6 @@
 		}
 	}
 
-	:global(.anti-hover {
-		text-fill-color: unset;
-		-webkit-text-fill-color: unset;
-		opacity: 0.5;
-	})
-
-	.gradient-text {
-		background: linear-gradient(to right, theme(colors.orange.400), theme(colors.orange.700));
-		background-clip: text;
-		-webkit-background-clip: text;
-		text-fill-color: transparent;
-		-webkit-text-fill-color: transparent;
-		font-weight: 700;
-	}
 	@keyframes cool-img {
 		from {
 			transform: scale(1);
