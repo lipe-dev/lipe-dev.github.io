@@ -32,7 +32,7 @@
 </h1>
 
 <div
-	class="flex flex-row flex-wrap mb-3 gap-3 bg-gray-950 shadow-sm rounded-lg p-4 relative overflow-hidden"
+	class="flex flex-row flex-wrap mb-4 gap-3 bg-gray-950 shadow-sm rounded-lg p-4 relative overflow-hidden"
 	use:bottomShine
 >
 	{#each data.projects as project}
@@ -49,7 +49,7 @@
 </h1>
 
 <div
-	class="flex flex-row flex-wrap mb-3 gap-3 bg-gray-950 shadow-sm rounded-lg p-4 relative overflow-hidden"
+	class="flex flex-row flex-wrap mb-4 gap-3 bg-gray-950 shadow-sm rounded-lg p-4 relative overflow-hidden"
 	use:bottomShine
 >
 	{#each data.posts as post}
