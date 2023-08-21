@@ -1,22 +1,11 @@
 <script lang="ts">
 	import CoolBox from '$lib/components/CoolBox.svelte';
-	import PostBox from '$lib/components/PostBox.svelte';
 	import { format } from 'date-fns';
-	import type { PageData } from './$types';
+	import type { LayoutData } from './$types';
 	import { Breadcrumb, BreadcrumbItem, GradientButton } from 'flowbite-svelte';
 	import Button from '$lib/components/Button.svelte';
 
-	export let data: PageData;
-
-	let postMD: ConstructorOfATypedSvelteComponent;
-
-	$: {
-		if (data.path) {
-			import(data.path).then((module) => {
-				postMD = module.default;
-			});
-		}
-	}
+	export let data: LayoutData;
 </script>
 
 <Breadcrumb aria-label="Default breadcrumb example" class="mb-8">
@@ -30,7 +19,7 @@
 		>Blog</BreadcrumbItem
 	>
 	<BreadcrumbItem
-		href="/project/{data.post?.slug}"
+		href="/blog/post/{data.post?.slug}"
 		linkClass="hover:text-white text-gray-500 text-sm gradient-text ml-2"
 		>{data.post?.title}</BreadcrumbItem
 	>
@@ -56,18 +45,22 @@
 		{/if}
 	</div>
 
+	<div class="mb-16 w-full h-[400px] max-w-full mx-auto rounded-lg">
+		<img src={data.post.image} alt={data.post.title} class="object-cover w-full h-full" />
+	</div>
+
 	<article
-		class="prose lg:prose-xl prose-invert prose-headings:text-2xl prose-headings:tracking-wide prose-headings:font-semibold prose-headings:font-display prose-headings:text-gray-200 mx-auto"
+		class="prose lg:prose-lg prose-invert prose-headings:text-2xl prose-headings:tracking-wide prose-headings:font-semibold prose-headings:font-display prose-headings:text-gray-200 mx-auto"
 	>
-		<svelte:component this={postMD} />
+		<slot />
 	</article>
 </div>
 
 <div class="flex flex-row justify-between items-center bg-gray-950 shadow-sm rounded-md p-4">
 	{#if data.prevPost}
-		<Button href="/blog/{data.prevPost?.slug}">Previous Post</Button>
+		<Button href="/blog/post/{data.prevPost?.slug}">Previous Post</Button>
 	{/if}
 	{#if data.nextPost}
-		<Button href="/blog/{data.nextPost?.slug}" buttonClass="ml-auto">Next Post</Button>
+		<Button href="/blog/post/{data.nextPost?.slug}" buttonClass="ml-auto">Next Post</Button>
 	{/if}
 </div>

@@ -2,7 +2,6 @@
 	import CoolBox from '$lib/components/CoolBox.svelte';
 	import PostBox from '$lib/components/PostBox.svelte';
 	import ProjectBox from '$lib/components/ProjectBox.svelte';
-	import { GradientButton } from 'flowbite-svelte';
 	import type { PageData } from './$types';
 	import bottomShine from '$lib/actions/bottom-shine';
 	import Button from '$lib/components/Button.svelte';

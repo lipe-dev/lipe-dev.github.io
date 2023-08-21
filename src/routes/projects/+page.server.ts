@@ -1,17 +1,7 @@
-import type { Techs } from '$lib/data/tech';
-import type { ServerLoad } from '@sveltejs/kit';
-const projectModules = import.meta.glob('$lib/data/projects/*.md');
-import tech from '$lib/data/tech';
-import type { Project, ProjectMDType } from '$lib/data/projects';
+import type { PageServerLoad } from './$types';
 
-export const load: ServerLoad = async () => {
-	const projects: Project[] = [];
-
-	for (const modulePath in projectModules) {
-		const project = { ...((await projectModules[modulePath]()) as ProjectMDType) };
-		project.metadata.tech = project.metadata.techSlugs.map((t) => tech[t as unknown as Techs]);
-		projects.push(project.metadata);
-	}
+export const load: PageServerLoad = async ({ parent }) => {
+	const { projects } = await parent();
 
 	return {
 		projects

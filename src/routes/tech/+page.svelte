@@ -34,26 +34,3 @@
 		<CoolBox {tech} />
 	{/each}
 </div>
-
-<style lang="postcss">
-	.gradient-text {
-		background: linear-gradient(to right, theme(colors.orange.400), theme(colors.orange.700));
-		background-clip: text;
-		-webkit-background-clip: text;
-		text-fill-color: transparent;
-		-webkit-text-fill-color: transparent;
-		font-weight: 700;
-		position: relative;
-
-		&:after {
-			content: '';
-			display: block;
-			width: 100%;
-			position: absolute;
-			height: 1px;
-			background: linear-gradient(to right, theme(colors.orange.400), theme(colors.orange.600));
-			bottom: 0;
-			left: 0;
-		}
-	}
-</style>
