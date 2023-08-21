@@ -23,7 +23,7 @@
 	<iconify-icon icon="line-md:download-outline" class="mr-2" /> Download as PDF
 </Button>
 
-<div class="bg-gray-950 rounded-lg p-12">
+<div class="bg-gray-950 rounded-lg md:p-12 p-4">
 	<div class="prose prose-invert mx-auto">
 		<h1 class="mb-0">Felipe "lipe-dev" Pereira</h1>
 		<h2 class="mt-0 font-light tracking-wide">Software Engineer</h2>

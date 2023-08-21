@@ -29,7 +29,7 @@
 </div>
 
 <div
-	class="flex flex-row flex-wrap mb-3 gap-4 bg-gray-950 shadow-sm rounded-lg p-4 relative overflow-hidden"
+	class="flex flex-row flex-wrap mb-3 gap-4 bg-gray-950 shadow-sm rounded-lg p-4 relative overflow-hidden justify-evenly md:justify-start"
 	use:bottomShine
 >
 	{#each data.posts as post}

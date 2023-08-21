@@ -6,6 +6,7 @@
 	import { Breadcrumb, BreadcrumbItem } from 'flowbite-svelte';
 	import type { PageData } from './$types';
 	import Button from '$lib/components/Button.svelte';
+	import tech from '$lib/data/tech';
 
 	export let data: PageData;
 </script>
@@ -45,7 +46,7 @@
 </h1>
 
 <div
-	class="flex flex-row flex-wrap mb-3 gap-4 p-4 bg-gray-950 rounded-lg relative overflow-hidden"
+	class="flex flex-row flex-wrap mb-3 gap-4 p-4 bg-gray-950 rounded-lg relative overflow-hidden justify-evenly md:justify-start"
 	use:bottomShine
 >
 	{#each data.projects as project}
@@ -53,7 +54,7 @@
 	{/each}
 </div>
 
-<Button href="/projects">
+<Button href="/projects" buttonClass="w-full justify-center md:w-fit">
 	<iconify-icon icon="ph:plus" class="mr-1 text-sm" />See all my projects
 </Button>
 
@@ -62,16 +63,18 @@
 </h1>
 
 <div
-	class="flex flex-row flex-wrap mb-3 gap-4 p-4 bg-gray-950 rounded-lg relative overflow-hidden"
+	class="flex flex-row flex-wrap mb-3 gap-4 p-4 bg-gray-950 rounded-lg relative overflow-hidden justify-evenly md:justify-start"
 	use:bottomShine
 >
 	{#each data.posts as post}
 		<PostBox {post}>
 			{post.title}
 		</PostBox>
+	{:else}
+		<div class="text-gray-500 text-center text-lg">No posts yet about {data.tech.name}</div>
 	{/each}
 </div>
 
-<Button href="/projects">
+<Button href="/projects" buttonClass="w-full justify-center md:w-fit">
 	<iconify-icon icon="ph:plus" class="mr-1 text-sm" />See all my posts
 </Button>
