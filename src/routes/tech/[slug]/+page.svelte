@@ -5,6 +5,7 @@
 	import ProjectBox from '$lib/components/ProjectBox.svelte';
 	import { Breadcrumb, BreadcrumbItem } from 'flowbite-svelte';
 	import type { PageData } from './$types';
+	import Button from '$lib/components/Button.svelte';
 
 	export let data: PageData;
 </script>
@@ -33,12 +34,11 @@
 	{data.tech.name}
 </h1>
 
-<h2
-	class="text-gray-300 text-xl font-display font-normal tracking-normal mb-4 p-4 bg-gray-950 rounded-lg relative overflow-hidden"
-	use:bottomShine
->
-	{data.tech.summary}
-</h2>
+<div class="mb-4 p-4 bg-gray-950 rounded-lg relative overflow-hidden" use:bottomShine>
+	<div class="prose prose-invert lg:prose-lg mx-auto">
+		{data.tech.summary}
+	</div>
+</div>
 
 <h1 class="text-stone-300 text-2xl font-display font-bold uppercase tracking-widest mb-4 mt-8">
 	My <span class="gradient-text no-underline">{data.tech.name}</span> projects
@@ -53,9 +53,9 @@
 	{/each}
 </div>
 
-<a href="/projects" class="text-1xl gradient-text mb-4">
-	<iconify-icon icon="ph:plus" class="mr-1 text-orange-500 text-sm" />Check out all my projects
-</a>
+<Button href="/projects">
+	<iconify-icon icon="ph:plus" class="mr-1 text-sm" />See all my projects
+</Button>
 
 <h1 class="text-stone-300 text-2xl font-display font-bold uppercase tracking-widest mb-4 mt-8">
 	Recent posts about <span class="gradient-text no-underline">{data.tech.name}</span>
@@ -72,6 +72,6 @@
 	{/each}
 </div>
 
-<a href="/tech" class="text-1xl gradient-text">
-	<iconify-icon icon="ph:plus" class="mr-1 text-orange-500 text-sm" />See all posts
-</a>
+<Button href="/projects">
+	<iconify-icon icon="ph:plus" class="mr-1 text-sm" />See all my posts
+</Button>

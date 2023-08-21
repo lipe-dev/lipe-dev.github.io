@@ -1,15 +1,12 @@
 <script lang="ts">
 	import type { Post } from '$lib/data/posts';
-	import { parseISO } from 'date-fns';
-	import format from 'date-fns/format';
+	import { format } from 'date-fns';
 
 	export let post: Post;
-
-	console.log(post);
 </script>
 
 <a
-	href="/blog/{post.slug}"
+	href="/blog/post/{post.slug}"
 	class="blog-box flex flex-col items-center justify-center border-[1px] border-solid border-gray-800 w-72 overflow-hidden relative rounded-lg box-content hover:scale-[1.03] transition-all duration-200 fill-gray-400 hover:fill-white text-gray-400 hover:text-white hover:shadow-orange-900/50 hover:shadow-lg p-[5px] m-1 bg-gray-900"
 >
 	<div class="blog-box-bg absolute top-0 left-0 right-0 bottom-0 w-full h-full" />

@@ -5,7 +5,7 @@
 </script>
 
 <a
-	href="projects/{project.slug}"
+	href="/projects/details/{project.slug}"
 	class="project-box flex flex-col items-center justify-center border-[1px] border-solid border-gray-800 w-72 overflow-hidden relative rounded-lg p-[5px] box-content hover:scale-[1.03] transition-all duration-200 fill-gray-400 hover:fill-white text-gray-400 hover:text-white hover:shadow-orange-900/50 hover:shadow-lg bg-gray-900 m-1"
 >
 	<div class="project-box-bg absolute top-0 left-0 right-0 bottom-0 w-full h-full" />

@@ -1,21 +1,10 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import CoolBox from '$lib/components/CoolBox.svelte';
-	import PostBox from '$lib/components/PostBox.svelte';
-	import ProjectBox from '$lib/components/ProjectBox.svelte';
-	import type { PageData } from './$types';
 	import { Breadcrumb, BreadcrumbItem, Carousel, CarouselTransition } from 'flowbite-svelte';
+	import type { LayoutData } from './$types';
 
-	export let data: PageData;
-
-	let projectMD: ConstructorOfATypedSvelteComponent;
-
-	$: {
-		if (data.path) {
-			import(data.path).then((module) => {
-				projectMD = module.default;
-			});
-		}
-	}
+	export let data: LayoutData;
 
 	$: images =
 		data.project?.images.map((image, index) => {
@@ -37,7 +26,7 @@
 		>Projects</BreadcrumbItem
 	>
 	<BreadcrumbItem
-		href="/project/{data.project?.slug}"
+		href="/projects/details/{data.project?.slug}"
 		linkClass="hover:text-white text-gray-500 text-sm gradient-text ml-2"
 		>{data.project?.name}</BreadcrumbItem
 	>
@@ -66,8 +55,8 @@
 	</div>
 
 	<article
-		class="prose lg:prose-xl prose-invert prose-headings:text-2xl prose-headings:tracking-wide prose-headings:font-semibold prose-headings:font-display prose-headings:text-gray-200 mx-auto"
+		class="prose lg:prose-lg prose-invert prose-headings:text-2xl prose-headings:tracking-wide prose-headings:font-semibold prose-headings:font-display prose-headings:text-gray-200 mx-auto"
 	>
-		<svelte:component this={projectMD} />
+		<slot />
 	</article>
 </div>

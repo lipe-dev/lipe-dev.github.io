@@ -1,21 +1,16 @@
 ---
-slug: my-second-blog
+slug: my-first-blog
 title: My First Blog
 body: This is my first blog
-techSlugs: ["react"]
+techSlugs: ["react", "svelte"]
 date: "2023-01-01 14:14:14 -0300"
 excerpt: This is my first blog
-image: https://picsum.photos/seed/picsum/200/300
+image: https://picsum.photos/seed/picsum/1280/900
 ---
-
 
 # Hello
 ## Table of contents
 
-## Section A
+## Section
 
-this is a post
-
-## Section B
-
-this is a post
+this is another post
