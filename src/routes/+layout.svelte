@@ -58,12 +58,12 @@
 </script>
 
 <div class="bg-gray-950/95 w-screen min-h-screen">
-	<div class="flex flex-row items-stretch w-full h-full">
+	<div class="flex flex-col md:flex-row items-stretch w-full h-full">
 		<div
-			class="flex flex-col items-start w-[520px] shrink-0 gap-4 dotted border-gray-900 border-solid border-r-2 fixed h-screen"
+			class="flex md:flex-col flex-row justify-center flex-wrap md:flex-nowrap items-start w-full md:w-[520px] shrink-0 gap-4 dotted border-gray-900 border-solid border-r-2 md:fixed md:h-screen sticky -top-20 z-[9999999] md:top-0"
 		>
 			<div
-				class="rounded-full gradient w-48 h-48 p-1 relative overflow-hidden mx-16 mb-8 mt-16"
+				class="rounded-full gradient w-20 h-20 md:w-48 md:h-48 p-1 relative overflow-hidden md:mx-16 md:mb-8 md:mt-16 m-2 shrink-0"
 				use:sheen
 				role="presentation"
 			>
@@ -74,21 +74,27 @@
 				</div>
 			</div>
 
-			<h1 class="font-display text-5xl font-normal text-white px-16 tracking-wider uppercase">
-				I'm <span
-					class="gradient-text"
-					style="-webkit-text-fill-color: transparent;"
-					use:textScramble={wordPool.name}>Felipe</span
-				>.
-			</h1>
+			<div class="my-auto md:my-0">
+				<h1
+					class="font-display md:text-5xl text-xl font-normal text-white md:px-16 tracking-wider uppercase"
+				>
+					I'm <span
+						class="gradient-text"
+						style="-webkit-text-fill-color: transparent;"
+						use:textScramble={wordPool.name}>Felipe</span
+					>.
+				</h1>
 
-			<h2 class="font-display text-3xl text-stone-300 font-bold px-16">
-				<span use:textScramble={wordPool.langs}>Front-End</span>
-				<span use:textScramble={wordPool.developer}>Developer</span>
-			</h2>
+				<h2 class="font-display md:text-3xl text-lg text-stone-300 font-bold md:px-16">
+					<span use:textScramble={wordPool.langs}>Front-End</span>
+					<span use:textScramble={wordPool.developer}>Developer</span>
+				</h2>
+			</div>
 
-			<nav class="mt-8 relative w-full overflow-hidden" use:sideShine>
-				<ul class="flex flex-col text-stone-300 text-2xl px-16 menu items-stretch">
+			<nav class="md:mt-8 relative w-full overflow-hidden" use:sideShine>
+				<ul
+					class="flex md:flex-col justify-center md:justify-start gap-4 md:gap-0 flex-row text-stone-300 md:text-2xl text-md md:px-16 menu items-stretch"
+				>
 					<li use:antiHoverSiblings><a href="/cv" class="z-50">Resume</a></li>
 					<li use:antiHoverSiblings><a href="/tech">Tech</a></li>
 					<li use:antiHoverSiblings><a href="/projects">Projects</a></li>
@@ -166,7 +172,7 @@
 			</div>
 		</div>
 
-		<div class="p-16 grow relative ml-[520px]" use:sideShine>
+		<div class="md:p-16 p-4 grow relative md:ml-[520px]" use:sideShine>
 			<slot />
 		</div>
 	</div>

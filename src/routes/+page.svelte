@@ -9,12 +9,14 @@
 	export let data: PageData;
 </script>
 
-<h1 class="text-stone-300 text-2xl font-display font-bold uppercase tracking-widest mb-4">
+<h1
+	class="text-stone-300 text-2xl font-display font-bold uppercase tracking-widest mb-4 text-center md:text-start"
+>
 	Stuff I work with
 </h1>
 
 <div
-	class="flex relative flex-row flex-wrap mb-4 bg-gray-950 shadow-sm rounded-md p-4 overflow-hidden"
+	class="flex relative flex-row flex-wrap mb-4 bg-gray-950 shadow-sm rounded-md p-4 overflow-hidden justify-evenly md:justify-start"
 	use:bottomShine
 >
 	{#each Object.entries(data.tech) as [name, tech]}
@@ -22,7 +24,7 @@
 	{/each}
 </div>
 
-<Button href="/tech">
+<Button href="/tech" buttonClass="w-full justify-center md:w-fit">
 	<iconify-icon icon="ph:plus" class="mr-1 text-sm" />
 	See more
 </Button>
@@ -32,7 +34,7 @@
 </h1>
 
 <div
-	class="flex flex-row flex-wrap mb-4 gap-3 bg-gray-950 shadow-sm rounded-lg p-4 relative overflow-hidden"
+	class="flex flex-row flex-wrap mb-4 gap-3 bg-gray-950 shadow-sm rounded-lg p-4 relative overflow-hidden justify-evenly md:justify-start"
 	use:bottomShine
 >
 	{#each data.projects as project}
@@ -40,7 +42,7 @@
 	{/each}
 </div>
 
-<Button href="/projects">
+<Button href="/projects" buttonClass="w-full justify-center md:w-fit">
 	<iconify-icon icon="ph:plus" class="mr-1 text-sm" />See more</Button
 >
 
@@ -49,7 +51,7 @@
 </h1>
 
 <div
-	class="flex flex-row flex-wrap mb-4 gap-3 bg-gray-950 shadow-sm rounded-lg p-4 relative overflow-hidden"
+	class="flex flex-row flex-wrap mb-4 gap-3 bg-gray-950 shadow-sm rounded-lg p-4 relative overflow-hidden justify-evenly md:justify-start"
 	use:bottomShine
 >
 	{#each data.posts as post}
@@ -59,6 +61,6 @@
 	{/each}
 </div>
 
-<Button href="/blog">
+<Button href="/blog" buttonClass="w-full justify-center md:w-fit">
 	<iconify-icon icon="ph:plus" class="mr-1 text-sm" />See more</Button
 >
