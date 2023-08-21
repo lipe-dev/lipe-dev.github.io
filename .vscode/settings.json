@@ -1,3 +1,4 @@
 {
-	"conventionalCommits.scopes": ["project", "blog", "home"]
+	"conventionalCommits.scopes": ["project", "blog", "home", "cv"],
+	"cSpell.words": ["Photoshop", "Traço"]
 }
