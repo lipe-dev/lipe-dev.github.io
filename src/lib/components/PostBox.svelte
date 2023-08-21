@@ -42,18 +42,13 @@
 				</div>
 			{/each}
 		</div>
+		<div class="text-xs mt-1 text-orange-300">
+			{format(post.date, 'PP')}
+		</div>
 
 		<h1 class="text-lg font-bold mt-1">
 			{post.title}
 		</h1>
-
-		<div class="text-xs mt-1 text-orange-300 -mt-1">
-			{format(post.date, 'PP')}
-		</div>
-
-		<div class="text-sm text-gray-300 mt-1">
-			{post.excerpt}
-		</div>
 	</div>
 </a>
 

@@ -2,6 +2,9 @@ import svelteIcon from '$lib/icons/svelte.svg?raw';
 import reactIcon from '$lib/icons/react.svg?raw';
 import nextIcon from '$lib/icons/next.svg?raw';
 import maplibreIcon from '$lib/icons/maplibre.svg?raw';
+import githubActions from '$lib/icons/github-actions.svg?raw';
+import githubPages from '$lib/icons/github-pages.svg?raw';
+import github from '$lib/icons/github.svg?raw';
 
 export type Tech = {
 	name: string;
@@ -11,7 +14,15 @@ export type Tech = {
 	summary?: string;
 };
 
-export type Techs = 'svelte' | 'sveltekit' | 'react' | 'next' | 'maplibre';
+export type Techs =
+	| 'svelte'
+	| 'sveltekit'
+	| 'react'
+	| 'next'
+	| 'maplibre'
+	| 'github-actions'
+	| 'github-pages'
+	| 'github';
 
 const tech: Record<Techs, Tech> = {
 	svelte: {
@@ -53,6 +64,30 @@ const tech: Record<Techs, Tech> = {
 		star: false,
 		summary:
 			'I have been using MaplibreGL JS since 2022 when a potential client approached me with a request for an irrigation mapping tool. I have mastered many of its advanced features, including custom layers, custom controls, and custom popups. I have also used it with Next.js, React, Svlete, and SvelteKit. I have also used it with a variety of other technologies, including Firebase for storing data, and ESRI for geocoding.'
+	},
+	'github-actions': {
+		name: 'GitHub Actions',
+		icon: githubActions,
+		slug: 'github-actions',
+		star: false,
+		summary:
+			'I have been using GitHub Actions since 2020 when I started using GitHub Actions for my personal projects. I have used it to build, test, and deploy a variety of projects, including this website. I have also used it to build, test, and deploy a variety of projects at my last few jobs.'
+	},
+	'github-pages': {
+		name: 'GitHub Pages',
+		icon: githubPages,
+		slug: 'github-pages',
+		star: false,
+		summary:
+			'I have been using GitHub Pages since 2018 when I started using it to host documentation for a component library project. I have used it to host a variety of projects, including this website and a few other personal projects. I have also used it to host a variety of projects at my last few jobs.'
+	},
+	github: {
+		name: 'GitHub',
+		icon: github,
+		slug: 'github',
+		star: false,
+		summary:
+			'I have been using GitHub since... well... basically forever. I have used it in all ways imaginable, to host stuff, for versioning, for collaboration, for documentation, for issue tracking, for project management, for CI/CD, and more. Do I even need to say more about GitHub at this point?'
 	}
 };
 
