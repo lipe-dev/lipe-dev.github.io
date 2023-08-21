@@ -28,6 +28,6 @@ export const load: LayoutServerLoad = async () => {
 	return {
 		projects: projects,
 		tech: tech,
-		posts
+		posts: posts.sort((a, b) => b.date.getTime() - a.date.getTime())
 	};
 };

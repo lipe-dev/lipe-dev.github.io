@@ -21,7 +21,7 @@
 			{@html tech.icon}
 		</div>
 
-		<div class="uppercase mt-2">
+		<div class="uppercase mt-2 text-sm text-center">
 			{tech.name}
 		</div>
 	</div>
