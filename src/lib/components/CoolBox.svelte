@@ -14,7 +14,7 @@
 	>
 		{#if tech.star}
 			<div class="absolute top-0 right-0 mt-0 mr-0 z-50">
-				<iconify-icon icon="line-md:star" class="text-yellow-400 text-2xl" />
+				<iconify-icon icon="line-md:star-filled" class="text-yellow-400 text-2xl" />
 			</div>
 		{/if}
 		<div class="icon-wrapper text-gray-300 fill-gray-300">
