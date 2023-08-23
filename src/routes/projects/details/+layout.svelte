@@ -50,8 +50,8 @@
 		{/if}
 	</div>
 
-	<div class="mb-16 w-[820px] max-w-full mx-auto">
-		<Carousel {images} showThumbs={false} showCaptions={false} />
+	<div class="mb-16 w-[820px] max-w-full mx-auto bg-gray-900 p-4 rounded-lg">
+		<Carousel {images} showThumbs={false} showCaptions={false} imgFit="contain" />
 	</div>
 
 	<article

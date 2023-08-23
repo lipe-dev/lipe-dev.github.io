@@ -6,6 +6,7 @@ export type Project = {
 	description: string;
 	tech: Tech[];
 	images: string[];
+	order: number;
 };
 
 export type ProjectMDType = {

@@ -57,7 +57,7 @@
 	};
 </script>
 
-<div class="bg-gray-950/95 w-screen min-h-screen">
+<div>
 	<div class="flex flex-col md:flex-row items-stretch w-full h-full">
 		<div
 			class="flex md:flex-col flex-row justify-center flex-wrap md:flex-nowrap items-start w-full md:w-[520px] shrink-0 gap-4 dotted border-gray-900 border-solid border-r-2 md:fixed md:h-screen sticky -top-20 z-[9999999] md:top-0"

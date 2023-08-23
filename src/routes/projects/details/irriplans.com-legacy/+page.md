@@ -1,6 +1,7 @@
 ---
 slug: "irriplans.com-legacy"
 name: Irriplans.com Legacy
+order: 1
 description: Legacy version of the Irrigation system mapping tool
 techSlugs: [
     "react",
