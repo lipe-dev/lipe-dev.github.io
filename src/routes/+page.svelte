@@ -16,7 +16,7 @@
 	const techSorted = Object.entries(tech).sort((a, b) => {
 		// if star, put it first
 		if (a[1].star) return -1;
-		if (b[1].star) return 1;
+		if (b[1].star) return -1;
 
 		const aProjects = projects.filter((project) => project.tech.includes(a[1])).length;
 		const aPosts = posts.filter((post) => post.tech.includes(a[1])).length;
