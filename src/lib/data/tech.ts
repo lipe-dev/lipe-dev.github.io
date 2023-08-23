@@ -69,6 +69,46 @@ const tech: Record<Techs, Tech> = {
 		summary:
 			'I have used Next.js for a few years now, and I am very comfortable with it. I have used it to build a variety of projects, including my previous website and most products at my last few jobs. I have also used it with TypeScript. I have also used it with a variety of other technologies, including MapLibre, Mapbox, SWR, and more.'
 	},
+	django: {
+		name: 'Django',
+		icon: django,
+		slug: 'django',
+		star: false,
+		summary:
+			"I have been using Django since 2016, at one of my first jobs. It is a very popular framework, and I have used it to help build a variety of projects, including a few internal tools and special projects at my last few jobs. I haven't used it much recently as I decided to focus on the frontend, but I am still get back into it if needed."
+	},
+	python: {
+		name: 'Python',
+		icon: python,
+		slug: 'python',
+		star: false,
+		summary:
+			"Python is my favorite language. I have been using Python since 2016, at one of my first jobs. I have used it to help build a variety of projects, including a few internal tools and special projects at my last few jobs. I haven't used it much recently as I decided to focus on the frontend, but I still use it from time to time in personal projects and for data analysis."
+	},
+	'material-design': {
+		name: 'Material Design',
+		icon: materialDesign,
+		slug: 'material-design',
+		star: false,
+		summary:
+			'As a programmer, I am not a designer. Having a good design system is very important to me. I have used Material UI for a few years now, and I am very comfortable with it. I think it is going out of style a bit, but I still like it.'
+	},
+	android: {
+		name: 'Android',
+		icon: android,
+		slug: 'android',
+		star: false,
+		summary:
+			"I have been using Android since 2012, when I got my first smartphone. I have used it to build a variety of projects, from user facing apps, to working with the inner workings of the OS for Motorola. I haven't used it much recently since joining the Javascript revolution, and nowadays if I have to build an app, I will do it with React Native."
+	},
+	firebase: {
+		name: 'Firebase',
+		icon: firebase,
+		slug: 'firebase',
+		star: false,
+		summary:
+			"You know I'm all about that Base, 'bout that Base, no SQL. From the first moment I touched Firebase, I was in love. It helped immensely when I needed both authentication and a realtime database for a project. Nowadays I prefer open sources with less vendor lock in like Supabase, but Firebase is still a great option, specially for customers who want to stay in the Google ecosystem."
+	},
 	maplibre: {
 		name: 'MapLibre',
 		icon: maplibreIcon,
@@ -101,30 +141,6 @@ const tech: Record<Techs, Tech> = {
 		summary:
 			'I have been using GitHub since... well... basically forever. I have used it in all ways imaginable, to host stuff, for versioning, for collaboration, for documentation, for issue tracking, for project management, for CI/CD, and more. Do I even need to say more about GitHub at this point?'
 	},
-	django: {
-		name: 'Django',
-		icon: django,
-		slug: 'django',
-		star: false,
-		summary:
-			"I have been using Django since 2016, at one of my first jobs. It is a very popular framework, and I have used it to help build a variety of projects, including a few internal tools and special projects at my last few jobs. I haven't used it much recently as I decided to focus on the frontend, but I am still get back into it if needed."
-	},
-	python: {
-		name: 'Python',
-		icon: python,
-		slug: 'python',
-		star: false,
-		summary:
-			"Python is my favorite language. I have been using Python since 2016, at one of my first jobs. I have used it to help build a variety of projects, including a few internal tools and special projects at my last few jobs. I haven't used it much recently as I decided to focus on the frontend, but I still use it from time to time in personal projects and for data analysis."
-	},
-	'material-design': {
-		name: 'Material Design',
-		icon: materialDesign,
-		slug: 'material-design',
-		star: false,
-		summary:
-			'As a programmer, I am not a designer. Having a good design system is very important to me. I have used Material UI for a few years now, and I am very comfortable with it. I think it is going out of style a bit, but I still like it.'
-	},
 	mui: {
 		name: 'MUI',
 		icon: mui,
@@ -132,22 +148,6 @@ const tech: Record<Techs, Tech> = {
 		star: false,
 		summary:
 			"As a programmer, I am not a designer. Having a good design system is very important to me. Having a library that implements said design system is even better! Whenever the project calls for Material Design, I know what I'll be using. I have even contributed to the project a few times."
-	},
-	android: {
-		name: 'Android',
-		icon: android,
-		slug: 'android',
-		star: false,
-		summary:
-			"I have been using Android since 2012, when I got my first smartphone. I have used it to build a variety of projects, from user facing apps, to working with the inner workings of the OS for Motorola. I haven't used it much recently since joining the Javascript revolution, and nowadays if I have to build an app, I will do it with React Native."
-	},
-	firebase: {
-		name: 'Firebase',
-		icon: firebase,
-		slug: 'firebase',
-		star: false,
-		summary:
-			"You know I'm all about that Base, 'bout that Base, no SQL. From the first moment I touched Firebase, I was in love. It helped immensely when I needed both authentication and a realtime database for a project. Nowadays I prefer open sources with less vendor lock in like Supabase, but Firebase is still a great option, specially for customers who want to stay in the Google ecosystem."
 	}
 };
 
