@@ -7,6 +7,26 @@ body {
 	@apply bg-gray-950/95;
 }
 
+* {
+	scrollbar-color: theme(colors.orange.700) transparent;
+	scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+	background: theme(colors.gray.950);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: theme(colors.orange.700);
+	border-radius: 20px;
+	border: 6px solid transparent;
+}
+
 :root {
 	--gradient: linear-gradient(
 			162deg,
