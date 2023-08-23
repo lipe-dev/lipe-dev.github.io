@@ -7,6 +7,25 @@
 	import Button from '$lib/components/Button.svelte';
 
 	export let data: PageData;
+
+	const posts = data.posts || [];
+	const projects = data.projects || [];
+	const tech = data.tech || {};
+
+	// order tech by number of projects + posts
+	const techSorted = Object.entries(tech).sort((a, b) => {
+		// if star, put it first
+		if (a[1].star) return -1;
+		if (b[1].star) return 1;
+
+		const aProjects = projects.filter((project) => project.tech.includes(a[1])).length;
+		const aPosts = posts.filter((post) => post.tech.includes(a[1])).length;
+
+		const bProjects = projects.filter((project) => project.tech.includes(b[1])).length;
+		const bPosts = posts.filter((post) => post.tech.includes(b[1])).length;
+
+		return bProjects + bPosts - aProjects - aPosts;
+	});
 </script>
 
 <h1
@@ -19,7 +38,7 @@
 	class="flex relative flex-row flex-wrap mb-4 bg-gray-950 shadow-sm rounded-md p-4 overflow-hidden justify-evenly md:justify-start"
 	use:bottomShine
 >
-	{#each Object.entries(data.tech) as [name, tech]}
+	{#each techSorted as [name, tech]}
 		<CoolBox {tech} />
 	{/each}
 </div>
