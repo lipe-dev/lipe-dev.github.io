@@ -95,7 +95,7 @@
 				<ul
 					class="flex md:flex-col justify-center md:justify-start gap-4 md:gap-0 flex-row text-stone-300 md:text-2xl text-md md:px-16 menu items-stretch"
 				>
-					<li use:antiHoverSiblings><a href="/cv" class="z-50">Resume</a></li>
+					<li use:antiHoverSiblings><a href="/cv">Resume</a></li>
 					<li use:antiHoverSiblings><a href="/tech">Tech</a></li>
 					<li use:antiHoverSiblings><a href="/projects">Projects</a></li>
 					<li use:antiHoverSiblings><a href="/blog">Posts</a></li>
