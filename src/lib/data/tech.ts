@@ -11,6 +11,11 @@ import materialDesign from '$lib/icons/material-design.svg?raw';
 import mui from '$lib/icons/mui.svg?raw';
 import android from '$lib/icons/android.svg?raw';
 import firebase from '$lib/icons/firebase.svg?raw';
+import storybook from '$lib/icons/storybook.svg?raw';
+import recharts from '$lib/icons/recharts.svg?raw';
+import javascript from '$lib/icons/javascript.svg?raw';
+import typescript from '$lib/icons/typescript.svg?raw';
+import styledComponents from '$lib/icons/styled-components.svg?raw';
 
 export type Tech = {
 	name: string;
@@ -34,7 +39,12 @@ export type Techs =
 	| 'material-design'
 	| 'mui'
 	| 'android'
-	| 'firebase';
+	| 'firebase'
+	| 'storybook'
+	| 'recharts'
+	| 'javascript'
+	| 'typescript'
+	| 'styled-components';
 
 const tech: Record<Techs, Tech> = {
 	svelte: {
@@ -69,6 +79,30 @@ const tech: Record<Techs, Tech> = {
 		summary:
 			'I have used Next.js for a few years now, and I am very comfortable with it. I have used it to build a variety of projects, including my previous website and most products at my last few jobs. I have also used it with TypeScript. I have also used it with a variety of other technologies, including MapLibre, Mapbox, SWR, and more.'
 	},
+	typescript: {
+		name: 'TypeScript',
+		icon: typescript,
+		slug: 'typescript',
+		star: true,
+		summary:
+			'I have been using TypeScript since 2018 when I started using it for a React project. I have used it to build a variety of projects, including my previous website and most products at my last few jobs. I have also used it with a variety of other technologies, including Next.js, MapLibre, Mapbox, SWR, and more. It is my default go to language for any project.'
+	},
+	javascript: {
+		name: 'JavaScript',
+		icon: javascript,
+		slug: 'javascript',
+		star: false,
+		summary:
+			'I have been using JavaScript since pretty much always. But if I had to put a date on it, I would say 2012, when I first saw it in a talk at my university. The idea of making dynamic interfaces was captivating. I have used it to build a variety of projects over the years, from bare JS to modern frameworks like React and Svelte.'
+	},
+	'styled-components': {
+		name: 'Styled',
+		icon: styledComponents,
+		slug: 'styled-components',
+		star: false,
+		summary:
+			"I have been using Styled Components since 2018 when I started using it for a React project. I still like using it whenever I'm using React. I like how it makes it easy to style components, and how it makes it easy to use props to style components. Nowadays, if I have any say, I will use Svelte and its built in CSS solution."
+	},
 	django: {
 		name: 'Django',
 		icon: django,
@@ -85,6 +119,22 @@ const tech: Record<Techs, Tech> = {
 		summary:
 			"Python is my favorite language. I have been using Python since 2016, at one of my first jobs. I have used it to help build a variety of projects, including a few internal tools and special projects at my last few jobs. I haven't used it much recently as I decided to focus on the frontend, but I still use it from time to time in personal projects and for data analysis."
 	},
+	firebase: {
+		name: 'Firebase',
+		icon: firebase,
+		slug: 'firebase',
+		star: false,
+		summary:
+			"You know I'm all about that Base, 'bout that Base, no SQL. From the first moment I touched Firebase, I was in love. It helped immensely when I needed both authentication and a realtime database for a project. Nowadays I prefer open sources with less vendor lock in like Supabase, but Firebase is still a great option, specially for customers who want to stay in the Google ecosystem."
+	},
+	storybook: {
+		name: 'Storybook',
+		icon: storybook,
+		slug: 'storybook',
+		star: false,
+		summary:
+			'I have been using Storybook since 2018 when I started using it to document a component library project. I have used it to document a variety of projects, from component libraries, to icon libraries, to design systems. I have also used it to document a variety of projects at my last few jobs.'
+	},
 	'material-design': {
 		name: 'Material Design',
 		icon: materialDesign,
@@ -100,14 +150,6 @@ const tech: Record<Techs, Tech> = {
 		star: false,
 		summary:
 			"I have been using Android since 2012, when I got my first smartphone. I have used it to build a variety of projects, from user facing apps, to working with the inner workings of the OS for Motorola. I haven't used it much recently since joining the Javascript revolution, and nowadays if I have to build an app, I will do it with React Native."
-	},
-	firebase: {
-		name: 'Firebase',
-		icon: firebase,
-		slug: 'firebase',
-		star: false,
-		summary:
-			"You know I'm all about that Base, 'bout that Base, no SQL. From the first moment I touched Firebase, I was in love. It helped immensely when I needed both authentication and a realtime database for a project. Nowadays I prefer open sources with less vendor lock in like Supabase, but Firebase is still a great option, specially for customers who want to stay in the Google ecosystem."
 	},
 	maplibre: {
 		name: 'MapLibre',
@@ -148,6 +190,14 @@ const tech: Record<Techs, Tech> = {
 		star: false,
 		summary:
 			"As a programmer, I am not a designer. Having a good design system is very important to me. Having a library that implements said design system is even better! Whenever the project calls for Material Design, I know what I'll be using. I have even contributed to the project a few times."
+	},
+	recharts: {
+		name: 'Recharts',
+		icon: recharts,
+		slug: 'recharts',
+		star: false,
+		summary:
+			'I have been using Recharts since 2018 when I build a component library on top of it for a data visualization project. I still use it to this day whenever I need to build a chart that is reliable, customizable, and easy to use.'
 	}
 };
 

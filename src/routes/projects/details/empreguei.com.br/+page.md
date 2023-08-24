@@ -5,6 +5,7 @@ order: 0
 description: 'Tinder for Jobs, you get the idea.'
 techSlugs: [
     "react",
+    "javascript",
     "django",
     "python",
     "material-design",
