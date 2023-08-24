@@ -16,6 +16,7 @@ import recharts from '$lib/icons/recharts.svg?raw';
 import javascript from '$lib/icons/javascript.svg?raw';
 import typescript from '$lib/icons/typescript.svg?raw';
 import styledComponents from '$lib/icons/styled-components.svg?raw';
+import cssIcon from '$lib/icons/css.svg?raw';
 
 export type Tech = {
 	name: string;
@@ -44,7 +45,8 @@ export type Techs =
 	| 'recharts'
 	| 'javascript'
 	| 'typescript'
-	| 'styled-components';
+	| 'styled-components'
+	| 'css';
 
 const tech: Record<Techs, Tech> = {
 	svelte: {
@@ -53,7 +55,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'svelte',
 		star: true,
 		summary:
-			'I have started using Svelte recently, and I am really enjoying it. I have used it to build this website, and I am using it to build a few other projects. I am also using it at work to build a few internal tools and special projects. I am excited to see where Svelte goes in the future. I am also excited to see how SvelteKit turns out. I hope to use it for more and more projects in the future.'
+			"Svelte is my new coding crush. Building websites with it feels like surfing on code waves. From my website to secret projects, Svelte's my trusty sidekick. Can't wait to see what SvelteKit brings to this electrifying tech romance!"
 	},
 	sveltekit: {
 		name: 'SvelteKit',
@@ -61,7 +63,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'sveltekit',
 		star: true,
 		summary:
-			'I am excited to see where SvelteKit goes in the future. I hope to use it for more and more projects in the future. I really enjoy how SvelteKit organizes the project structure with its folder based routing. I also really like how it handles server side rendering, making things really simple with the `load` function and +server files. The enhancing feature is by far my favorite feature, allowing for really accessible, available and fast websites.'
+			"SvelteKit, the futuristic superhero of web development! It organizes projects smoother than a dance routine, serves SSR magic with a sprinkle of load function fairy dust. And don't get me started on the enhancing feature - it's like giving your website a jetpack!"
 	},
 	react: {
 		name: 'React',
@@ -69,7 +71,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'react',
 		star: true,
 		summary:
-			'I have used React for a few years now, and I am very comfortable with it. I have used it in a variety of ways, including with Redux, Next.js, and Gatsby. I have also used it with TypeScript. I have used React to build a variety of projects, including my previous website and most products at my last few jobs.'
+			"React and I go way back - we're practically old buddies. From Redux roller coasters to Gatsby galas, we've done it all. TypeScript joined the party, and now it's a sophisticated soirée of frontend fun."
 	},
 	next: {
 		name: 'Next.js',
@@ -77,7 +79,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'next',
 		star: true,
 		summary:
-			'I have used Next.js for a few years now, and I am very comfortable with it. I have used it to build a variety of projects, including my previous website and most products at my last few jobs. I have also used it with TypeScript. I have also used it with a variety of other technologies, including MapLibre, Mapbox, SWR, and more.'
+			"Next.js is my virtual tour guide in the world of web. It's like a GPS for building projects, and it doesn't mind if I bring my TypeScript teddy bear along. MapLibre, SWR, and friends often tag along for the adventure!"
 	},
 	typescript: {
 		name: 'TypeScript',
@@ -85,7 +87,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'typescript',
 		star: true,
 		summary:
-			'I have been using TypeScript since 2018 when I started using it for a React project. I have used it to build a variety of projects, including my previous website and most products at my last few jobs. I have also used it with a variety of other technologies, including Next.js, MapLibre, Mapbox, SWR, and more. It is my default go to language for any project.'
+			"TypeScript, my dependable partner-in-code since 2018. It's like coding with training wheels, making sure I don't fall into runtime potholes. It's my go-to language - the cape to my coding superhero outfit!"
 	},
 	javascript: {
 		name: 'JavaScript',
@@ -93,7 +95,15 @@ const tech: Record<Techs, Tech> = {
 		slug: 'javascript',
 		star: false,
 		summary:
-			'I have been using JavaScript since pretty much always. But if I had to put a date on it, I would say 2012, when I first saw it in a talk at my university. The idea of making dynamic interfaces was captivating. I have used it to build a variety of projects over the years, from bare JS to modern frameworks like React and Svelte.'
+			"JavaScript, the wild and free spirit I met back in 2012. It's been a roller coaster ride from basic scripts to React extravaganzas. It's like a lifelong friendship with a coding rebel."
+	},
+	css: {
+		name: 'CSS',
+		icon: cssIcon,
+		slug: 'css',
+		star: true,
+		summary:
+			"CSS, my artistic touch to the web since the early days. It's the palette with which I paint delightful visual experiences. From simple styling to complex animations, CSS is my creative outlet - the magician behind the curtain of web design!"
 	},
 	'styled-components': {
 		name: 'Styled',
@@ -101,7 +111,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'styled-components',
 		star: false,
 		summary:
-			"I have been using Styled Components since 2018 when I started using it for a React project. I still like using it whenever I'm using React. I like how it makes it easy to style components, and how it makes it easy to use props to style components. Nowadays, if I have any say, I will use Svelte and its built in CSS solution."
+			"Styled Components, my design stylist since 2018. It's like having a personal fashion designer for my React components. Though nowadays, Svelte's internal couture is stealing the show!"
 	},
 	django: {
 		name: 'Django',
@@ -109,7 +119,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'django',
 		star: false,
 		summary:
-			"I have been using Django since 2016, at one of my first jobs. It is a very popular framework, and I have used it to help build a variety of projects, including a few internal tools and special projects at my last few jobs. I haven't used it much recently as I decided to focus on the frontend, but I am still get back into it if needed."
+			"Django, the wise old wizard of web frameworks. I dabbled with it in 2016, creating digital spells for projects. While I'm grooving in the frontend spotlight now, Django knows I'll return if backend magic is needed."
 	},
 	python: {
 		name: 'Python',
@@ -117,7 +127,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'python',
 		star: false,
 		summary:
-			"Python is my favorite language. I have been using Python since 2016, at one of my first jobs. I have used it to help build a variety of projects, including a few internal tools and special projects at my last few jobs. I haven't used it much recently as I decided to focus on the frontend, but I still use it from time to time in personal projects and for data analysis."
+			"Python, my trusty sidekick since 2016. It's like a Swiss Army knife for coding – from tools to data adventures. It's my go-to for scripting shenanigans and the occasional data caper."
 	},
 	firebase: {
 		name: 'Firebase',
@@ -125,7 +135,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'firebase',
 		star: false,
 		summary:
-			"You know I'm all about that Base, 'bout that Base, no SQL. From the first moment I touched Firebase, I was in love. It helped immensely when I needed both authentication and a realtime database for a project. Nowadays I prefer open sources with less vendor lock in like Supabase, but Firebase is still a great option, specially for customers who want to stay in the Google ecosystem."
+			"Firebase, the rockstar of real-time tech. It's like the lead guitarist of a band that nails both authentication and real-time database solos. Supabase might be knocking, but Firebase still knows how to jam!"
 	},
 	storybook: {
 		name: 'Storybook',
@@ -133,7 +143,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'storybook',
 		star: false,
 		summary:
-			'I have been using Storybook since 2018 when I started using it to document a component library project. I have used it to document a variety of projects, from component libraries, to icon libraries, to design systems. I have also used it to document a variety of projects at my last few jobs.'
+			"Storybook, my trusty scribe since 2018. It's like the librarian for my components, neatly cataloging their tales. From design systems to hero icons, Storybook is the epic storyteller of code."
 	},
 	'material-design': {
 		name: 'Material Design',
@@ -141,7 +151,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'material-design',
 		star: false,
 		summary:
-			'As a programmer, I am not a designer. Having a good design system is very important to me. I have used Material UI for a few years now, and I am very comfortable with it. I think it is going out of style a bit, but I still like it.'
+			"Material Design, the stylish tailor of user interfaces. It's like a fashion consultant for my apps, dressing them in modern elegance. Sure, it might be taking a breather, but class is timeless, right?"
 	},
 	android: {
 		name: 'Android',
@@ -149,7 +159,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'android',
 		star: false,
 		summary:
-			"I have been using Android since 2012, when I got my first smartphone. I have used it to build a variety of projects, from user facing apps, to working with the inner workings of the OS for Motorola. I haven't used it much recently since joining the Javascript revolution, and nowadays if I have to build an app, I will do it with React Native."
+			"Android, the adventurous spirit that led me to the smartphone era in 2012. We've explored the app wilderness and tinkered with OS gears. Nowadays, React Native's my co-pilot for cross-platform quests."
 	},
 	maplibre: {
 		name: 'MapLibre',
@@ -157,7 +167,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'maplibre',
 		star: false,
 		summary:
-			'I have been using MaplibreGL JS since 2022 when a potential client approached me with a request for an irrigation mapping tool. I have mastered many of its advanced features, including custom layers, custom controls, and custom popups. I have also used it with Next.js, React, Svlete, and SvelteKit. I have also used it with a variety of other technologies, including Firebase for storing data, and ESRI for geocoding.'
+			"MapLibre, the cartographer of my coding journeys since 2022. It's like my GPS to coding destinations, complete with custom layers and map popups. With Firebase and ESRI, it's a dream team for geo-adventures!"
 	},
 	'github-actions': {
 		name: 'GitHub Actions',
@@ -165,7 +175,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'github-actions',
 		star: false,
 		summary:
-			'I have been using GitHub Actions since 2020 when I started using GitHub Actions for my personal projects. I have used it to build, test, and deploy a variety of projects, including this website. I have also used it to build, test, and deploy a variety of projects at my last few jobs.'
+			"GitHub Actions, the backstage crew of my coding circus since 2020. It's like having a team of automators, ensuring my code takes center stage flawlessly. Deployments, tests, and applause - all in one!"
 	},
 	'github-pages': {
 		name: 'GitHub Pages',
@@ -173,7 +183,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'github-pages',
 		star: false,
 		summary:
-			'I have been using GitHub Pages since 2018 when I started using it to host documentation for a component library project. I have used it to host a variety of projects, including this website and a few other personal projects. I have also used it to host a variety of projects at my last few jobs.'
+			"GitHub Pages, my online podium since 2018. It's like a virtual amphitheater for my projects, where they can shine in the spotlight. From this website to personal projects, it's a standing ovation for GitHub Pages!"
 	},
 	github: {
 		name: 'GitHub',
@@ -181,7 +191,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'github',
 		star: false,
 		summary:
-			'I have been using GitHub since... well... basically forever. I have used it in all ways imaginable, to host stuff, for versioning, for collaboration, for documentation, for issue tracking, for project management, for CI/CD, and more. Do I even need to say more about GitHub at this point?'
+			"GitHub, the trusty companion that's been with me through thick and thin. From versioning virtuoso to collaboration maestro, it's the partner-in-crime every coder dreams of. At this point, GitHub's practically part of my DNA!"
 	},
 	mui: {
 		name: 'MUI',
@@ -189,7 +199,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'mui',
 		star: false,
 		summary:
-			"As a programmer, I am not a designer. Having a good design system is very important to me. Having a library that implements said design system is even better! Whenever the project calls for Material Design, I know what I'll be using. I have even contributed to the project a few times."
+			"MUI, the design conductor that orchestrates my UI symphonies. It's like having a conductor's wand for Material Design magic. Whether it's styling or orchestrating, MUI knows how to make UIs sing!"
 	},
 	recharts: {
 		name: 'Recharts',
@@ -197,7 +207,7 @@ const tech: Record<Techs, Tech> = {
 		slug: 'recharts',
 		star: false,
 		summary:
-			'I have been using Recharts since 2018 when I build a component library on top of it for a data visualization project. I still use it to this day whenever I need to build a chart that is reliable, customizable, and easy to use.'
+			"Recharts, the data visualization partner that turns numbers into chart-topping hits. Since 2018, it's been my go-to chart maestro. With Recharts, my data stories are as captivating as a catchy melody!"
 	}
 };
 

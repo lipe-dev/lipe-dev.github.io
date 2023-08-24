@@ -11,26 +11,32 @@ techSlugs: [
 images: ['/images/projects/legacy_irriplans.com/1.png']
 ---
 
-# About the project
+# Navigating the Irrigation Maze: Unearthing Challenges and Growth
 
-Irriplans.com is a mapping software destined to irrigation companies and contractors. It comes with a map drawing feature, which is at the core of the application.
+## Table of Contents
 
-Clients can navigate a map, which is based on MapLibreGL JS, and add map irrigation features and components.
+## Embarking on the Journey
 
-Users can also print the maps straight from the browser and obtain shareable links, that they can send to their clients.
+Join me in unearthing the saga of **Irriplans.com**, where mapping meets irrigation in a dance of technology and innovation. This mapping marvel, tailored for irrigation aficionados, boasts a star feature – a map-drawing tool that's the backbone of the experience.
 
-# Challenges
+Imagine this: clients traversing a digital landscape powered by the enchanting MapLibreGL JS (minus the complexity of Mapbox's hush-hush antics), weaving their irrigation dreams onto the canvas. And that's not all – these water wranglers can seamlessly print and share their aquatic creations with clients. A true harmony of form and function!
 
-The biggest challenge in this project was integrating a real time database (firestore) with MapLibre. This would be easy if we could just store a GeoJSON in firestore, but we can't because of firestore limitations around arrays.
+## Tackling the Tempests
 
-The solution was to create custom data models and implement firestores's `withConverter` methods to transform the data accordingly.
+Ahoy, matey! Prepare to navigate through coding conundrums as we dive into the technical trenches of this venture. The grand challenge that loomed before us? The marriage of a real-time database (Firestore) with the enigmatic MapLibre. Sounds simple, right? Not quite, for Firestore's array limitations put a damper on our parade.
 
-Another big challenge was getting everything to work with React, specially with its virtual DOM, since MapLibre needs to manipulate the DOM directly. But after a few hickups and a lot of `ref` passing, I got it done.
+Our ingenious solution? Forging custom data models and invoking Firestore's `withConverter` incantations to elegantly mold the data. A true alchemy of tech and creativity!
 
-# Learnings
+But wait, there's more! The tumultuous waters of React and its virtual DOM added another layer of complexity. Enter MapLibre, needing to directly manipulate the DOM. It was a true tango of technologies, requiring some crafty `ref` choreography and a few missteps along the way.
 
-My biggest takeaway from this project was learning how to develop advanced features on MapLibre. There are many custom events, a lot of custom layer styling to deal with the GeoJSON source data that we generate, plenty custom map controls also that required some nifty portal manipulation to get them to integrate properly.
+## Gaining Insights
 
-# Final Thoughts
+As we sailed through this venture, I gathered a treasure trove of insights. Mastering the intricacies of MapLibre was a journey through a cartographer's wonderland. Custom events and layer styling wove a tapestry of GeoJSON finesse. And let's not forget the dance of custom map controls, which I finessed into harmony with Svelte's portal magic.
 
-This was a great oportunity to flex my map realted muscles and get back into working with firebase, both things that I haven't done in quite a while.
+Ah, React – a worthy adversary in this tale. Yet, I emerged victorious, having learned to navigate the React waters with MapLibre's compass.
+
+## Concluding the Expedition
+
+As we bid adieu to this chapter, reflections abound. The journey through **Irriplans** took me back to my cartographic roots, sparking a rekindling of my GIS prowess and a nostalgic return to Firebase's embrace. This was an expedition where I bridged the waters of innovation and legacy.
+
+So here's to the irrigation dreamers, the mapping maestros, and the code captains who braved the tides. The journey may have been challenging, but it's the challenges that fertilize our growth in the evergreen fields of technology.

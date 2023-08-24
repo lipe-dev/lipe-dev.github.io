@@ -16,36 +16,34 @@ techSlugs: [
 images: ['/images/projects/empreguei.com.br/screen-0.webp', '/images/projects/empreguei.com.br/screen-1.webp']
 ---
 
-# About the project
+# Unveiling Empreguei.com.br: Navigating the Realm of Job Matching
 
-Empreguei.com.br was a company that provided job matching features for employers and employees.
+## Table of Contents
 
-Candidates could download the mobile APP and apply to jobs in a Tinder-like interface, by quickly swiping left or right.
+## Introduction
 
-Companies would access their own app for posting jobs or do it via the web-app.
+Step into the world of Empreguei.com.br, a pioneering platform offering a revolutionary approach to job matching, bridging the chasm between employers and job seekers. The platform harnessed a mobile app resembling the seamless swiping mechanism of Tinder, creating an efficient and engaging mode for candidates to explore potential opportunities.
 
-# Challenges
+Companies had the option to either post jobs through their dedicated app or utilize the web application. This innovative endeavor presented various challenges and valuable insights that have shaped my trajectory since.
 
-The biggest challenge, by far, was developing the matching algorithm, which took into consideration candidates and jobs' locations, salary ranges, requirements, and other variables. This algorithm was constantly improved upon as more users joined, in order to keep up with the new data set.
+## Overcoming Hurdles
 
-It wasn't a simple matter of filtering them based on values, we developed a machine learning model that would rank all candidates possible matches based on those features.
+The centerpiece challenge was the development of a robust matching algorithm, an endeavor that involved meticulous consideration of candidates' and jobs' geographical locations, salary ranges, requisites, and a gamut of variables. The algorithm's sophistication evolved in tandem with user growth, adapting to the influx of new data for optimal performance.
 
-Another big challenge was coordinating real time communication between the 3 different apps, specially after the match occurred when a chat would open up.
+The intricacy extended beyond mere filtering, prompting the creation of a machine learning model. This model dynamically ranked potential matches based on an array of features, laying the foundation for precise job-candidate pairings.
 
-The chat was very feature rich, employers could employ automated interviews, with a pre set of questions that took many forms, including: questions where you answer by recording a voice clip or video, multiple choice questions that the candidate could answer from within the chat interface, free text questions, and more. However, the chat was also a regular real-time chat, in case employers found that to be more useful depending on the candidate.
+Additionally, orchestrating real-time communication across three distinct apps posed another major hurdle. Notably, after successful matches, a dynamic chat interface was activated, with an array of features that ranged from automated interviews with voice and video responses to real-time text chats, adapting to the varied needs of employers and candidates.
 
-# Learnings
+## Illuminating Insights
 
-This project was my first contact with many of the technologies I still work with today, including: React, Python, Django, Material Design, and Firebase.
+This project marked my inaugural encounter with several technologies that continue to underpin my work today: React, Python, Django, Material Design, and Firebase. Beyond technical proficiency, it served as an arena for delving into the realms of business operations. As the sole developer, I collaborated closely with the CEO and CTO, fostering an intricate understanding of aligning tech solutions with overarching business goals.
 
-Aside from learning and getting proficient in all of that, I also learned a lot about the business side of things, as I was the only developer in the company for a long time, and had to work closely with the CEO and CTO to make sure we were on the right track.
+The project also etched my introduction to machine learning models, unraveling the intricacies of training and continual enhancement. Equally, the journey encompassed a deep dive into continuous integration and deployment, with a robust pipeline delivering frequent production updates.
 
-This was also the first time I worked with a machine learning model, and I learned a lot about how to train and improve it over time. I also learned a lot about continuous integration and deployment, as we had a very robust CI/CD pipeline that would deploy to production multiple times a day.
+Yet, the venture also illuminated the poignant reality that even with a stellar product, an exceptional team, and an altruistic mission, challenges can arise. Empreguei.com.br ultimately succumbed after a commendable operational span, instilling a humbling reminder of the unpredictable nature of business ventures.
 
-Sadly, the biggest teaching of all was that sometimes, even if you have a great product, a great team, and a great idea, and the best of intentions (finding jobs for people who need it) things don't work out. The company was shut down after a few years of operation.
+## Reflections
 
-# Final Thoughts
+Undoubtedly, this endeavor remains a source of immense pride. It marked an arena of learning, transformation, and personal growth. The experience stands as a testament to the amalgamation of technology, business acumen, and unwavering dedication. As Empreguei.com.br takes its place in history, I extend my best wishes to former colleagues, with hope for future collaborations.
 
-This was a great project to work on, and I am very proud of what we accomplished. I learned a lot and I am very grateful for the opportunity.
-
-I wish the best of luck to my former colleagues and I hope we can work together again in the future!
+The journey was nothing short of profound, shaping not just my skills, but my outlook on the intricate dance of technology, entrepreneurship, and human dynamics. I remain deeply grateful for the privilege of having played a pivotal role in this remarkable journey.
