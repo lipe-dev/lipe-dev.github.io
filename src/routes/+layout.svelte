@@ -197,7 +197,8 @@
 	}
 
 	.menu {
-		li {
+		li a {
+			display: block;
 			transition: all 0.2s ease-in-out;
 			order: 3;
 			position: relative;
