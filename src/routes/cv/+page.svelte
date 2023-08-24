@@ -39,9 +39,9 @@
 
 		<h1>Profile</h1>
 		<p>
-			I am Felipe, a Computer Science graduate (UNIFEI + UMD). I'm Involved in all things UI/UX,
-			striving for a better world through beautiful, accessible, performant and reliable user
-			interfaces.
+			I am Felipe, a passionate Computer Science graduate from UNIFEI and UMD. With a keen focus on
+			UI/UX, I am dedicated to crafting impactful user experiences that seamlessly blend aesthetics,
+			accessibility, performance, and reliability, all with the goal of shaping a better world.
 		</p>
 
 		<hr />
@@ -196,9 +196,12 @@
 		<p class="m-0">Bachelor's Degree</p>
 
 		<ul>
-			<li class="m-0">1st Place in the Admission Process</li>
-			<li class="m-0">Graduated with a GPA in the top 2%</li>
-			<li class="m-0">Scientific Initiation Student Researching Data Mining</li>
+			<li class="m-0"><b>1st Place in the Admission Process</b></li>
+			<li class="m-0">Graduated with a <b>GPA in the top 2%</b></li>
+			<li class="m-0">
+				Engaged as a <b>Scientific Initiation Student</b>, researching Data Mining during the
+				academic journey.
+			</li>
 		</ul>
 
 		<h2><b>Computer Science</b> - University of Maryland - USA</h2>
@@ -206,9 +209,14 @@
 		<p class="m-0">Scientific Expansion Program, Full Scholarship</p>
 
 		<ul>
-			<li class="m-0">Receiver of a full scholarship by the Brazilian Government</li>
-			<li class="m-0">Completed part of my degree during this program</li>
-			<li class="m-0">Participated in scientific research on UI/UX</li>
+			<li class="m-0">
+				Scientific Expansion Program, Full Scholarship recipient by the Brazilian Government
+			</li>
+			<li class="m-0">Successfully completed a portion of the degree during the program</li>
+			<li class="m-0">
+				Actively participated in scientific research focused on UI/UX, enriching expertise in the
+				field.
+			</li>
 		</ul>
 
 		<hr />

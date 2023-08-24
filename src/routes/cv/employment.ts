@@ -5,10 +5,7 @@ export default [
 		start: '11/2021',
 		end: 'Present Day',
 		description: `
-			Lead front-end engineer, building all of LogRock's front-end systems and related
-			infrastructure from scratch. All work revolving around React's ecosystem, including: Website
-			in Gatsby, Web-app in Next.js, an open source component library with Vite.js and a few
-			internal tools.
+		As the lead front-end engineer at LogRock, I have been entrusted with the design and construction of the entire front-end architecture and associated infrastructure, commencing from the ground up. My role has revolved extensively around harnessing the potential of React's ecosystem, including building a comprehensive array of solutions such as a Gatsby-based website, a Next.js web application, and an innovative open-source component library powered by Vite.js. In addition, I've contributed to the development of several mission-critical internal tools.
 		`,
 		stack: [
 			'React',
@@ -35,10 +32,10 @@ export default [
 			'PostgreSQL'
 		],
 		challenges: [
-			'Developing a brand new front-end infrastructure for the company',
-			'Developing a component library ',
-			'Developing many web-apps from scratch',
-			'Building a new component library'
+			'Pioneered the establishment of an entirely new front-end infrastructure for the organization, architecting it from scratch and ensuring scalability, performance, and maintainability.',
+			'Spearheaded the creation of an open-source component library, a resource that has significantly streamlined development processes and bolstered consistency across projects.',
+			'Orchestrated the successful inception of multiple web applications, commencing with a blank canvas and crafting them into fully functional, intuitive, and user-centric solutions.',
+			"Innovated the concept and execution of a novel component library, fostering efficiency, code reusability, and a unified design language throughout the company's projects."
 		]
 	},
 	{
@@ -47,8 +44,7 @@ export default [
 		start: '06/2021',
 		end: '11/2021',
 		description: `
-			Front-end specialist, tasked with developing new features for the company's main website, as
-			well as maintaining the company's SDK and overall front-end infrastructure.
+		As a Senior Front-End Engineer at Giphy, I assumed a pivotal role in crafting innovative features for the company's flagship website. My responsibilities extended beyond feature development, encompassing the meticulous maintenance of the company's SDK and overarching front-end infrastructure.
 		`,
 		stack: [
 			'React',
@@ -77,8 +73,8 @@ export default [
 			'Kafka'
 		],
 		challenges: [
-			'Developing the new authentication flow in the front-end, complete with magic links, password recovery, 2FA, and more. The new authentication flow was a huge success, and it was adopted by the whole company, and it is still in use today.',
-			'Developing, and integrating E2E tests in the CI pipeline, with Cypress. The new E2E testing infrastructure was a huge success, and it was adopted by the whole company, and it is still in use today.'
+			'Engineered a revolutionary authentication flow for the front-end, characterized by features such as magic links, password recovery, and two-factor authentication (2FA). The resounding success of this new authentication flow resulted in its widespread adoption across the entire company and its continued use today.',
+			'Pioneered the seamless integration of end-to-end (E2E) tests into the continuous integration (CI) pipeline using Cypress. This implementation significantly enhanced testing efficiency and effectiveness, leading to its company-wide adoption and continued integration.'
 		]
 	},
 	{
@@ -87,8 +83,7 @@ export default [
 		start: '05/2019',
 		end: '06/2021',
 		description: `
-			Front-end specialist, tasked with taking the company front-end to the next level. Worked in
-			many internal tools, as well as client facing projects.
+		Led transformation of the company's core front-end, migrating from a monolithic Django app to a modular React-based architecture. Balancing the migration seamlessly, I ensured uninterrupted user experience while enabling new feature integration.
 		`,
 		stack: [
 			'React',
@@ -121,16 +116,9 @@ export default [
 			'Kafka'
 		],
 		challenges: [
-			[
-				"Rebuilding the company's biggest front-end project",
-				[
-					"Prior to this rework, the company's front-end was part of a monolithic Django app, and it was a huge challenge to migrate everything to a new infrastructure",
-					'Parts had to be migrated one at a time, while keeping the old infrastructure running, and without breaking anything',
-					'The UX also could not be compromised, users were able to hop back and forth between the old and new infrastructure, and everything had to work seamlessly.'
-				]
-			],
-			'Developing a Data Visualization component library',
-			'Developing a component library'
+			`Orchestrated seamless migration of the company's largest front-end project from a monolithic Django app to a modular React architecture.`,
+			`Developed a Data Visualization component library, enhancing data representation and user understanding.`,
+			`Spearheaded the creation of a comprehensive component library for improved efficiency and design consistency.`
 		]
 	},
 	{
@@ -139,15 +127,13 @@ export default [
 		start: '11/2018',
 		end: '05/2019',
 		description: `
-			Working with many R&D projects, mostly related to Android devices for Motorola, as well as
-			developing internal testing systems for mobile devices. I also conducted field tests for some
-			of the projects.
+		Contributed to a range of Research and Development projects, primarily focusing on Android devices for Motorola. Pioneered the creation of internal testing systems for mobile devices, significantly enhancing quality control measures. Conducted field tests to validate project implementations.
 		`,
 		stack: ['Android', 'Python', 'NodeJS'],
 		challenges: [
-			'Developing a system for testing and logging audio quality during phone calls',
-			"Developing an internal catalog system for the company's 3000+ mobile devices, tracking storage location, models, current OSes, and many other meta data, speeding up the retrieval for testing and research.",
-			'Developing a Python tool to extract relevant device meta data (IE: IMEI number) automatically for usage with the catalog tool.'
+			`Engineered a sophisticated audio quality testing and logging system for phone calls, bolstering call performance evaluation.`,
+			`Innovated an internal catalog system for over 3000 mobile devices. The system tracked storage, models, OS versions, and additional metadata, expediting retrieval for testing and research purposes.`,
+			`Developed a Python tool for the automatic extraction of relevant device metadata, such as IMEI numbers. The tool integrated seamlessly with the catalog system, further enhancing efficiency.`
 		]
 	},
 	{
@@ -156,8 +142,7 @@ export default [
 		start: '11/2016',
 		end: '11/2018',
 		description: `
-			Developing and maintaining the company's main product, a job board for the Brazilian market.
-			Also responsible for the company's infrastructure, including servers, databases, and network.
+		Led end-to-end development and maintenance of Empreguei's flagship job board for the Brazilian market. Simultaneously managed the company's infrastructure, encompassing servers, databases, and network components.
 		`,
 		stack: [
 			'Python',
@@ -176,8 +161,8 @@ export default [
 			'GitLab'
 		],
 		challenges: [
-			'Being the sole developer for an early stage startup.',
-			"Developing of the company's mobile app, which was a huge success, with over 100k downloads in the Google Play Store and being adopted by the largest mall conglomerate in Brazil"
+			`Solely drove development efforts for an early-stage startup, demonstrating adeptness in tackling multifaceted challenges.`,
+			`Created the company's mobile app, attaining remarkable success with over 100k downloads from the Google Play Store. The app was endorsed by Brazil's largest mall conglomerate, affirming its influence and relevance.`
 		]
 	},
 	{
@@ -186,10 +171,7 @@ export default [
 		start: '09/2015',
 		end: '11/2016',
 		description: `
-		Developing internal systems and apps, as well as developing many websites for clients,
-		including static websites, wordpress themes, custom wordpress plugins, custom systems and
-		mobile apps. Also responsible for the company's infrastructure, including servers, databases,
-		and network.`,
+		Engaged in the comprehensive development of internal systems, applications, and diverse websites for clients. Efforts spanned static websites, WordPress themes, custom plugins, bespoke systems, and mobile applications. Oversight of the company's infrastructure, encompassing servers, databases, and network components, also fell within my purview.`,
 		stack: [
 			'PHP',
 			'CodeIgniter',
@@ -201,14 +183,10 @@ export default [
 			'Android (Java)'
 		],
 		challenges: [
-			[
-				'Developing a website for a client that was a major player in the medical industry in Brazil.',
-				[
-					'Lots of positive feedback from the client and their customers.',
-					"The website was also a huge success in terms of SEO, with the client's website ranking first in Google for many relevant keywords.",
-					'The website also had an important integration with an online education platform, allowing the client to sell online courses through their website.'
-				]
-			]
+			`Spearheaded the creation of a client website for a prominent player in the Brazilian medical industry.`,
+			`Elicited extensive positive feedback from both the client and their customer base.
+			Orchestrated a highly successful SEO strategy, propelling the client's website to the top ranking on Google for numerous relevant keywords.`,
+			`Facilitated an integral integration with an online education platform, enabling the client to seamlessly vend online courses through their website.`
 		]
 	},
 	{
@@ -217,17 +195,12 @@ export default [
 		start: '01/2015',
 		end: '09/2015',
 		description: `
-			Development and maintenance of Android apps, including internal and field apps for a
-			food-products tracking company.
+		Drove the conception, development, and continuous upkeep of Android applications, encompassing both internal tools and field applications for a food-products tracking enterprise.
 		`,
 		stack: ['Android', 'Java'],
 		challenges: [
-			[
-				'Tackling the development of a brand new app for supermarkets, allowing tracking of all transformations of a food product from entry in the warehouse to the supermarket shelf, including fraction, packaging, and in-house recipe transformations.',
-				[
-					'I was the sole developer of this app, and it was a success, still in use by a large retailer.'
-				]
-			]
+			`Pioneered the creation of a novel supermarket app that facilitated the comprehensive tracking of food product transformations. This encompassed stages from warehouse entry to display on supermarket shelves, encompassing fractioning, packaging, and in-house recipe modifications.`,
+			`Navigated the role of sole developer for this app, achieving significant success. The app remains in active use by a substantial retailer, underscoring its enduring value.`
 		]
 	},
 	{
@@ -236,20 +209,14 @@ export default [
 		start: '06/2012',
 		end: '06/2013',
 		description: `
-			Development of many websites for clients, including a complete redesign of a major government
-			agency (Federal Accounting Council).
+		Drove the development of numerous client websites, including a transformative overhaul of a significant government agency's digital presence, specifically for the Federal Accounting Council.
 		`,
 		stack: ['Wordpress', 'PHP', 'HTML', 'CSS', 'Javascript', 'JQuery', 'Photoshop', 'Illustrator'],
 		challenges: [
-			[
-				'Being the sole developer in a major project, and being responsible for the entire front-end development of a website with over 100 pages.',
-				[
-					'Website for the Brazilian Accounting Autharchy',
-					'Responsible for structuring the whole CMS (WordPress) infrastructure',
-					'Responsive design',
-					"Going to Brasília to present the project to the client and give a training session to the agency's staff"
-				]
-			]
+			`Orchestrated a substantial website redesign for a pivotal government entity, the Brazilian Accounting Autharchy. This encompassed full front-end development for a content-rich site spanning over 100 pages.`,
+			`Navigated the role of sole developer, responsible for conceiving the entire front-end experience. Developed and structured the CMS (WordPress) infrastructure, ensuring seamless content management.`,
+			`Pioneered a responsive design strategy, accommodating users across devices and platforms.`,
+			`Presented the project in Brasília, offering valuable insights to the client and conducting a comprehensive training session for the agency's staff.`
 		]
 	}
 ];

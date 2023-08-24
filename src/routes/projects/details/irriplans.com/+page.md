@@ -11,36 +11,34 @@ techSlugs: [
 images: ['/images/projects/legacy_irriplans.com/1.png']
 ---
 
-# About the project
+# Navigating Waters with Irriplans: Mapping Success, One Drop at a Time
 
-Irriplans.com is a mapping software destined to irrigation companies and contractors. It comes with a map drawing feature, which is at the core of the application.
+## Table of Contents
 
-Clients can navigate a map, which is based on MapLibreGL JS, and add map irrigation features and components.
+## Introduction
 
-Users can also print the maps straight from the browser and obtain shareable links, that they can send to their clients.
+Welcome to the tale of **Irriplans.com**, where we irrigate your mapping needs with a splash of innovation! This mapping software, tailor-made for irrigation champs and contractors, dives deep into simplifying the complex choreography of irrigation planning. The pièce de résistance? A map-drawing feature that's the heartbeat of this aqua-inspired application.
 
-# Challenges
+Imagine this: clients surfing a dynamic map, powered by the swanky MapLibreGL JS (let's not mention Mapbox's closed-source shindig), embellishing it with irrigation gems. And wait, there's more! These water wizards can summon prints straight from their browser and even whip up shareable links for their clients. Talk about making a splash!
 
-The biggest challenge in this project was integrating a real time database (firestore) with MapLibre. This would be easy if we could just store a GeoJSON in firestore, but we can't because of firestore limitations around arrays.
+## Conquering Challenges
 
-The solution was to create custom data models and implement firestores's `withConverter` methods to transform the data accordingly.
+Ahoy, matey! The treacherous challenge that stared us down? Blending a real-time database (Firestore) with the majestic MapLibre. But alas, our sails got caught in a breeze! Storing GeoJSON in Firestore? That's a no-go, thanks to Firestore's array-related quirks.
 
-In the end, we ended up with a great product and users can collaborate on maps drawing in real time, and their clients can also see the changes happening at the same time!
+Our workaround? Crafting bespoke data models and whipping up Firestore's `withConverter` spells to shape the data just right. It was like wielding a magic wand, only digital!
 
-# Learnings
+The outcome? Victory! Collaborative real-time map drawing, where users dance in harmony with the changing landscape, as their clients watch the magic unfold.
 
-My biggest takeaway from this project was learning how to develop advanced features on MapLibre. There are many custom events, a lot of custom layer styling to deal with the GeoJSON source data that we generate, plenty custom map controls which I managed to integrate seamlesly into Svelte components, thanks to its direct DOM manipulation.
+## Unveiling Wisdom
 
-Oh, also, this is my first full production software made with Svelte and SvelteKit shipped! I am pretty stoked about that.
+The treasure chest of wisdom I unearthed from this venture was mastering the art of advanced MapLibre maneuvers. Custom events, layer styling galore to tame the wild GeoJSON data we conjured – it was a cartographer's dream. And here's the twist: I seamlessly wove custom map controls into Svelte components. The secret sauce? Svelte's knack for direct DOM enchantment.
 
-# Final Thoughts
+Oh, did I mention? This voyage marked my Svelte debut, with SvelteKit cruising at the helm! A full-blown production software set sail, and I'm riding the waves of excitement.
 
-This project in particular was a port of the previous version, that I also built, made with Next.js.
+## Grand Finale
 
-Overall, redoing it in Svelte was a much better experience. Being able to directly manipulate the DOM was a huge plus (not that you are not able with React, but in Svelte is just how things go!). 
+Ladies and gentlemen, presenting a rebirth story! The phoenix of projects, rising anew as **Irriplans**, shed its Next.js cocoon for a dazzling Svelte metamorphosis. Svelte's DOM dexterity added a delightful twist, making DOM manipulation a breeze – not to diss React, but Svelte had me at 'Hello.'
 
-Not relying on MapLibre wrappers for the library was another huge win. In the Next.js project I used React-Mapbox-GL, which is wonky when used with Maplibre and things did not go as smoothly.
+No more Mapbox wrappers! The sea of MapLibre rocked smoother without the Mapbox tantrums. Smooth sailing, indeed!
 
-All in all, I consider this project a huge success.
-
-Best of luck to my client turned friend John in his endeavors with Irriplans and I hope we can work together again in the future!
+In the grand symphony of software, **Irriplans** hits the high notes. Wishing my client-turned-comrade, John, bon voyage in his watery exploits with **Irriplans**. Here's to more collaborations and mapping marvels on the horizon!

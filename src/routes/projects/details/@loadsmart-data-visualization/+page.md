@@ -1,5 +1,5 @@
 ---
-slug: 'loadsmart-data-visualization'
+slug: '@loadsmart-data-visualization'
 name: '@loadsmart/data-visualization'
 order: 1
 description: 'A library of React components for data visualization.'
@@ -15,34 +15,31 @@ techSlugs: [
 images: ['/images/projects/@loadsmart-data-visualization/img2.png', '/images/projects/@loadsmart-data-visualization/img1.png', /images/projects/@loadsmart-data-visualization/img3.png]
 ---
 
-# About the project
+# Crafting a Component Library for Data Visualization
 
-During my time at [LoadSmart](https://loadsmart.com) I was tasked with creating a library of React components for data visualization, that would be used across the company's products, specially in the new solution for small enterprises.
+## Table of Contents
 
-The life of this library was short lived, as the company decided to pivot and focus on other things, but it was a great experience nonetheless.
+## Introduction
 
-The library was built with React, Storybook, and Recharts, and it was published to a public NPM registry at [https://www.npmjs.com/package/@loadsmart/data-visualization](https://www.npmjs.com/package/@loadsmart/data-visualization). It still has a few downloads to this day!
+In my tenure at LoadSmart, a unique project emerged - a React component library tailored for data visualization. This initiative aimed to empower the company's products, especially in the realm of small enterprises. Although the library's lifecycle was brief due to a pivot in the company's focus, the experience proved invaluable.
+The Architecture
 
-# Challenges
+The foundation of this library rested on the trifecta of React, Storybook, and Recharts. Published on the public NPM registry, its downloads still accumulate today.
 
-The library needed to follow a design specification that was provided by the design team, and it needed to be flexible enough to be used in multiple products, with different color schemes and data structures.
+## Navigating Challenges
 
-With that in mind, I decided to use Recharts as the base for the library, as it is a very flexible library that allows for a lot of customization.
+The pivotal challenge lay in aligning the library with the design specifications provided by the design team. This necessitated flexibility for integration across multiple products with distinct color schemes and data structures. In response, I leveraged Recharts as the cornerstone due to its versatility and customization potential.
 
-In the end, we got a cool wrapper around Recharts that allowed us to create charts with a single line of code, and that could be easily customized with a theme object, and also allowed for custom components to be passed in, so we could add custom tooltips and other things.
+Ultimately, the library provided a refined Recharts wrapper. This streamlined chart creation, often requiring a mere single line of code. Its adaptability shone through a theme object for customization, while embracing extensibility via the integration of custom components like tooltips.
 
-# Learnings
+## Gaining Insights
 
-This was a great opportunity to get more familiar with Recharts, and also to learn how to create a library of React components that can be easily consumed by other developers.
+This undertaking served as a remarkable learning opportunity. It fortified my grasp on Recharts, enriching my skill set with the creation of a developer-consumable React component library. The foremost lesson was in crafting components that effortlessly balanced high customizability with foundational styling.
 
-The biggest takeaway for me was learning how to create a library of React components that can be highly customizable, while offering a decent base styling.
+Employing Storybook alongside Typescript was another first, which proved to be an enlightening journey. Moreover, I engineered the entire CI/CD pipeline, enabling seamless automatic publishing to NPM.
 
-This was also the first time I made heavy use of Storybook with Typescript, and it was a great experience.
+## Reflections
 
-Finally, I also coded the entire CI/CD pipeline for the library, which published it automatically to NPM.
+While the library's trajectory remains uncertain, its impact was substantial within its fleeting existence. I take immense pride in our achievements within a constrained timeline.
 
-# Final Thoughts
-
-I am not sure what the future holds for this library, but I am very proud of what we accomplished in such a short time.
-
-It is still open source, but it is not maintained anymore. You can check it out at [https://github.com/loadsmart/data-visualization-components](github.com/loadsmart/data-visualization-components). The storybook is also available at [https://loadsmart-data-insights-ui.netlify.app/] for now.
+While the library is now open source and unmaintained, you can explore its source code on GitHub. The Storybook preview is accessible at https://loadsmart-data-insights-ui.netlify.app/ for the time being.

@@ -1,79 +1,48 @@
 ---
 slug: how-one-punch-man-can-help-you-classify-bugs
-title: How One Punch Man can help you classify bugs and fires!
+title: "Bug Smashing Strategies: Using One Punch Man's Threat Levels for Effective Prioritization"
 techSlugs: []
 date: "2022-11-03 14:14:14 -0300"
 image: /images/posts/threat-levels.png
 ---
 
+# Bug Smashing Strategies: Using One Punch Man's Threat Levels for Effective Prioritization
 ## Table of Contents
 
-## Intro
+## Punching Through Bug Prioritization
 
-The hit webcomic-turned-manga-turned-anime series One Punch Man, home of the titular One Punch Man, AKA Saitama, AKA Caped Baldy is parody of many traditional shonen manga series. Instead of the traditional hero training hard to overcome each new and increased challenge, one step at a time, we have a hero who instead has already undergone all that training to a point of attaining god-like powers, thus being able to defeat each and any opponent in a single punch.
+Enter the world of One Punch Man, where Saitama's legendary one-punch victories have turned the hero trope on its head. But today, we're not here to discuss manga antics or kaiju-sized battles. We're diving into the realm of software bugs and how the threat levels from this anime can guide us in classifying and tackling those pesky coding conundrums.
 
-While that sounds like a boring premise, the focus of the show is not on whether or not Saitama will be able to overcome each opponent. It is about the struggles he faces with his inner self, facing depression and extreme isolation from everything and everyone. It is a great show, truly.
+## Defining Threat Levels: Unleashing Heroic Bug Management
 
-If you are interested in the show, give it a go, you won't regret. However, we are not here to talk about manga. At least, not any further.
+Much like Saitama's hero association, our software projects need organization and strategy to save the day. Let's break down how their approach aligns with our coding conundrums:
 
-We are here to talk about bugs, not the fly with which Saitama has an epic battle, but bugs in our code.
+### Step 1: Identify the Threat
 
-## Defining threat levels
+Whether it's a user report or an automated system's alarm, recognizing bugs is the first step in the battle against faulty code.
 
-In One Punch Man, the world of super heroes is organized by a national hero organization. While heroes can be great on their own, under the organization they can be much more effective.
+### Step 2: Identify the Threat Level
 
-The main way this organization helps them save the world more effectively is one we can all take lessons from:
+Drawing inspiration from One Punch Man's intuitive threat classification, we can adapt it for our purposes:
 
-Step 1: Identify the threat
-Step 2: Identify the threat level
-Step 3: Dispatch the appropriate hero/heroes for the job
+- BABY: An annoyance, not a true threat.
+- WOLF: A bug that nips at a lone user.
+- TIGER: A bug that prowls among many users.
+- ONI: A bug that menaces a whole user group.
+- DRAGON: A bug that threatens multiple user groups.
+- GOD: The ultimate bug, capable of bringing down the entire user base.
 
-The first step is usually done by a user reporting a bug or an automated system detecting one. Pretty straightforward.
+### Step 3: Dispatch the Appropriate Heroes (Developers)
 
-I would like to focus this write-up on the second step.
+Now comes the fun part - deciding who fights these virtual bugs:
 
-In OPM they have this very interesting and intuitive way to classify threats, by assigning them codenames that are very intuitive. Which are:
+- BABY: Handle it whenever you can, without breaking a sweat.
+- WOLF & TIGER: Prioritize them as high-priority issues, suitable for all team members.
+- ONI & DRAGON: Send in the S-class developers for these major bugs.
+- GOD: Pray you never face one. Assemble a task force for this monumental challenge.
 
-- **WOLF**: Puts in danger the life of an individual
-- **TIGER**: Puts in danger the life of many individuals
-- **ONI**: Puts in danger the life of a large group of individuals (like a whole city)
-- **DRAGON**: Puts in danger the life of many cities (or a whole country)
-- **GOD**: Puts all of humanity in check. Can wipe out the planet.
+### Conclusion: Punching Up Bug Prioritization
 
-## Converting these to something within our reality
+Sure, this approach might seem more playful than a sparring match, but beneath the anime-inspired fun lies a serious strategy. We can glean valuable insights from One Punch Man's threat levels to better allocate our limited time and resources.
 
-While we are not likely to face giant monsters called "Vaccine Man" trying to wipe out the virus that is humanity from the planet, as engineers we are very likely to face bugs that threaten to make us lose a user. Or many. Or all.
-
-So let's convert those meanings to something we can use. And also add a lower level one.
-
-- **BABY**: Not a threat. Just an inconvenience.
-- **WOLF**: A bug that affects a single user. Has unknown potential to make us lose more users.
-- **TIGER**: A bug that affects many users. Example: a bug that affects accounts created on February 29.
-- **ONI**: A bug that affects a whole user group. Example: a bug that affects accounts with the "accounting" role.
-- **DRAGON**: A bug that affects many user groups. Example: a bug that affects all users in a determined timezone.
-- **GOD**: A bug that affects everyone. It can potentially make us lose all our users. Example: you broke the login page.
-
-## Prioritizing and dispatching personnel
-
-Once the threat level has been identified, all that's left to do is prioritize what to tackle first.
-
-Obviously, Oni and above must be tackled ASAP! All hands on deck. Stop whatever you are doing and fix it!
-
-Wolf and Tigers can be dealt with in a high priority ticket. Whenever a dev is available they can tackle it.
-
-Baby tickets can obviously be solved with a low priority ticket, or, if available, with some workaround.
-
-When it comes to dispatching the appropriate people to deal with the issue, I would probably do the following:
-
-- Baby: whoever gets to it when tackling issues following their priority value.
-- Wolf & Tiger: Can also be solved by anyone. Wolves are also probably great initial issues for people new in the team.
-- Oni & Dragon: Dispatch your S class heroes. Probably a good idea to dispatch the most experienced developers for this one.
-- God: Hopefully we will never have to face one of these. But if we do, it's probably a team effort issue. Get a task-force together and figure out the best solution. May god have mercy on your soul.
-
-## Conclusion
-
-This is obviously not a very serious ~~punch~~ post. You don't have to prioritize your issues with goofy anime based names (even though this list of threat levels rule IMO). The main takeaway here is the following:
-
-Identifying how many users can we potentially lose (or at the very least annoy) if we leave this bug in is an extremely valuable metric, that is fairly easy to assess, when defining issue prioritization.
-
-At the end of the day, our time and numbers are limited, and we gotta make the best use out of them.
+While Saitama might be an unbeatable force in his universe, developers can't afford to let their guard down in ours. Just like heroes in One Punch Man who must always be ready to protect, we too must be vigilant against the bugs that threaten our digital realm. So take a cue from Saitama's unwavering dedication, prioritize those bugs with the precision of a martial artist, and remember, a punchy codebase is a resilient one. Keep punching those bugs, and your software will be the hero your users deserve!
