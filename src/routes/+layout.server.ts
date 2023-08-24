@@ -21,6 +21,9 @@ export const load: LayoutServerLoad = async () => {
 
 	for (const modulePath in projectModules) {
 		const project = { ...((await projectModules[modulePath]()) as ProjectMDType) };
+
+		console.log(project);
+
 		project.metadata.tech = project.metadata.techSlugs.map((t) => tech[t as unknown as Techs]);
 		projects.push(project.metadata);
 	}
