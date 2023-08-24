@@ -89,14 +89,6 @@ const tech: Record<Techs, Tech> = {
 		summary:
 			"TypeScript, my dependable partner-in-code since 2018. It's like coding with training wheels, making sure I don't fall into runtime potholes. It's my go-to language - the cape to my coding superhero outfit!"
 	},
-	javascript: {
-		name: 'JavaScript',
-		icon: javascript,
-		slug: 'javascript',
-		star: false,
-		summary:
-			"JavaScript, the wild and free spirit I met back in 2012. It's been a roller coaster ride from basic scripts to React extravaganzas. It's like a lifelong friendship with a coding rebel."
-	},
 	css: {
 		name: 'CSS',
 		icon: cssIcon,
@@ -104,6 +96,14 @@ const tech: Record<Techs, Tech> = {
 		star: true,
 		summary:
 			"CSS, my artistic touch to the web since the early days. It's the palette with which I paint delightful visual experiences. From simple styling to complex animations, CSS is my creative outlet - the magician behind the curtain of web design!"
+	},
+	javascript: {
+		name: 'JavaScript',
+		icon: javascript,
+		slug: 'javascript',
+		star: false,
+		summary:
+			"JavaScript, the wild and free spirit I met back in 2012. It's been a roller coaster ride from basic scripts to React extravaganzas. It's like a lifelong friendship with a coding rebel."
 	},
 	'styled-components': {
 		name: 'Styled',
