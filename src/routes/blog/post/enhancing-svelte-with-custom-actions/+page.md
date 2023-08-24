@@ -22,29 +22,59 @@ CSS provides a wide array of selectors to target elements based on their relatio
 
 Here's where Svelte comes to the rescue. Svelte, a revolutionary frontend framework, offers a concept called custom actions that empowers developers to create reusable and encapsulated interactions that go beyond what traditional CSS can achieve. The use: directive allows us to apply these custom actions to DOM elements, enriching their behavior with minimal effort.
 
+Svelte actions are functions that are called when an element is created and destroyed. They can be used to add event listeners, manipulate the DOM, or perform any other imperative tasks. The function will receive the element as an argument, allowing us to access and manipulate it as needed. The use: directive is used to invoke the action, passing in any additional arguments as needed. Like so:
+
+```html
+<script>
+    import { antiHoverSiblings } from './myAction.js';
+</script>
+
+<ul>
+    <li use:antiHoverSiblings><a href="/cv">Resume</a></li>
+    <li use:antiHoverSiblings><a href="/tech">Tech</a></li>
+    <li use:antiHoverSiblings><a href="/projects">Projects</a></li>
+    <li use:antiHoverSiblings><a href="/blog">Posts</a></li>
+</ul>
+```
+
 Consider the custom Svelte action I've developed called antiHoverSiblings. This action elegantly solves the problem of styling preceding siblings when an element is hovered over. Let's take a closer look at how it works:
 
-```javascript
+```ts
 export default function antiHoverSiblings(node: HTMLElement) {
-    const parent = node.parentElement;
-    if (!parent) return;
+	// This action is called when the node is mounted.
 
-    node.onmouseenter = (e: MouseEvent) => {
-        const children = Array.from(parent.children);
-        children.forEach((child) => {
-            if (child !== node) {
-                child.classList.add('anti-hover');
-            }
-        });
-    };
-    node.onmouseleave = () => {
-        const children = Array.from(parent.children);
-        children.forEach((child) => {
-            if (child !== node) {
-                child.classList.remove('anti-hover');
-            }
-        });
-    };
+	const parent = node.parentElement;
+	if (!parent) return;
+
+	const applyAntiHoverToSiblings = () => {
+		const children = Array.from(parent.children);
+		children.forEach((child) => {
+			if (child !== node) {
+				child.classList.add('anti-hover');
+			}
+		});
+	};
+
+	const removeAntiHoverFromSiblings = () => {
+		const children = Array.from(parent.children);
+		children.forEach((child) => {
+			if (child !== node) {
+				child.classList.remove('anti-hover');
+			}
+		});
+	};
+
+	node.addEventListener('mouseenter', applyAntiHoverToSiblings);
+	node.addEventListener('mouseleave', removeAntiHoverFromSiblings);
+
+	return {
+		// This action is called when the node is unmounted.
+		// Here we can remove our listeners, stop timers, etc.
+		destroy() {
+			node.removeEventListener('mouseenter', applyAntiHoverToSiblings);
+			node.removeEventListener('mouseleave', removeAntiHoverFromSiblings);
+		}
+	};
 }
 ```
 

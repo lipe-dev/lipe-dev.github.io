@@ -2,8 +2,9 @@
 	import CoolBox from '$lib/components/CoolBox.svelte';
 	import { format } from 'date-fns';
 	import type { LayoutData } from './$types';
-	import { Breadcrumb, BreadcrumbItem, GradientButton } from 'flowbite-svelte';
+	import { Breadcrumb, BreadcrumbItem } from 'flowbite-svelte';
 	import Button from '$lib/components/Button.svelte';
+	import '$lib/styles/prism-synthwave84.css';
 
 	export let data: LayoutData;
 </script>
