@@ -1,5 +1,7 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import remarkToc from 'remark-toc';
+import slug from 'remark-slug';
+import headings from 'remark-autolink-headings';
 
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
@@ -8,7 +10,7 @@ const config = defineConfig({
 		dashes: 'oldschool'
 	},
 
-	remarkPlugins: [remarkToc],
+	remarkPlugins: [slug, headings, remarkToc],
 	rehypePlugins: []
 });
 
