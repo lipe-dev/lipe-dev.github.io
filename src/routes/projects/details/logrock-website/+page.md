@@ -8,6 +8,10 @@ techSlugs: [
     "styled-components",
     "css",
     "github-actions",
+    "gatsby",
+    "html",
+    "i18n",
+    "p5.js",
 ]
 images: ["/images/projects/logrock-website/1.png", 
 "/images/projects/logrock-website/2.png",
