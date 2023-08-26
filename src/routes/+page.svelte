@@ -19,10 +19,10 @@
 </h1>
 
 <div
-	class="flex relative flex-row flex-wrap mb-4 bg-gray-950 shadow-sm rounded-md p-4 overflow-hidden justify-evenly md:justify-start"
+	class="flex relative flex-row flex-wrap mb-4 bg-gray-950 shadow-sm rounded-md p-4 overflow-hidden justify-evenly md:justify-start items-center"
 	use:bottomShine
 >
-	{#each Object.entries(data.tech) as [name, tech]}
+	{#each data.tech as tech}
 		<CoolBox {tech} />
 	{/each}
 </div>

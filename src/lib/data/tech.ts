@@ -17,6 +17,10 @@ import javascript from '$lib/icons/javascript.svg?raw';
 import typescript from '$lib/icons/typescript.svg?raw';
 import styledComponents from '$lib/icons/styled-components.svg?raw';
 import cssIcon from '$lib/icons/css.svg?raw';
+import gatsbyIcon from '$lib/icons/gatsby.svg?raw';
+import htmlIcon from '$lib/icons/html.svg?raw';
+import i18nIcon from '$lib/icons/i18n.svg?raw';
+import p5jsIcon from '$lib/icons/p5.js.svg?raw';
 
 export type Tech = {
 	name: string;
@@ -46,7 +50,11 @@ export type Techs =
 	| 'javascript'
 	| 'typescript'
 	| 'styled-components'
-	| 'css';
+	| 'css'
+	| 'gatsby'
+	| 'html'
+	| 'i18n'
+	| 'p5.js';
 
 const tech: Record<Techs, Tech> = {
 	svelte: {
@@ -96,6 +104,14 @@ const tech: Record<Techs, Tech> = {
 		star: true,
 		summary:
 			"CSS, my artistic touch to the web since the early days. It's the palette with which I paint delightful visual experiences. From simple styling to complex animations, CSS is my creative outlet - the magician behind the curtain of web design!"
+	},
+	html: {
+		name: 'HTML',
+		icon: htmlIcon,
+		slug: 'html',
+		star: true,
+		summary:
+			"HTML, the building blocks of the web. It's the structure that holds it all together. From headings to hyperlinks, HTML is where it all begins. It's the alphabet of the digital realm."
 	},
 	javascript: {
 		name: 'JavaScript',
@@ -208,6 +224,30 @@ const tech: Record<Techs, Tech> = {
 		star: false,
 		summary:
 			"Recharts, the data visualization partner that turns numbers into chart-topping hits. Since 2018, it's been my go-to chart maestro. With Recharts, my data stories are as captivating as a catchy melody!"
+	},
+	gatsby: {
+		name: 'Gatsby',
+		icon: gatsbyIcon,
+		slug: 'gatsby',
+		star: false,
+		summary:
+			'Gatsby, my static site sorcerer. It takes my React spells and turns them into blazing-fast websites. GraphQL is the magic wand, and plugins are the enchantments. Together, they craft web experiences like no other!'
+	},
+	i18n: {
+		name: 'i18n',
+		icon: i18nIcon,
+		slug: 'i18n',
+		star: false,
+		summary:
+			'i18n, the global communicator of my apps. It speaks the language of users around the world. With internationalization, my projects become multilingual, breaking down barriers and reaching a diverse audience.'
+	},
+	'p5.js': {
+		name: 'p5.js',
+		icon: p5jsIcon,
+		slug: 'p5js',
+		star: false,
+		summary:
+			"p5.js, my canvas for creative coding. It's where algorithms meet artistry. From generative graphics to interactive animations, p5.js turns code into visual poetry. It's a playground for the imagination."
 	}
 };
 

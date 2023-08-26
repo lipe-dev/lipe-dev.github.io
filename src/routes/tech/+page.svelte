@@ -23,7 +23,8 @@
 	All the stuff I have worked with
 </h1>
 <div class="text-lg text-orange-300 mb-8 text-center">
-	Click one to see what I have done with it
+	Click one to see what I have done with it. Ordered by number of posts and projects I have done
+	with it.
 </div>
 
 <div
