@@ -244,7 +244,7 @@ const tech: Record<Techs, Tech> = {
 	'p5.js': {
 		name: 'p5.js',
 		icon: p5jsIcon,
-		slug: 'p5js',
+		slug: 'p5.js',
 		star: false,
 		summary:
 			"p5.js, my canvas for creative coding. It's where algorithms meet artistry. From generative graphics to interactive animations, p5.js turns code into visual poetry. It's a playground for the imagination."
