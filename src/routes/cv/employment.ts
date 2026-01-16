@@ -1,9 +1,40 @@
 export default [
 	{
-		name: 'LogRock',
-		role: 'Senior Front-End Engineer',
-		start: '11/2021',
+		name: 'eBay',
+		role: 'Senior Front-End Engineer (Independent Contractor)',
+		start: '11/2023',
 		end: 'Present Day',
+		description: `
+		Primary front-end developer on Showroom (showroom.ebay.com), the new platform that replaced eBay Motors' old Vehicle Merchandising Platform (VMP) for bulk vehicle listings by dealerships. Built most of the front-end myself (with occasional help from a full-stack engineer), working in a team led by engineering management. Currently supports ~1,000 active dealers, over 50,000 vehicles, and more than 1 million photos. Handled React + TypeScript client work, custom styling on top of eBay's design system, integrations with internal microservices (both existing and Showroom-specific), plus some server-side Node.js using eBay's modified Express fork and custom SSR engine. The app has separate internal views for eBay staff/account managers (user management, permissions, job monitoring) and an external portal for dealers (feed configs, listing creation/editing). Heavily involved in the ongoing migration from VMP, now at Wave 9 of 28.
+		`,
+		stack: [
+			'React',
+			'TypeScript',
+			'Node.js',
+			'Express (eBay fork)',
+			'Custom SSR Engine',
+			'@ebay/skin',
+			'@ebay/ui-core-react',
+			'Testing Library',
+			'Playwright',
+			'Jenkins (eBay-modified)',
+			'Nu Object (document DB)',
+			'HTML',
+			'CSS',
+			'Javascript'
+		],
+		challenges: [
+			'Built the main front-end for Showroom, covering dealer and internal user flows including permissions, bulk feed setup from dealer databases, async job tracking, and direct listing management on eBay.',
+			'Contributed to migrating dealers from the old VMP system—currently Wave 9 of 28—with smooth handoff of core workflows.',
+			'Connected the front-end to multiple eBay microservices for real-time bulk operations at current scale (~1,000 dealers, 50k+ vehicles, 1M+ photos).',
+			'Extended eBay\'s open-source UI components and skin with custom styles; set up unit/component tests (Testing Library) and E2E (Playwright) in modified Jenkins pipelines.'
+		]
+	},
+	{
+		name: 'LogRock',
+		role: 'Senior Front-End Engineer (Independent Contractor)',
+		start: '11/2021',
+		end: '10/2025',
 		description: `
 		As the lead front-end engineer at LogRock, I have been entrusted with the design and construction of the entire front-end architecture and associated infrastructure, commencing from the ground up. My role has revolved extensively around harnessing the potential of React's ecosystem, including building a comprehensive array of solutions such as a Gatsby-based website, a Next.js web application, and an innovative open-source component library powered by Vite.js. In addition, I've contributed to the development of several mission-critical internal tools.
 		`,
