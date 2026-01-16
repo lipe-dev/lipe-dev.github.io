@@ -1,9 +1,40 @@
 export default [
 	{
-		name: 'LogRock',
-		role: 'Senior Front-End Engineer',
-		start: '11/2021',
+		name: 'Enterprise E-Commerce Platform',
+		role: 'Senior Front-End Engineer (Independent Contractor)',
+		start: '11/2023',
 		end: 'Present Day',
+		description: `
+		Primary front-end developer on internal project (internal-platform.example.com), the new platform that replaced the client's automotive division' old Vehicle Merchandising Platform (internal tooling) for bulk vehicle listings by dealerships. Built most of the front-end myself (with occasional help from a full-stack engineer), working in a team led by engineering management. Currently supports ~1,000 active dealers, over 50,000 vehicles, and more than 1 million photos. Handled React + TypeScript client work, custom styling on top of the platform's design system, integrations with internal microservices (both existing and internal project-specific), plus some server-side Node.js using the platform's modified Express fork and custom SSR engine. The app has separate internal views for internal staff/account managers (user management, permissions, job monitoring) and an external portal for dealers (feed configs, listing creation/editing). Heavily involved in the ongoing migration from internal tooling, now at Wave 9 of 28.
+		`,
+		stack: [
+			'React',
+			'TypeScript',
+			'Node.js',
+			'Express (the client fork)',
+			'Custom SSR Engine',
+			'@client-internal/skin',
+			'@client-internal/ui-core-react',
+			'Testing Library',
+			'Playwright',
+			'Jenkins (the client-modified)',
+			'Nu Object (document DB)',
+			'HTML',
+			'CSS',
+			'Javascript'
+		],
+		challenges: [
+			'Built the main front-end for internal project, covering dealer and internal user flows including permissions, bulk feed setup from dealer databases, async job tracking, and direct listing management on the client.',
+			'Contributed to migrating dealers from the old internal tooling system—currently Wave 9 of 28—with smooth handoff of core workflows.',
+			'Connected the front-end to multiple the client microservices for real-time bulk operations at current scale (~1,000 dealers, 50k+ vehicles, 1M+ photos).',
+			'Extended the client\'s open-source UI components and skin with custom styles; set up unit/component tests (Testing Library) and E2E (Playwright) in modified Jenkins pipelines.'
+		]
+	},
+	{
+		name: 'LogRock',
+		role: 'Senior Front-End Engineer (Independent Contractor)',
+		start: '11/2021',
+		end: '10/2025',
 		description: `
 		As the lead front-end engineer at LogRock, I have been entrusted with the design and construction of the entire front-end architecture and associated infrastructure, commencing from the ground up. My role has revolved extensively around harnessing the potential of React's ecosystem, including building a comprehensive array of solutions such as a Gatsby-based website, a Next.js web application, and an innovative open-source component library powered by Vite.js. In addition, I've contributed to the development of several mission-critical internal tools.
 		`,

@@ -12,17 +12,17 @@ Image by <a href="https://www.freepik.com/free-photo/rural-lifestyle-concept-wit
 
 ## Table of Contents
 
-In the ever-evolving landscape of web development, crafting engaging user experiences requires a deep understanding of both design and technology. One challenge developers often encounter is controlling the styling of sibling elements that precede a specific element in the HTML tree. While CSS is a powerful tool for styling, it has its limitations, especially when it comes to selecting preceding siblings. In this blog post, we'll explore a custom Svelte action I've developed to overcome this limitation and dive into the world of Svelte's use: directive to make our web interactions smoother.
+One common challenge in web development is controlling the styling of sibling elements that come before a specific element in the HTML tree. While CSS provides many selectors, it has limitations when it comes to selecting preceding siblings. In this post, I'll show you a custom Svelte action I built to overcome this limitation using Svelte's `use:` directive.
 
-## The Struggle with Sibling Styling
+## The Problem with Sibling Styling
 
-CSS provides a wide array of selectors to target elements based on their relationships within the HTML structure. However, selecting preceding siblings in CSS can be a bit tricky. The lack of a reliable way to select siblings that appear before a certain element often leads developers to explore complex workarounds that might result in convoluted code and reduced maintainability. Moreover, the :has pseudo-class, which has the potential to address this issue, suffers from limited browser support, making it a less-than-ideal solution for production environments.
+CSS provides many selectors to target elements based on their relationships within the HTML structure. However, selecting preceding siblings is tricky. There's no reliable CSS selector to target siblings that appear before a certain element, which often forces developers into complex workarounds that reduce code maintainability. The `:has()` pseudo-class could potentially solve this, but browser support is still limited.
 
-## Enter Svelte Custom Actions
+## Svelte Custom Actions
 
-Here's where Svelte comes to the rescue. Svelte, a revolutionary frontend framework, offers a concept called custom actions that empowers developers to create reusable and encapsulated interactions that go beyond what traditional CSS can achieve. The use: directive allows us to apply these custom actions to DOM elements, enriching their behavior with minimal effort.
+Svelte offers custom actions that let you create reusable interactions beyond what CSS can achieve. The `use:` directive applies these actions to DOM elements.
 
-Svelte actions are functions that are called when an element is created and destroyed. They can be used to add event listeners, manipulate the DOM, or perform any other imperative tasks. The function will receive the element as an argument, allowing us to access and manipulate it as needed. The use: directive is used to invoke the action, passing in any additional arguments as needed. Like so:
+Svelte actions are functions called when an element is created and destroyed. They can add event listeners, manipulate the DOM, or perform other imperative tasks. The function receives the element as an argument. The `use:` directive invokes the action, passing in any additional arguments. Here's an example:
 
 ```html
 <script>
@@ -37,7 +37,7 @@ Svelte actions are functions that are called when an element is created and dest
 </ul>
 ```
 
-Consider the custom Svelte action I've developed called antiHoverSiblings. This action elegantly solves the problem of styling preceding siblings when an element is hovered over. Let's take a closer look at how it works:
+Here's a custom Svelte action called `antiHoverSiblings` that solves the problem of styling siblings when an element is hovered over:
 
 ```ts
 export default function antiHoverSiblings(node: HTMLElement) {
@@ -78,11 +78,11 @@ export default function antiHoverSiblings(node: HTMLElement) {
 }
 ```
 
-This custom action efficiently adds and removes the anti-hover class to preceding sibling elements when the target element is hovered over. The beauty of Svelte custom actions lies in their simplicity and reusability, allowing us to encapsulate complex behavior like this in a concise manner.
+This action adds and removes the `anti-hover` class to sibling elements when the target element is hovered over. Custom actions make it easy to encapsulate and reuse this type of behavior.
 
-## Styling the Svelte Solution
+## Styling the Solution
 
-Of course, what's a finely crafted interaction without a dash of style to match? Let's take a brief moment to explore how we can style the anti-hover class, making our sibling-hiding effect visually appealing. Here's a snippet of CSS that you can use to style the affected elements:
+Now let's add some CSS to style the `anti-hover` class. Here's a simple example:
 
 ```css
 .anti-hover {
@@ -92,24 +92,18 @@ Of course, what's a finely crafted interaction without a dash of style to match?
 }
 ```
 
-In this snippet, we're applying a few styling tweaks to the elements with the anti-hover class. The text-fill-color and -webkit-text-fill-color properties are set to unset, effectively resetting any text color adjustments. This ensures that the text remains in its original color, not affected by any text color modifications that might have been applied elsewhere. The opacity property is set to 0.5, providing a subtle transparency effect to the elements, making them visually recede when hovered over.
+This CSS applies a few styling tweaks to elements with the `anti-hover` class. The `text-fill-color` and `-webkit-text-fill-color` properties are set to `unset` to reset any text color adjustments. The `opacity` property is set to `0.5` to create a transparency effect, making the elements visually recede when siblings are hovered over.
 
-Remember, the beauty of this solution lies not only in its functionality but also in its customizability. Feel free to experiment with various styling properties to achieve the aesthetic that best fits your project.
+Feel free to experiment with different styling properties to match your project's design.
 
-With just a touch of CSS magic, we've transformed our functional custom action into a polished user experience. Now your users can interact with your elements in style, all while enjoying the seamless sibling management.
+To see this in action, hover over the menu items in the navigation 👈. Notice how the other items fade away when you hover over one? That's the effect created by this custom action.
 
-And there you have it! A complete package where functionality meets aesthetics, brought to you by the dynamic duo of Svelte and some well-crafted CSS.
+## Why Use Svelte for This?
 
-And how does it look? Well, just take a look at the menu right there 👈 and hover over the menu items. See how the other items fade away? That's the magic of Svelte custom actions!
+While I could have used various workarounds or CSS tricks to achieve this effect, I chose to use Svelte custom actions for a few reasons. First, it's a more maintainable approach that keeps the behavior encapsulated. Second, it gave me a chance to practice implementing custom actions and better understand Svelte's features. And third, it's simply a cleaner solution than trying to hack around CSS limitations.
 
-## Svelte: Doing It the Svelte Way
+## Wrapping Up
 
-As developers, we're always looking for efficient, maintainable, and elegant solutions to our challenges. While I could have resorted to various workarounds or convoluted CSS tricks to achieve the desired effect, I chose to take the Svelte route for several reasons. Firstly, it aligns with the philosophy of using technology in the most natural way possible. Secondly, it allowed me to deepen my understanding of Svelte's powerful features and practice implementing custom actions. And lastly, who doesn't want to add a touch of Svelte flair to their development toolkit?
+CSS has limitations when it comes to selecting preceding siblings, and the `:has()` pseudo-class still has limited browser support. Svelte's custom actions provide a practical solution to this problem. The `antiHoverSiblings` action shows how you can handle complex interactions in a clean, reusable way.
 
-## Wrapping Up with a Wink
-
-In conclusion, the world of web development constantly pushes us to innovate, adapt, and find creative solutions to our challenges. With the limitations of CSS when it comes to selecting preceding siblings and the restricted support for :has pseudo-class, Svelte's custom actions step in as a breath of fresh air. My antiHoverSiblings custom action exemplifies how Svelte empowers developers to tackle complex interactions with elegance and simplicity.
-
-So, next time you find yourself wrestling with the quirks of CSS sibling selectors, consider taking a leap into the world of Svelte custom actions. After all, why settle for shenanigans when you can achieve your goals the Svelte way?
-
-Stay curious, stay innovative, and keep Svelting! 😉
+Next time you run into issues with CSS sibling selectors, consider using Svelte custom actions as an alternative approach.
