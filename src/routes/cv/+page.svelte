@@ -39,9 +39,7 @@
 
 		<h1>Profile</h1>
 		<p>
-			I am Felipe, a passionate Computer Science graduate from UNIFEI and UMD. With a keen focus on
-			UI/UX, I am dedicated to crafting impactful user experiences that seamlessly blend aesthetics,
-			accessibility, performance, and reliability, all with the goal of shaping a better world.
+			Passionate Computer Science graduate (UNIFEI & UMD) focused on UI/UX. Build impactful, accessible, performant user experiences that blend design and reliability to improve the world.
 		</p>
 
 		<hr />
@@ -169,18 +167,7 @@
 
 			<ul>
 				{#each job.challenges as challenge}
-					{#if typeof challenge === 'string'}
-						<li>{challenge}</li>
-					{:else}
-						<li>
-							{challenge[0]}
-							<ul>
-								{#each challenge[1] as subchallenge}
-									<li>{subchallenge}</li>
-								{/each}
-							</ul>
-						</li>
-					{/if}
+					<li>{challenge}</li>
 				{/each}
 			</ul>
 		{/each}
