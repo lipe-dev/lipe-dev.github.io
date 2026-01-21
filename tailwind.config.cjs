@@ -1,10 +1,7 @@
 /** @type {import('tailwindcss').Config}*/
 const config = {
-	content: [
-		'./src/**/*.{html,js,svelte,ts}',
-		'./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'
-	],
-	plugins: [require('flowbite/plugin'), require('@tailwindcss/typography')],
+	content: ['./src/**/*.{html,js,svelte,ts}'],
+	plugins: [require('@tailwindcss/typography')],
 	darkMode: 'class',
 	theme: {
 		extend: {
@@ -13,7 +10,6 @@ const config = {
 				display: ['Manrope Variable', 'sans-serif']
 			},
 			colors: {
-				// flowbite-svelte
 				primary: {
 					50: '#FFF5F2',
 					100: '#FFF1EE',
