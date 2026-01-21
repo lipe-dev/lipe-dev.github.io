@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Project } from '$lib/data/projects';
 
-	export let project: Project;
+	let { project }: { project: Project } = $props();
 </script>
 
 <a

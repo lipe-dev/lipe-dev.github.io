@@ -1,8 +1,9 @@
 <script lang="ts">
 	import type { Post } from '$lib/data/posts';
 	import { format } from 'date-fns';
+	import type { Snippet } from 'svelte';
 
-	export let post: Post;
+	let { post, description }: { post: Post; description?: Snippet } = $props();
 </script>
 
 <a
@@ -23,7 +24,9 @@
 				class="description-box absolute bottom-0 left-0 right-0 z-50 p-2 text-center hidden h-full w-full"
 				role="presentation"
 			>
-				<slot name="description" />
+				{#if description}
+					{@render description()}
+				{/if}
 
 				<div
 					class="gradient-link p-2 rounded-sm m-2 text-orange-600 uppercase text-sm overflow-hidden relative"
