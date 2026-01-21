@@ -1,33 +1,105 @@
 export const prerender = true;
 
-import type { Post, PostMDType } from '$lib/data/posts';
-import type { Techs } from '$lib/data/tech';
-const postModules = import.meta.glob('./blog/post/**/*.md');
-const projectModules = import.meta.glob('./projects/details/**/*.md');
-import tech from '$lib/data/tech';
-import type { Project, ProjectMDType } from '$lib/data/projects';
 import type { LayoutServerLoad } from './$types';
+import type { Note, GrowthStage } from '$lib/data/notes';
+import type { Graph, GraphNode, GraphEdge } from '$lib/data/graph';
+import tech, { type Techs } from '$lib/data/tech';
+import {
+	notes as generatedNotes,
+	graphNodes as generatedNodes,
+	graphEdges,
+	noteTree
+} from '$lib/generated/notes-data';
 
 export const load: LayoutServerLoad = async () => {
-	const posts: Post[] = [];
-	const projects: Project[] = [];
+	// Convert generated notes to runtime format (add icons, parse dates)
+	const notes: Note[] = generatedNotes.map((n) => {
+		const techSlug = n.slug as keyof typeof tech;
+		const techData = tech[techSlug];
 
-	for (const modulePath in postModules) {
-		const post = { ...((await postModules[modulePath]()) as PostMDType) };
-		post.metadata.date = new Date(post.metadata.date);
-		post.metadata.tech = post.metadata.techSlugs.map((t) => tech[t as unknown as Techs]);
-		posts.push(post.metadata);
-	}
+		return {
+			slug: n.slug,
+			name: n.name,
+			tags: n.tags,
+			growth: n.growth as GrowthStage,
+			links: n.links,
+			backlinks: n.backlinks,
+			date: n.date ? new Date(n.date) : undefined,
+			image: n.image,
+			description: n.description,
+			images: n.images,
+			icon: techData?.icon
+		};
+	});
 
-	for (const modulePath in projectModules) {
-		const project = { ...((await projectModules[modulePath]()) as ProjectMDType) };
-		project.metadata.tech = project.metadata.techSlugs.map((t) => tech[t as unknown as Techs]);
-		projects.push(project.metadata);
-	}
+	// Add icons to graph nodes
+	const nodes: GraphNode[] = generatedNodes.map((n) => {
+		const techSlug = n.slug as keyof typeof tech;
+		const techData = tech[techSlug];
+
+		return {
+			...n,
+			icon: techData?.icon
+		};
+	});
+
+	// Sort notes by date (newest first) for those with dates
+	notes.sort((a, b) => {
+		if (a.date && b.date) {
+			return b.date.getTime() - a.date.getTime();
+		}
+		if (a.date) return -1;
+		if (b.date) return 1;
+		return a.name.localeCompare(b.name);
+	});
+
+	const graph: Graph = { nodes, edges: graphEdges };
+
+	// For backwards compatibility, provide filtered lists
+	const techNotes = notes.filter((n) => n.icon);
+	const projectNotes = notes.filter((n) => n.tags.includes('projects'));
+	const blogNotes = notes.filter((n) => n.date && n.image);
+
+	// Convert to old format for backwards compatibility
+	const techWithStats = Object.fromEntries(
+		Object.entries(tech).map(([key, value]) => {
+			const relatedProjects = projectNotes.filter((p) => p.tags.includes(key));
+			const relatedPosts = blogNotes.filter((p) => p.tags.includes(key));
+			return [
+				key,
+				{
+					...value,
+					projectCount: relatedProjects.length,
+					postCount: relatedPosts.length
+				}
+			];
+		})
+	);
 
 	return {
-		projects: projects.sort((a, b) => b.order - a.order),
-		tech: tech,
-		posts: posts.sort((a, b) => b.date.getTime() - a.date.getTime())
+		notes,
+		graph,
+		noteTree,
+		// Backwards compatibility
+		tech: techWithStats,
+		projects: projectNotes.map((n) => ({
+			slug: n.slug,
+			name: n.name,
+			description: n.description || '',
+			tech: n.tags
+				.filter((t) => tech[t as Techs])
+				.map((t) => tech[t as Techs]),
+			images: n.images || [],
+			order: 0
+		})),
+		posts: blogNotes.map((n) => ({
+			slug: n.slug,
+			title: n.name,
+			tech: n.tags
+				.filter((t) => tech[t as Techs])
+				.map((t) => tech[t as Techs]),
+			date: n.date!,
+			image: n.image
+		}))
 	};
 };

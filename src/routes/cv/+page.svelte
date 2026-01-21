@@ -1,19 +1,14 @@
 <script>
 	import Button from '$lib/components/Button.svelte';
-	import { Breadcrumb, BreadcrumbItem, Progressbar } from 'flowbite-svelte';
+	import Breadcrumb from '$lib/components/Breadcrumb.svelte';
+	import BreadcrumbItem from '$lib/components/BreadcrumbItem.svelte';
+	import Progressbar from '$lib/components/Progressbar.svelte';
 	import employment from './employment';
 </script>
 
-<Breadcrumb aria-label="Default breadcrumb example" class="mb-8">
-	<BreadcrumbItem
-		href="/"
-		home
-		homeClass="hover:text-white text-gray-500 text-sm flex items-center flex-row"
-		>Home</BreadcrumbItem
-	>
-	<BreadcrumbItem href="/cv" linkClass="hover:text-white text-gray-500 text-sm gradient-text ml-2"
-		>Resume</BreadcrumbItem
-	>
+<Breadcrumb class="mb-8">
+	<BreadcrumbItem href="/" home>Home</BreadcrumbItem>
+	<BreadcrumbItem href="/cv">Resume</BreadcrumbItem>
 </Breadcrumb>
 
 <Button
@@ -21,7 +16,7 @@
 	download="__CV__Felipe_lipe-dev_Pereira.pdf"
 	buttonClass="w-full justify-center mb-4"
 >
-	<iconify-icon icon="line-md:download-outline" class="mr-2" /> Download as PDF
+	<iconify-icon icon="line-md:download-outline" class="mr-2"></iconify-icon> Download as PDF
 </Button>
 
 <div class="bg-gray-950 rounded-lg md:p-12 p-4">
@@ -49,37 +44,29 @@
 		<div class="grid grid-cols-3 gap-4 pt-4">
 			<div>
 				<p class="m-0 mb-2 flex flex-row items-center text-sm">
-					<iconify-icon icon="circle-flags:br" class="mr-4" />
+					<iconify-icon icon="circle-flags:br" class="mr-4"></iconify-icon>
 					Brazilian Portuguese
 				</p>
 
-				<Progressbar progress="100" divClass="mb-4 bg-gray-600 rounded-full progress" />
+				<Progressbar progress="100" class="mb-4" />
 			</div>
 
 			<div>
 				<p class="m-0 mb-2 flex flex-row items-center text-sm">
-					<iconify-icon icon="circle-flags:us" class="mr-4" />
+					<iconify-icon icon="circle-flags:us" class="mr-4"></iconify-icon>
 					US English
 				</p>
 
-				<Progressbar
-					progress="95"
-					color="primary"
-					divClass="mb-4 bg-gray-600 rounded-full progress"
-				/>
+				<Progressbar progress="95" class="mb-4" />
 			</div>
 
 			<div>
 				<p class="m-0 mb-2 flex flex-row items-center text-sm">
-					<iconify-icon icon="circle-flags:es" class="mr-4" />
+					<iconify-icon icon="circle-flags:es" class="mr-4"></iconify-icon>
 					Spanish
 				</p>
 
-				<Progressbar
-					progress="30"
-					color="primary"
-					divClass="mb-4 bg-gray-600 rounded-full progress"
-				/>
+				<Progressbar progress="30" class="mb-4" />
 			</div>
 		</div>
 
@@ -91,57 +78,37 @@
 			<div>
 				<p class="m-0 mb-2 flex flex-row items-center text-sm">Front-End Development</p>
 
-				<Progressbar progress="100" divClass="mb-4 bg-gray-600 rounded-full progress" />
+				<Progressbar progress="100" class="mb-4" />
 			</div>
 
 			<div>
 				<p class="m-0 mb-2 flex flex-row items-center text-sm">Mobile Development</p>
 
-				<Progressbar
-					progress="100"
-					color="primary"
-					divClass="mb-4 bg-gray-600 rounded-full progress"
-				/>
+				<Progressbar progress="100" class="mb-4" />
 			</div>
 
 			<div>
 				<p class="m-0 mb-2 flex flex-row items-center text-sm">Project Management</p>
 
-				<Progressbar
-					progress="80"
-					color="primary"
-					divClass="mb-4 bg-gray-600 rounded-full progress"
-				/>
+				<Progressbar progress="80" class="mb-4" />
 			</div>
 
 			<div>
 				<p class="m-0 mb-2 flex flex-row items-center text-sm">Back-End Development</p>
 
-				<Progressbar
-					progress="80"
-					color="primary"
-					divClass="mb-4 bg-gray-600 rounded-full progress"
-				/>
+				<Progressbar progress="80" class="mb-4" />
 			</div>
 
 			<div>
 				<p class="m-0 mb-2 flex flex-row items-center text-sm">UI/UX Design</p>
 
-				<Progressbar
-					progress="60"
-					color="primary"
-					divClass="mb-4 bg-gray-600 rounded-full progress"
-				/>
+				<Progressbar progress="60" class="mb-4" />
 			</div>
 
 			<div>
 				<p class="m-0 mb-2 flex flex-row items-center text-sm">Dev Ops</p>
 
-				<Progressbar
-					progress="80"
-					color="primary"
-					divClass="mb-4 bg-gray-600 rounded-full progress"
-				/>
+				<Progressbar progress="80" class="mb-4" />
 			</div>
 		</div>
 
@@ -212,22 +179,22 @@
 
 		<div class="gap-4 flex flex-row items-center">
 			<div class="flex flex-row items-center gap-2">
-				<iconify-icon icon="mdi:web" />
+				<iconify-icon icon="mdi:web"></iconify-icon>
 				<a href="https://lipe.dev">lipe.dev</a>
 			</div>
 
 			<div class="flex flex-row items-center gap-2">
-				<iconify-icon icon="fa6-brands:linkedin" />
+				<iconify-icon icon="fa6-brands:linkedin"></iconify-icon>
 				<a href="https://linkedin.com/in/felipeicp">/in/felipeicp</a>
 			</div>
 
 			<div class="flex flex-row items-center gap-2">
-				<iconify-icon icon="fa6-brands:github" class="ml-4" />
+				<iconify-icon icon="fa6-brands:github" class="ml-4"></iconify-icon>
 				<a href="https://github.com/lipe-dev">github/lipe-dev</a>
 			</div>
 
 			<div class="flex flex-row items-center gap-2">
-				<iconify-icon icon="ic:baseline-discord" class="ml-4" />
+				<iconify-icon icon="ic:baseline-discord" class="ml-4"></iconify-icon>
 				<a href="https://discordapp.com/users/lipe_dev">discord @ lipe_dev</a>
 			</div>
 		</div>
@@ -296,7 +263,7 @@
 		</p>
 
 		<p>
-			See more in <a href="/tech">Tech</a>
+			See more in my <a href="/">digital garden</a>
 		</p>
 
 		<hr />
@@ -317,13 +284,6 @@
 	href="/docs/__CV__Felipe_lipe-dev_Pereira.pdf"
 	buttonClass="w-full justify-center mt-4"
 >
-	<iconify-icon icon="line-md:download-outline" class="mr-2" /> Download as PDF
+	<iconify-icon icon="line-md:download-outline" class="mr-2"></iconify-icon> Download as PDF
 </Button>
 
-<style lang="postcss">
-	.progress {
-		:global(& > div) {
-			background: var(--gradient);
-		}
-	}
-</style>
