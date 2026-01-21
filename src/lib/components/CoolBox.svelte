@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Tech } from '$lib/data/tech';
 
-	export let tech: Tech;
+	let { tech }: { tech: Tech } = $props();
 </script>
 
 <a
