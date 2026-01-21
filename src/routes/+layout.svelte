@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import '../app.postcss';
 	import '@fontsource-variable/nunito';
 	import '@fontsource-variable/manrope';
@@ -11,6 +11,9 @@
 	import sideShine from '$lib/actions/side-shine';
 	import antiHoverSiblings from '$lib/actions/anti-hover-siblings';
 	import bottomShine from '$lib/actions/bottom-shine';
+	import type { Snippet } from 'svelte';
+
+	let { children }: { children: Snippet } = $props();
 
 	const wordPool = {
 		developer: [
@@ -95,10 +98,8 @@
 				<ul
 					class="flex md:flex-col justify-center md:justify-start gap-4 md:gap-0 flex-row text-stone-300 md:text-2xl text-md md:px-16 menu items-stretch"
 				>
+					<li use:antiHoverSiblings><a href="/">Garden</a></li>
 					<li use:antiHoverSiblings><a href="/cv">Resume</a></li>
-					<li use:antiHoverSiblings><a href="/tech">Tech</a></li>
-					<li use:antiHoverSiblings><a href="/projects">Projects</a></li>
-					<li use:antiHoverSiblings><a href="/blog">Posts</a></li>
 				</ul>
 			</nav>
 
@@ -114,9 +115,10 @@
 						<a
 							href="https://github.com/lipe-dev"
 							class="rounded-full w-11 h-11 flex items-center justify-center"
+							aria-label="GitHub"
 						>
 							<div class="rounded-full w-full h-full overflow-hidden">
-								<iconify-icon icon="line-md:github-twotone" class="text-orange-400 text-4xl" />
+								<iconify-icon icon="line-md:github-twotone" class="text-orange-400 text-4xl"></iconify-icon>
 							</div>
 						</a>
 					</div>
@@ -130,9 +132,10 @@
 						<a
 							href="https://www.linkedin.com/in/felipeicp/"
 							class="rounded-full w-11 h-11 flex items-center justify-center"
+							aria-label="LinkedIn"
 						>
 							<div class="rounded-full w-full h-full overflow-hidden pl-1 pt-0.5">
-								<iconify-icon icon="line-md:linkedin" class="text-orange-400 text-3xl" />
+								<iconify-icon icon="line-md:linkedin" class="text-orange-400 text-3xl"></iconify-icon>
 							</div>
 						</a>
 					</div>
@@ -146,9 +149,10 @@
 						<a
 							href="mailto:fe@lipe.dev"
 							class="rounded-full w-11 h-11 flex items-center justify-center"
+							aria-label="Email"
 						>
 							<div class="rounded-full w-full h-full overflow-hidden pt-[1px] pl-[2px]">
-								<iconify-icon icon="line-md:email-twotone" class="text-orange-400 text-[32px]" />
+								<iconify-icon icon="line-md:email-twotone" class="text-orange-400 text-[32px]"></iconify-icon>
 							</div>
 						</a>
 					</div>
@@ -162,9 +166,10 @@
 						<a
 							href="https://discordapp.com/users/lipe_dev"
 							class="rounded-full w-11 h-11 flex items-center justify-center"
+							aria-label="Discord"
 						>
 							<div class="rounded-full w-full h-full overflow-hidden pt-[1px] pl-[2px]">
-								<iconify-icon icon="line-md:discord" class="text-orange-400 text-[32px]" />
+								<iconify-icon icon="line-md:discord" class="text-orange-400 text-[32px]"></iconify-icon>
 							</div>
 						</a>
 					</div>
@@ -173,7 +178,7 @@
 		</div>
 
 		<div class="md:p-16 p-4 grow relative md:ml-[520px]" use:sideShine>
-			<slot />
+			{@render children()}
 		</div>
 	</div>
 </div>
@@ -204,10 +209,7 @@
 			position: relative;
 			padding-top: theme(space.2);
 			padding-bottom: theme(space.2);
-
-			a {
-				z-index: 1;
-			}
+			z-index: 1;
 
 			&:hover {
 				padding-left: theme(space.4);
