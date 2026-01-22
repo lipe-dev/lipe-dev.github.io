@@ -60,3 +60,13 @@ Next steps: organize notes, add proper tags and wikilinks to have a better looki
 - 56 seedlings waiting to be planted
 
 Next steps: actually sow those seeds and start writing content.
+
+### Day 4
+
+- Fixed note detail pages not rendering - the universal load in `+page.ts` wasn't spreading server data
+- Fixed [[wikilinks]] not rendering as links - wrote custom remark plugin that converts `linkReference` nodes to proper links
+- Key insight: remark parses `[[text]]` as `[` + linkReference + `]`, not as a special node type
+- Removed broken `@flowershow/remark-wiki-link` dependency, replaced with 40 lines of custom code
+- Site now builds as fully static - ready for [[GitHub Pages]] and Neocities
+
+Next steps: layout adjustments to all pages to fit new style of site.

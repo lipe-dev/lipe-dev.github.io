@@ -36,7 +36,7 @@ Remotely from Brazil
 
 ### [[LogRock]]
 - Built scalable quote system (FSM-driven) for 3 agencies; 6x industry benchmark conversion rate
-- Set up CI/CD (Actions + Terraform + Vercel) for <2-min parallel deploys
+- Set up CI/CD (Actions + Terraform + Vercel) for under 2-min parallel deploys
 - Created modular email templating tool (150+ campaigns + transactional)
 - Led AI initiatives: custom ChatGPT client for reps + Devin.ai setup
 
@@ -46,7 +46,7 @@ Remotely from Brazil
 
 ### [[Loadsmart]]
 - Led migration from monolithic Django to modular React architecture (zero downtime)
-- Reduced build times from ~1h to <5 min
+- Reduced build times from ~1h to under 5 min
 - Delivered scalable tool still used daily by hundreds of reps
 
 ### [[Instituto Eldorado]]

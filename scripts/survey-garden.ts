@@ -43,7 +43,7 @@ function scanNotes(dir: string, relativePath = ''): Note[] {
 	return notes;
 }
 
-const notesDir = path.join(process.cwd(), 'content/notes');
+const notesDir = path.join(process.cwd(), 'src/content/notes');
 const notes = scanNotes(notesDir);
 
 const grouped: Record<GrowthStage, Note[]> = {

@@ -135,7 +135,7 @@ growth: seedling
 }
 
 // Main execution
-const notesDir = path.join(process.cwd(), 'content/notes');
+const notesDir = path.join(process.cwd(), 'src/content/notes');
 const shouldCreate = process.argv.includes('--create');
 
 console.log('Scanning notes for wikilinks...\n');

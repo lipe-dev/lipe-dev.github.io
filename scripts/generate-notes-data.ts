@@ -377,7 +377,7 @@ export function resolveWikilink(linkText: string): string {
 }
 
 // Main execution
-const notesDir = path.join(process.cwd(), 'content/notes');
+const notesDir = path.join(process.cwd(), 'src/content/notes');
 const outputPath = path.join(process.cwd(), 'src/lib/generated/notes-data.ts');
 
 console.log('Scanning notes directory...');

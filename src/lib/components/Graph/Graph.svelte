@@ -5,7 +5,6 @@
 	import * as d3Zoom from 'd3-zoom';
 	import * as d3Drag from 'd3-drag';
 	import type { Graph, GraphNode, GraphEdge } from '$lib/data/graph';
-	import GraphControls from './GraphControls.svelte';
 
 	interface Props {
 		graph: Graph;
@@ -13,21 +12,9 @@
 
 	let { graph }: Props = $props();
 
-	// Filter state
-	let activeFilters = $state<string[]>(['technology', 'projects', 'hobbies']);
-
-	// Compute visible nodes and edges based on filters
-	let visibleNodes = $derived(
-		graph.nodes.filter((n) => n.tags.some((t) => activeFilters.includes(t)))
-	);
-
-	let visibleEdges = $derived(
-		graph.edges.filter(
-			(e) =>
-				visibleNodes.some((n) => n.slug === e.source) &&
-				visibleNodes.some((n) => n.slug === e.target)
-		)
-	);
+	// Use all nodes and edges (no filtering for now)
+	let visibleNodes = $derived(graph.nodes);
+	let visibleEdges = $derived(graph.edges);
 
 	let container: HTMLDivElement;
 	let svg: SVGSVGElement;
@@ -50,13 +37,18 @@
 		return growthColors[node.growth] || '#6b7280'; // gray fallback
 	}
 
+	// Node sizes based on growth stage
+	const growthSizes: Record<string, number> = {
+		seedling: 10,
+		budding: 16,
+		evergreen: 22
+	};
+
 	function getNodeRadius(node: GraphNode): number {
-		// Larger nodes for tech with icons
-		if (node.icon) return 24;
-		// Medium for projects
-		if (node.tags.includes('projects')) return 18;
-		// Smaller for others
-		return 14;
+		const baseSize = growthSizes[node.growth] || 10;
+		// Slightly larger for nodes with icons to fit them
+		if (node.icon) return Math.max(baseSize, 18);
+		return baseSize;
 	}
 
 	function initSimulation() {
@@ -215,15 +207,11 @@
 		});
 	}
 
-	function handleFilterChange(filters: string[]) {
-		activeFilters = filters;
-	}
-
 	onMount(() => {
-		// Set initial dimensions
+		// Set initial dimensions from container
 		if (container) {
 			width = container.clientWidth;
-			height = Math.max(500, window.innerHeight - 200);
+			height = container.clientHeight;
 		}
 
 		initSimulation();
@@ -232,7 +220,7 @@
 		const resizeObserver = new ResizeObserver((entries) => {
 			for (const entry of entries) {
 				width = entry.contentRect.width;
-				height = Math.max(500, window.innerHeight - 200);
+				height = entry.contentRect.height;
 				initSimulation();
 			}
 		});
@@ -247,73 +235,24 @@
 		};
 	});
 
-	// Re-initialize when filters change
-	$effect(() => {
-		if (svg && visibleNodes.length > 0) {
-			initSimulation();
-		}
-	});
 </script>
 
 <div class="graph-container" bind:this={container}>
-	<GraphControls {activeFilters} onFilterChange={handleFilterChange} />
-
-	<svg bind:this={svg} {width} {height} class="graph-svg"></svg>
-
-	<div class="graph-legend">
-		<div class="legend-item">
-			<span class="legend-dot" style="background: #f97316;"></span>
-			<span>Projects</span>
-		</div>
-		<div class="legend-item">
-			<span class="legend-dot" style="background: #22c55e;"></span>
-			<span>Technology</span>
-		</div>
-		<div class="legend-item">
-			<span class="legend-dot" style="background: #8b5cf6;"></span>
-			<span>Hobbies</span>
-		</div>
-	</div>
+	<svg bind:this={svg} viewBox="0 0 {width} {height}" class="graph-svg"></svg>
 </div>
 
 <style lang="postcss">
 	.graph-container {
 		position: relative;
 		width: 100%;
-		min-height: 500px;
-		background: theme(colors.gray.950);
-		border-radius: theme(borderRadius.lg);
-		overflow: hidden;
+		height: 100%;
+		min-height: 0;
 	}
 
 	.graph-svg {
 		display: block;
-	}
-
-	.graph-legend {
-		position: absolute;
-		bottom: 1rem;
-		left: 1rem;
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		padding: 0.75rem;
-		background: rgba(17, 24, 39, 0.9);
-		border-radius: theme(borderRadius.md);
-		font-size: 0.75rem;
-		color: theme(colors.gray.400);
-	}
-
-	.legend-item {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-	}
-
-	.legend-dot {
-		width: 12px;
-		height: 12px;
-		border-radius: 50%;
+		width: 100%;
+		height: 100%;
 	}
 
 	:global(.icon-container svg) {

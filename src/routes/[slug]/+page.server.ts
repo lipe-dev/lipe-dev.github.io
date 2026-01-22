@@ -10,12 +10,16 @@ export const load: PageServerLoad = async ({ params, parent }) => {
 	const { slug } = params;
 	const parentData = await parent();
 
-	// Get note from parent data
+	// Get note metadata from parent data (includes icons, parsed dates)
 	const note = parentData.notes.find((n) => n.slug === slug);
 
 	if (!note) {
 		error(404, `Note not found: ${slug}`);
 	}
+
+	// Get filePath from generated data for module lookup
+	const generatedNote = notes.find((n) => n.slug === slug);
+	const filePath = generatedNote?.filePath;
 
 	// Get backlink note data for display
 	const backlinkNotes = note.backlinks
@@ -24,6 +28,7 @@ export const load: PageServerLoad = async ({ params, parent }) => {
 
 	return {
 		note,
-		backlinkNotes
+		backlinkNotes,
+		filePath
 	};
 };
