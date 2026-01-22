@@ -60,7 +60,7 @@
 	};
 </script>
 
-<div>
+<div class="h-screen overflow-hidden">
 	<div class="flex flex-col md:flex-row items-stretch w-full h-full">
 		<div
 			class="flex md:flex-col flex-row justify-center flex-wrap md:flex-nowrap items-start w-full md:w-[520px] shrink-0 gap-4 dotted border-gray-900 border-solid border-r-2 md:fixed md:h-screen sticky -top-20 z-[9999999] md:top-0"
@@ -177,7 +177,7 @@
 			</div>
 		</div>
 
-		<div class="md:p-16 p-4 grow relative md:ml-[520px]" use:sideShine>
+		<div class="md:p-16 p-4 grow relative md:ml-[520px] min-h-0 overflow-auto" use:sideShine>
 			{@render children()}
 		</div>
 	</div>
