@@ -1,7 +1,7 @@
 ---
 name: Gatsby
 slug: gatsby
-tags: [technology]
+tags: []
 growth: seedling
 ---
 

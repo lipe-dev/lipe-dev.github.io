@@ -1,7 +1,7 @@
 ---
 name: HTML
 slug: html
-tags: [technology]
+tags: []
 growth: seedling
 ---
 

@@ -9,11 +9,16 @@
 	import sheen from '$lib/actions/sheen';
 	import textScramble from '$lib/actions/text-scramble';
 	import sideShine from '$lib/actions/side-shine';
-	import antiHoverSiblings from '$lib/actions/anti-hover-siblings';
 	import bottomShine from '$lib/actions/bottom-shine';
+	import Graph from '$lib/components/Graph/Graph.svelte';
 	import type { Snippet } from 'svelte';
+	import type { LayoutData } from './$types';
+	import { page } from '$app/stores';
 
-	let { children }: { children: Snippet } = $props();
+	let { children, data }: { children: Snippet; data: LayoutData } = $props();
+
+	// Check if we're on a note page (not homepage)
+	const isNotePage = $derived($page.route.id === '/[slug]');
 
 	const wordPool = {
 		developer: [
@@ -63,48 +68,64 @@
 <div class="h-screen overflow-hidden">
 	<div class="flex flex-col md:flex-row items-stretch w-full h-full">
 		<div
-			class="flex md:flex-col flex-row justify-center flex-wrap md:flex-nowrap items-start w-full md:w-[520px] shrink-0 gap-4 dotted border-gray-900 border-solid border-r-2 md:fixed md:h-screen sticky -top-20 z-[9999999] md:top-0"
+			class="flex md:flex-col flex-row justify-center flex-wrap md:flex-nowrap items-start w-full md:w-[520px] shrink-0 gap-2 dotted border-gray-900 border-solid border-r-2 md:fixed md:h-screen sticky -top-20 z-[9999999] md:top-0"
 		>
-			<div
-				class="rounded-full gradient w-20 h-20 md:w-48 md:h-48 p-1 relative overflow-hidden md:mx-16 md:mb-8 md:mt-16 m-2 shrink-0"
-				use:sheen
-				role="presentation"
-			>
-				<div class="rounded-full w-full h-full bg-stone-950 overflow-hidden p-1">
-					<div class="rounded-full w-full h-full bg-stone-950 overflow-hidden">
-						<img src="/me.jpg" alt="me" class="rounded-full" />
+			<!-- Header row with pic and text side by side -->
+			<div class="flex flex-row items-center gap-4 md:px-8 md:pt-4 m-2 md:m-0">
+				<div
+					class="rounded-full gradient w-20 h-20 md:w-24 md:h-24 p-1 relative overflow-hidden shrink-0"
+					use:sheen
+					role="presentation"
+				>
+					<div class="rounded-full w-full h-full bg-stone-950 overflow-hidden p-1">
+						<div class="rounded-full w-full h-full bg-stone-950 overflow-hidden">
+							<img src="/me.jpg" alt="me" class="rounded-full" />
+						</div>
 					</div>
+				</div>
+
+				<div class="my-auto">
+					<h1
+						class="font-display md:text-2xl text-xl font-normal text-white tracking-wider uppercase"
+					>
+						I'm <span
+							class="gradient-text"
+							style="-webkit-text-fill-color: transparent;"
+							use:textScramble={wordPool.name}>Felipe</span
+						>.
+					</h1>
+
+					<h2 class="font-display md:text-lg text-lg text-stone-300 font-bold">
+						<span use:textScramble={wordPool.langs}>Front-End</span>
+						<span use:textScramble={wordPool.developer}>Developer</span>
+					</h2>
 				</div>
 			</div>
 
-			<div class="my-auto md:my-0">
-				<h1
-					class="font-display md:text-5xl text-xl font-normal text-white md:px-16 tracking-wider uppercase"
-				>
-					I'm <span
-						class="gradient-text"
-						style="-webkit-text-fill-color: transparent;"
-						use:textScramble={wordPool.name}>Felipe</span
-					>.
-				</h1>
-
-				<h2 class="font-display md:text-3xl text-lg text-stone-300 font-bold md:px-16">
-					<span use:textScramble={wordPool.langs}>Front-End</span>
-					<span use:textScramble={wordPool.developer}>Developer</span>
-				</h2>
-			</div>
-
-			<nav class="md:mt-8 relative w-full overflow-hidden" use:sideShine>
-				<ul
-					class="flex md:flex-col justify-center md:justify-start gap-4 md:gap-0 flex-row text-stone-300 md:text-2xl text-md md:px-16 menu items-stretch"
-				>
-					<li use:antiHoverSiblings><a href="/">Garden</a></li>
-					<li use:antiHoverSiblings><a href="/cv">Resume</a></li>
-				</ul>
+			<!-- Navigation Menu -->
+			<nav class="hidden md:flex flex-col gap-0 px-8 w-full" use:sideShine>
+				<a href="/" class="menu-item">
+					<iconify-icon icon="line-md:home" class="text-xl"></iconify-icon>
+					<span>Home</span>
+				</a>
+				<a href="/sitemap" class="menu-item">
+					<iconify-icon icon="line-md:document-list" class="text-xl"></iconify-icon>
+					<span>Sitemap</span>
+				</a>
+				<a href="/random" class="menu-item">
+					<iconify-icon icon="line-md:compass-loop" class="text-xl"></iconify-icon>
+					<span>Random</span>
+				</a>
 			</nav>
 
+			{#if isNotePage}
+				<div class="sidebar-graph hidden md:block flex-1 min-h-0">
+					<Graph graph={data.graph} highlightSlug={$page.params.slug} />
+				</div>
+			{/if}
+
 			<div
-				class="flex flex-row items-center justify-center gap-4 mt-auto px-16 fill-stone-300 mb-4"
+				class="flex flex-row items-center justify-center gap-4 mt-auto px-8 fill-stone-300 mb-2"
 				use:bottomShine
 			>
 				<div
@@ -119,23 +140,6 @@
 						>
 							<div class="rounded-full w-full h-full overflow-hidden">
 								<iconify-icon icon="line-md:github-twotone" class="text-orange-400 text-4xl"></iconify-icon>
-							</div>
-						</a>
-					</div>
-				</div>
-
-				<div
-					class="rounded-full gradient hover:shadow-lg hover:shadow-orange-800 w-12 h-12 p-[2px] relative overflow-hidden transition-all duration-200 hover:scale-105"
-					role="presentation"
-				>
-					<div class="rounded-full w-full h-full bg-gray-900 overflow-hidden p-1">
-						<a
-							href="https://www.linkedin.com/in/felipeicp/"
-							class="rounded-full w-11 h-11 flex items-center justify-center"
-							aria-label="LinkedIn"
-						>
-							<div class="rounded-full w-full h-full overflow-hidden pl-1 pt-0.5">
-								<iconify-icon icon="line-md:linkedin" class="text-orange-400 text-3xl"></iconify-icon>
 							</div>
 						</a>
 					</div>
@@ -192,88 +196,21 @@
 		background-size: 48px 48px;
 	}
 
-	@keyframes expand-right {
-		from {
-			width: 0%;
-		}
-		to {
-			width: 100%;
-		}
+	.menu-item {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.25rem 0.75rem;
+		color: theme(colors.gray.400);
+		font-size: 0.875rem;
+		border-radius: 0.375rem;
+		transition: all 0.2s ease-in-out;
 	}
 
-	.menu {
-		li a {
-			display: block;
-			transition: all 0.2s ease-in-out;
-			order: 3;
-			position: relative;
-			padding-top: theme(space.2);
-			padding-bottom: theme(space.2);
-			z-index: 1;
-
-			&:hover {
-				padding-left: theme(space.4);
-				background: linear-gradient(
-						162deg,
-						rgba(232, 153, 1, 0.82) 0%,
-						transparent 40.281%,
-						rgba(236, 27, 116, 0.94) 100%
-					),
-					radial-gradient(
-							at 50% 50%,
-							#f41ff1 0%,
-							#ef061b 10.771%,
-							#f3074f 27.062%,
-							#db411d 72%,
-							#e12a0f 100%
-						)
-						67% 89%/170% 198%;
-				background-clip: text;
-				-webkit-background-clip: text;
-				text-fill-color: transparent;
-				-webkit-text-fill-color: transparent;
-				font-weight: 700;
-
-				&:before {
-					content: '';
-					position: absolute;
-					left: 0;
-					top: 50%;
-					transform: translateY(-50%);
-					width: 2px;
-					height: 100%;
-					background: linear-gradient(
-							162deg,
-							rgba(232, 153, 1, 0.82) 0%,
-							transparent 40.281%,
-							rgba(236, 27, 116, 0.94) 100%
-						),
-						radial-gradient(
-								at 99% 13%,
-								#f41ff1 0%,
-								#ef061b 10.771%,
-								#f3074f 27.062%,
-								#db411d 72%,
-								#e12a0f 100%
-							)
-							67% 89%/170% 198%;
-				}
-
-				&:after {
-					content: '';
-					position: absolute;
-					left: 0;
-					right: 0;
-					top: 0;
-					bottom: 0;
-					width: 0%;
-					z-index: -1;
-					height: 100%;
-					background: #ffffff05;
-					animation: expand-right 0.2s ease-in-out both;
-				}
-			}
-		}
+	.menu-item:hover {
+		color: theme(colors.orange.400);
+		background: rgba(251, 146, 60, 0.1);
+		padding-left: 1rem;
 	}
 
 	@keyframes cool-img {

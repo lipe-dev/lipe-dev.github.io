@@ -1,6 +1,9 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import bottomShine from '$lib/actions/bottom-shine';
+	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
+	import Tag from '$lib/components/Tag.svelte';
+	import ImageCarousel from '$lib/components/ImageCarousel.svelte';
 
 	let { data }: { data: PageData } = $props();
 
@@ -19,6 +22,8 @@
 </svelte:head>
 
 {#if data.note}
+	<Breadcrumbs filePath={data.filePath} noteName={data.note.name} />
+
 	<div class="mb-8">
 		<div class="flex items-center gap-3 mb-2">
 			<h1
@@ -34,11 +39,7 @@
 		{#if data.note.tags.length > 0}
 			<div class="flex flex-wrap gap-2 mb-4">
 				{#each data.note.tags as tag}
-					<span
-						class="px-2 py-1 text-xs rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 transition-colors"
-					>
-						{tag}
-					</span>
+					<Tag {tag} />
 				{/each}
 			</div>
 		{/if}
@@ -61,12 +62,8 @@
 	{/if}
 
 	{#if data.note.images && data.note.images.length > 0}
-		<div class="mb-8 rounded-lg overflow-hidden">
-			<img
-				src={data.note.images[0]}
-				alt={data.note.name}
-				class="w-full h-auto max-h-[400px] object-contain bg-gray-900"
-			/>
+		<div class="mb-8">
+			<ImageCarousel images={data.note.images} alt={data.note.name} />
 		</div>
 	{/if}
 

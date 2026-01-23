@@ -1,7 +1,7 @@
 ---
 name: Material Design
 slug: material-design
-tags: [technology]
+tags: []
 growth: seedling
 ---
 

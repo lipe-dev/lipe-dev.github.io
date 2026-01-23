@@ -1,7 +1,7 @@
 ---
 name: TypeScript
 slug: typescript
-tags: [technology]
+tags: []
 growth: seedling
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: "Bug Smashing Strategies: Using One Punch Man's Threat Levels for Effective Prioritization"
 slug: how-one-punch-man-can-help-you-classify-bugs
-tags: [technology]
+tags: []
 growth: evergreen
 date: "2022-11-03 14:14:14 -0300"
 image: /images/posts/threat-levels.png
