@@ -1,7 +1,7 @@
 ---
 name: How I Created the Most Rad Border Effect Ever
 slug: how-i-created-the-most-rad-border-effect-ever
-tags: [technology, html, css]
+tags: [html, css]
 growth: evergreen
 date: "2023-08-28 14:14:14 -0300"
 image: /images/posts/border.png

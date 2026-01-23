@@ -1,7 +1,7 @@
 ---
 name: GitHub Pages
 slug: github-pages
-tags: [technology]
+tags: []
 growth: seedling
 ---
 

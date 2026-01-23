@@ -8,9 +8,10 @@
 
 	interface Props {
 		graph: Graph;
+		highlightSlug?: string;
 	}
 
-	let { graph }: Props = $props();
+	let { graph, highlightSlug }: Props = $props();
 
 	// Use all nodes and edges (no filtering for now)
 	let visibleNodes = $derived(graph.nodes);
@@ -46,6 +47,8 @@
 
 	function getNodeRadius(node: GraphNode): number {
 		const baseSize = growthSizes[node.growth] || 10;
+		// Larger for nodes with images to show them clearly
+		if (node.image) return Math.max(baseSize, 24);
 		// Slightly larger for nodes with icons to fit them
 		if (node.icon) return Math.max(baseSize, 18);
 		return baseSize;
@@ -56,6 +59,15 @@
 
 		const svgSelection = d3Selection.select(svg);
 		svgSelection.selectAll('*').remove();
+
+		// Add glow filter for highlighted node
+		const defs = svgSelection.append('defs');
+		const filter = defs.append('filter').attr('id', 'glow');
+		filter.append('feGaussianBlur').attr('stdDeviation', '4').attr('result', 'coloredBlur');
+		const feMerge = filter.append('feMerge');
+		feMerge.append('feMergeNode').attr('in', 'coloredBlur');
+		feMerge.append('feMergeNode').attr('in', 'SourceGraphic');
+
 
 		// Create zoom container
 		const g = svgSelection.append('g').attr('class', 'zoom-container');
@@ -78,11 +90,21 @@
 				d3Force
 					.forceLink<GraphNode, GraphEdge>(visibleEdges as GraphEdge[])
 					.id((d) => d.slug)
-					.distance(100)
+					.distance(150)
 			)
-			.force('charge', d3Force.forceManyBody().strength(-200))
+			.force('charge', d3Force.forceManyBody().strength(-400))
 			.force('center', d3Force.forceCenter(width / 2, height / 2))
-			.force('collision', d3Force.forceCollide().radius((d) => getNodeRadius(d as GraphNode) + 5));
+			.force('x', d3Force.forceX(width / 2).strength(0.02))
+			.force('y', d3Force.forceY(height / 2).strength(0.02))
+			.force('collision', d3Force.forceCollide().radius((d) => getNodeRadius(d as GraphNode) + 10));
+
+		// Helper to check if edge connects to highlighted node
+		const isHighlightedEdge = (l: GraphEdge) => {
+			if (!highlightSlug) return false;
+			const sourceSlug = typeof l.source === 'string' ? l.source : (l.source as GraphNode).slug;
+			const targetSlug = typeof l.target === 'string' ? l.target : (l.target as GraphNode).slug;
+			return sourceSlug === highlightSlug || targetSlug === highlightSlug;
+		};
 
 		// Create edges
 		const links = g
@@ -91,9 +113,9 @@
 			.selectAll('line')
 			.data(visibleEdges)
 			.join('line')
-			.attr('stroke', '#374151')
+			.attr('stroke', (l) => isHighlightedEdge(l) ? 'url(#Gradient1)' : '#374151')
 			.attr('stroke-opacity', 0.6)
-			.attr('stroke-width', 1);
+			.attr('stroke-width', (l) => isHighlightedEdge(l) ? 2 : 1);
 
 		// Create node groups
 		const nodeGroups = g
@@ -132,15 +154,53 @@
 		nodeGroups.each(function (d) {
 			const group = d3Selection.select(this);
 			const radius = getNodeRadius(d);
+			const isHighlighted = d.slug === highlightSlug;
+			const effectiveRadius = isHighlighted ? radius + 4 : radius;
 
-			if (d.icon) {
-				// For tech nodes with icons, render the SVG icon
-				group
+			if (d.image) {
+				// For nodes with images, render circular clipped image
+				const clipId = `clip-${d.slug.replace(/[^a-zA-Z0-9]/g, '-')}`;
+
+				// Create clip path for circular image
+				defs.append('clipPath')
+					.attr('id', clipId)
 					.append('circle')
-					.attr('r', radius)
+					.attr('r', effectiveRadius - 2);
+
+				// Background circle with stroke
+				const circle = group
+					.append('circle')
+					.attr('r', effectiveRadius)
 					.attr('fill', '#1f2937')
-					.attr('stroke', getNodeColor(d))
-					.attr('stroke-width', 2);
+					.attr('stroke', isHighlighted ? 'url(#Gradient1)' : getNodeColor(d))
+					.attr('stroke-width', isHighlighted ? 4 : 2);
+
+				if (isHighlighted) {
+					circle.attr('filter', 'url(#glow)');
+				}
+
+				// Add image clipped to circle
+				group
+					.append('image')
+					.attr('xlink:href', d.image)
+					.attr('x', -(effectiveRadius - 2))
+					.attr('y', -(effectiveRadius - 2))
+					.attr('width', (effectiveRadius - 2) * 2)
+					.attr('height', (effectiveRadius - 2) * 2)
+					.attr('clip-path', `url(#${clipId})`)
+					.attr('preserveAspectRatio', 'xMidYMid slice');
+			} else if (d.icon) {
+				// For tech nodes with icons, render the SVG icon
+				const circle = group
+					.append('circle')
+					.attr('r', effectiveRadius)
+					.attr('fill', '#1f2937')
+					.attr('stroke', isHighlighted ? 'url(#Gradient1)' : getNodeColor(d))
+					.attr('stroke-width', isHighlighted ? 4 : 2);
+
+				if (isHighlighted) {
+					circle.attr('filter', 'url(#glow)');
+				}
 
 				// Add icon as foreignObject
 				group
@@ -159,7 +219,16 @@
 					.html(d.icon);
 			} else {
 				// Regular colored circle
-				group.append('circle').attr('r', radius).attr('fill', getNodeColor(d));
+				const circle = group
+					.append('circle')
+					.attr('r', effectiveRadius)
+					.attr('fill', getNodeColor(d))
+					.attr('stroke', isHighlighted ? 'url(#Gradient1)' : null)
+					.attr('stroke-width', isHighlighted ? 4 : 0);
+
+				if (isHighlighted) {
+					circle.attr('filter', 'url(#glow)');
+				}
 			}
 
 			// Add hover effect
@@ -180,8 +249,17 @@
 						);
 				})
 				.on('mouseleave', function () {
-					d3Selection.select(this).select('circle').attr('stroke', d.icon ? getNodeColor(d) : null).attr('stroke-width', d.icon ? 2 : 0);
-					links.attr('stroke', '#374151').attr('stroke-width', 1);
+					const baseStroke = isHighlighted ? 'url(#Gradient1)' : (d.icon ? getNodeColor(d) : null);
+					const baseWidth = isHighlighted ? 4 : (d.icon ? 2 : 0);
+					const baseFilter = isHighlighted ? 'url(#glow)' : null;
+					d3Selection.select(this).select('circle')
+						.attr('stroke', baseStroke)
+						.attr('stroke-width', baseWidth)
+						.attr('filter', baseFilter);
+					// Restore edge highlighting for current node
+					links
+						.attr('stroke', (l) => isHighlightedEdge(l) ? 'url(#Gradient1)' : '#374151')
+						.attr('stroke-width', (l) => isHighlightedEdge(l) ? 2 : 1);
 				});
 		});
 
@@ -205,7 +283,34 @@
 
 			nodeGroups.attr('transform', (d) => `translate(${d.x},${d.y})`);
 		});
+
+		// Center on highlighted node when simulation ends
+		simulation.on('end', () => {
+			if (highlightSlug) {
+				const highlightedNode = visibleNodes.find(n => n.slug === highlightSlug);
+				if (highlightedNode && highlightedNode.x !== undefined && highlightedNode.y !== undefined) {
+					const scale = 0.8;
+					const x = width / 2 - highlightedNode.x * scale;
+					const y = height / 2 - highlightedNode.y * scale;
+					svgSelection
+						.transition()
+						.duration(500)
+						.call(zoom.transform, d3Zoom.zoomIdentity.translate(x, y).scale(scale));
+				}
+			}
+		});
 	}
+
+	// Track previous highlightSlug to detect changes
+	let prevHighlightSlug = $state(highlightSlug);
+
+	$effect(() => {
+		// Reinitialize when highlightSlug changes (navigation between notes)
+		if (highlightSlug !== prevHighlightSlug && svg) {
+			prevHighlightSlug = highlightSlug;
+			initSimulation();
+		}
+	});
 
 	onMount(() => {
 		// Set initial dimensions from container

@@ -1,7 +1,7 @@
 ---
 name: How to deploy a website FOR FREE with Github pages & actions
 slug: how-to-deploy-for-free-on-github-pages
-tags: [technology, react, github-actions, next, github-pages]
+tags: [react, github-actions, next, github-pages]
 growth: evergreen
 date: "2020-09-24 14:14:14 -0300"
 image: /images/posts/ants.jpg

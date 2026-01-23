@@ -1,7 +1,7 @@
 ---
 name: MUI
 slug: mui
-tags: [technology]
+tags: []
 growth: seedling
 ---
 

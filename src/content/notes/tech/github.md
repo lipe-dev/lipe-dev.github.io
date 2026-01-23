@@ -1,7 +1,7 @@
 ---
 name: GitHub
 slug: github
-tags: [technology]
+tags: []
 growth: seedling
 ---
 

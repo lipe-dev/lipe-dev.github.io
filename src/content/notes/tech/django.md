@@ -1,7 +1,7 @@
 ---
 name: Django
 slug: django
-tags: [technology]
+tags: []
 growth: seedling
 ---
 

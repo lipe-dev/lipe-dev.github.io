@@ -1,7 +1,7 @@
 ---
 name: Python
 slug: python
-tags: [technology]
+tags: []
 growth: seedling
 ---
 

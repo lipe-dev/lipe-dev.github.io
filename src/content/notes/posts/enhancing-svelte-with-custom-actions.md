@@ -1,7 +1,7 @@
 ---
 name: "Enhancing Svelte with Custom Actions: Taming Sibling Styles"
 slug: enhancing-svelte-with-custom-actions
-tags: [technology, svelte, css, typescript, javascript]
+tags: [svelte, css, typescript, javascript]
 growth: evergreen
 date: "2023-08-24 14:14:14 -0300"
 image: /images/posts/siblings.jpg

@@ -1,7 +1,7 @@
 ---
 name: React
 slug: react
-tags: [technology]
+tags: []
 growth: seedling
 ---
 

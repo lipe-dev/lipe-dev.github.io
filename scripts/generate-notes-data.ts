@@ -39,6 +39,7 @@ interface GraphNode {
 	name: string;
 	tags: string[];
 	growth: GrowthStage;
+	image?: string;
 }
 
 interface GraphEdge {
@@ -235,7 +236,8 @@ function buildGraph(
 			slug: note.slug,
 			name: note.name,
 			tags: note.tags,
-			growth: note.growth
+			growth: note.growth,
+			image: note.image
 		});
 
 		// Extract wikilinks from content
@@ -327,6 +329,7 @@ export interface GraphNode {
 	name: string;
 	tags: string[];
 	growth: GrowthStage;
+	image?: string;
 }
 
 export interface GraphEdge {

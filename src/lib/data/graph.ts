@@ -6,6 +6,7 @@ export type GraphNode = {
 	tags: string[];
 	growth: GrowthStage;
 	icon?: string; // SVG string for tech nodes
+	image?: string; // Image URL from frontmatter
 };
 
 export type GraphEdge = {

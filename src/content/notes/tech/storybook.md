@@ -1,7 +1,7 @@
 ---
 name: Storybook
 slug: storybook
-tags: [technology]
+tags: []
 growth: seedling
 ---
 

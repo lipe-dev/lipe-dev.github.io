@@ -1,7 +1,7 @@
 ---
 name: Android
 slug: android
-tags: [technology]
+tags: []
 growth: seedling
 ---
 
