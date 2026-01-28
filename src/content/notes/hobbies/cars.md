@@ -12,16 +12,16 @@ I've always been passionate about cars - not just driving them, but understandin
 
 ## My Fleet
 
-### [[toyota-bandeirante|Toyota Bandeirante (1989)]]
+### [[Toyota Bandeirante]]
 My pride and joy - a Brazilian-built Toyota Land Cruiser variant with a Mercedes-Benz diesel engine. This is my project vehicle for off-roading, camping, and eventually a mobile office setup.
 
-### [[chevette|Chevette]]
+### [[Chevette]]
 My drift project car. A classic Brazilian GM compact that I'm building for track days and drift events.
 
-### [[gm-classic|GM Classic (2010)]]
+### [[GM Classic]]
 My daily driver and car audio project. A reliable sedan that I've upgraded with a custom sound system.
 
-### [[corolla|Toyota Corolla Hybrid]]
+### [[Toyota Corolla Hybrid]]
 The practical family car. Efficient and reliable transportation.
 
 ## Interests

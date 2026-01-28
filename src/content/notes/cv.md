@@ -92,7 +92,7 @@ Remotely from Brazil
 
 ## Education
 
-### [[Information Systems]] - [[UNIFEI|Federal University of Itajubá]]
+### [[Information Systems]] - [[UNIFEI]]
 - Bachelor's Degree (2010-2013 & 2015-2016)
 - 1st place in admission process
 - Graduated with GPA in top 2%
@@ -109,6 +109,6 @@ Remotely from Brazil
 
 - [[Hardware]] & [[Electronics]]
 - Playing the [[Bass]]
-- [[Cars|Motor Sports]] (car building, drifting, off-road)
+- [[Cars]] (car building, drifting, off-road)
 - [[Woodworking]]
 - [[3D Printing]]

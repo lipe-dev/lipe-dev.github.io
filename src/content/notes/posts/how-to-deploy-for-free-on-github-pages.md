@@ -19,13 +19,13 @@ I have done my fair share of website deploying with good ol' FTP over the years.
 
 ### CI in a nutshell
 
-Nowadays we do things automatically with the use of [[CI/CD|CI (Continuous Integration)]]. TLDR: You integrate the development, version control, build, testing, and deployment of your website into one beautiful continuous cycle, that usually goes:
+Nowadays we do things automatically with the use of [[CI/CD]]. TLDR: You integrate the development, version control, build, testing, and deployment of your website into one beautiful continuous cycle, that usually goes:
 
 ```sequence
 code > commit > pull request > tests > build > merge > deploy
 ```
 
-The steps from tests to deploy are usually handled by some [[CI/CD|CI]] service. There are many like [Circle CI](https://circleci.org), [Gitlab CI](https://docs.gitlab.com/ee/ci/), and the one we'll be using here: [[GitHub Actions]]. The reason I mentioned these 3 in specific is that I have used them in the past and know that they have free plans to get you started. These free plans are probably more than you need for smaller/personal projects. There are however many other services out there that do this.
+The steps from tests to deploy are usually handled by some [[CI/CD]] service. There are many like [Circle CI](https://circleci.org), [Gitlab CI](https://docs.gitlab.com/ee/ci/), and the one we'll be using here: [[GitHub Actions]]. The reason I mentioned these 3 in specific is that I have used them in the past and know that they have free plans to get you started. These free plans are probably more than you need for smaller/personal projects. There are however many other services out there that do this.
 
 What these services do is basically run a bunch of shell commands on some server somewhere. You usually have to configure what commands will be executed. There are exceptions, such as [[Vercel]] which specializes in [[Next.js]] projects and does everything that needs to be done out of the box for that kind of project, so that may be a good solution for you.
 
@@ -35,13 +35,13 @@ If that sounds interesting to you, but you're not building with [[Next.js]], you
 
 [[GitHub Pages]] is a free service from [[GitHub]] that serves website pages straight from your repo. Keep in mind that you must leave the website's code public for this to work, so don't use it if you have sensitive code there. In my case, it was perfect, as my website can also serve as a showcase of my work/coding,
 
-**Important Info:** [[GitHub Pages]] will, by default, process your pages as if they were built with [[Jekyll]], a blog aware static website generator. If you are not using [[Jekyll]] to build your website, you will have to tell [[GitHub Pages]] to skip this step. If you are using [[Jekyll]] however, you don't even need [[CI/CD|CI]] or anything, [[GitHub Pages]] will build and serve it straight from the repo automatically.
+**Important Info:** [[GitHub Pages]] will, by default, process your pages as if they were built with [[Jekyll]], a blog aware static website generator. If you are not using [[Jekyll]] to build your website, you will have to tell [[GitHub Pages]] to skip this step. If you are using [[Jekyll]] however, you don't even need [[CI/CD]] or anything, [[GitHub Pages]] will build and serve it straight from the repo automatically.
 
 Github pages can serve pages from a variety of sources. You can have your pages in a `gh-pages` branch, or in a `docs` folder inside your master branch. Visit [The Docs](https://pages.github.com/) to find out more. We'll be deploying it to the `gh-pages` branch here.
 
 ### Github Actions
 
-[[GitHub Actions]] is a free-to-start [[CI/CD|CI]] service from [[GitHub]]. There are many pre-made actions that do specific jobs for you. For instance, in this guide we'll be using an action that deploys to [[GitHub Pages]] using the gh-pages lib. There are actions that release libs to [[NPM]], there are ones that run build scripts for many popular frameworks and so on.
+[[GitHub Actions]] is a free-to-start [[CI/CD]] service from [[GitHub]]. There are many pre-made actions that do specific jobs for you. For instance, in this guide we'll be using an action that deploys to [[GitHub Pages]] using the gh-pages lib. There are actions that release libs to [[NPM]], there are ones that run build scripts for many popular frameworks and so on.
 
 ## Let's get down to business!
 
@@ -51,7 +51,7 @@ Enough with the chatter, let's get going.
 
 First of all, you will need your project (do I even have to say that?).
 
-In my case, I'll be using my own website as an example. This website is built with [[Next.js]]. [[Next.js]] has the ability to generate a static website (plain old [[HTML]] + [[CSS]] + [[JavaScript|JS]]) that can be run directly in the browser. Here are a few tips for different kind of projects:
+In my case, I'll be using my own website as an example. This website is built with [[Next.js]]. [[Next.js]] has the ability to generate a static website (plain old [[HTML]] + [[CSS]] + [[JavaScript]]) that can be run directly in the browser. Here are a few tips for different kind of projects:
 
 - **Plain HTML**: If you are building a plain [[HTML]] static website, you are good to go! Skip to the next step.
 - **React project**: You will need to know about the `build` script. It generates a production ready build of your project.

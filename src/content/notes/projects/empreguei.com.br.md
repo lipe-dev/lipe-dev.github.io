@@ -29,7 +29,7 @@ Additionally, orchestrating real-time communication across three distinct apps p
 
 This project marked my inaugural encounter with several technologies that continue to underpin my work today: [[React]], [[Python]], [[Django]], [[Material Design]], and [[Firebase]]. Beyond technical proficiency, it served as an arena for delving into the realms of business operations. As the sole developer, I collaborated closely with the CEO and CTO, fostering an intricate understanding of aligning tech solutions with overarching business goals.
 
-The project also etched my introduction to [[Machine Learning]] models, unraveling the intricacies of training and continual enhancement. Equally, the journey encompassed a deep dive into [[CI/CD|continuous integration and deployment]], with a robust pipeline delivering frequent production updates.
+The project also etched my introduction to [[Machine Learning]] models, unraveling the intricacies of training and continual enhancement. Equally, the journey encompassed a deep dive into [[CI/CD]], with a robust pipeline delivering frequent production updates.
 
 Yet, the venture also illuminated the poignant reality that even with a stellar product, an exceptional team, and an altruistic mission, challenges can arise. Empreguei.com.br ultimately succumbed after a commendable operational span, instilling a humbling reminder of the unpredictable nature of business ventures.
 

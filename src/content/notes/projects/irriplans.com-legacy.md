@@ -15,7 +15,7 @@ images: ['/images/projects/legacy_irriplans.com/1.png']
 
 Join me in unearthing the saga of **[[Irriplans.com]]**, where mapping meets irrigation in a dance of technology and innovation. This mapping marvel, tailored for irrigation aficionados, boasts a star feature – a map-drawing tool that's the backbone of the experience.
 
-Imagine this: clients traversing a digital landscape powered by the enchanting [[MapLibre|MapLibreGL JS]] (minus the complexity of [[Mapbox]]'s hush-hush antics), weaving their irrigation dreams onto the canvas. And that's not all – these water wranglers can seamlessly print and share their aquatic creations with clients. A true harmony of form and function!
+Imagine this: clients traversing a digital landscape powered by the enchanting [[MapLibre]] (minus the complexity of [[Mapbox]]'s hush-hush antics), weaving their irrigation dreams onto the canvas. And that's not all – these water wranglers can seamlessly print and share their aquatic creations with clients. A true harmony of form and function!
 
 ## Tackling the Tempests
 

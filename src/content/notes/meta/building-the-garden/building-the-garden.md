@@ -70,3 +70,60 @@ Next steps: actually sow those seeds and start writing content.
 - Site now builds as fully static - ready for [[GitHub Pages]] and Neocities
 
 Next steps: layout adjustments to all pages to fit new style of site.
+
+### Day 5 - The Great Seedling Expansion
+
+Expanded seedling. The approach: pick a note, chat about it with my LLM, gather the real stories and details, then write it up properly.
+
+**Upgraded to budding:**
+
+- All 13 gigs/jobs notes (eBay, LoadSmart, LogRock, Giphy, Instituto Eldorado, Empreguei, Teleo, Utyl, Safe Trace Café, Traço Leal, Repunzel, UNIFEI, University of Maryland)
+- [[Bass]] - actual gear setup, Boss pedal OCD, custom pedalboard from Brazilian hardwoods
+- [[Dactyl Manuform]] - the full rabbit hole from "maybe a smaller keyboard" to buying a 3D printer
+- [[Chevette]] - including the legendary 6-hour nighttime heist story
+- [[Woodworking]] - Steve Ramsey to Paul Sellers pipeline, the eternal workbench, multiple chickens and eggs
+- [[Electronics]] - telecom background, the Bandeirante's 32 connections, projects in limbo
+
+**Also updated:**
+
+- [[Toyota Bandeirante]] - pristine condition with original manuals and dealer tag
+- [[GM Classic]] - seedling outline with the real story
+- Fixed wikilink pipe syntax across the entire codebase (was using `[[slug|display]]`, now just `[[Note Name]]`)
+
+**Stats:** Went from 85 seedlings to ~70. Garden is growing.
+
+Next steps: more seedlings, maybe tackle the tech notes or car sub-projects.
+
+### Day 6 - Meta and Machines
+
+More conversational expansion, but this time with a focus on organizing the chaos.
+
+**Upgraded to budding:**
+
+- [[Planted Aquarium]] - the full DIY sump setup with custom siphon overflow, now with Excalidraw diagrams
+- [[Gaming PC]] - specs flex (9950X3D, 5080, 64GB DDR5), Lian Li RGB ecosystem hell, Linux gaming edge cases
+- [[Bandeirante Power Steering]] - completed project write-up, Junior Cordeiro the steering wizard, F350 pump kit with Mercedes pulley
+
+**Major updates:**
+
+- [[Toyota Bandeirante]] - full roadmap from the Google Drive list, everything from done items to "maybe someday" dreams
+- Transfer case corrected to 3-setting (not 2-speed) - the "tractor mode" is its own thing
+
+**Created meta notes:**
+
+- [[Notes to Expand Next]] - prioritized list of what to write next, balanced across hobbies/tech/life
+- [[Ongoing Projects]] - every loose end mapped out, including the famous chicken-and-egg dependency chart
+
+**New seedlings planted:**
+
+- [[Gridfinity]] - the Zack Freedman modular organization system
+- [[Underware]] - under-desk cable management project
+- [[Bambu Lab A1]] - the printer that started as "I'll just use a print farm"
+- [[Welding]] - currently learning for Chevette bodywork
+- [[Fishkeeping]] - hub note for the aquarium hobby
+
+**Stats:** 116 notes total (75 seedlings, 36 budding, 5 evergreen)
+
+The garden is becoming self-documenting. Notes about notes. Meta all the way down.
+
+Next steps: tackle tech stack placeholders, maybe expand the car sub-projects now that the roadmap is clear.

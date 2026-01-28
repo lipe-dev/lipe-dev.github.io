@@ -15,7 +15,7 @@ images: ['/images/projects/legacy_irriplans.com/1.png']
 
 Welcome to the tale of **[[Irriplans.com]]**, where we irrigate your mapping needs with a splash of innovation! This mapping software, tailor-made for irrigation champs and contractors, dives deep into simplifying the complex choreography of irrigation planning. The pièce de résistance? A map-drawing feature that's the heartbeat of this aqua-inspired application.
 
-Imagine this: clients surfing a dynamic map, powered by the swanky [[MapLibre|MapLibreGL JS]] (let's not mention [[Mapbox]]'s closed-source shindig), embellishing it with irrigation gems. And wait, there's more! These water wizards can summon prints straight from their browser and even whip up shareable links for their clients. Talk about making a splash!
+Imagine this: clients surfing a dynamic map, powered by the swanky [[MapLibre]] (let's not mention [[Mapbox]]'s closed-source shindig), embellishing it with irrigation gems. And wait, there's more! These water wizards can summon prints straight from their browser and even whip up shareable links for their clients. Talk about making a splash!
 
 ## Conquering Challenges
 

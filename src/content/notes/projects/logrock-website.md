@@ -45,7 +45,7 @@ As an engineer, I encountered a series of technical challenges on this journey. 
 
 ### Multilingual Mastery
 
-Catering to a multilingual audience meant diving into the complexities of language support. I chose to integrate the [[i18n|react-i18n]] library into our build pipeline, allowing us to generate distinct versions of the site for different languages. This not only improved performance but also enhanced [[SEO]] by providing dedicated content for each language. It was like fine-tuning a powerful engine for a multi-country road trip.
+Catering to a multilingual audience meant diving into the complexities of language support. I chose to integrate the [[i18n]] library into our build pipeline, allowing us to generate distinct versions of the site for different languages. This not only improved performance but also enhanced [[SEO]] by providing dedicated content for each language. It was like fine-tuning a powerful engine for a multi-country road trip.
 
 ### Performance Optimization
 
