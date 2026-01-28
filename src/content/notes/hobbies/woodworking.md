@@ -47,20 +47,11 @@ There's a room behind the garage that I've been meaning to turn into a proper sh
 
 ## The Eternal Workbench
 
-The crown jewel of projects-that-aren't-done-yet: a traditional Roubo-style workbench.
-
-### The Plan
-- Split top with a loose board in between for clamping workpieces
-- Drilled through for chisel storage
-- Leg vise
-- The kind of bench that outlives you
-
-### Current Status
-- **Tops**: Glued up ✓
-- **Legs**: Glued up from vigas (12x5cm dimensional lumber) ✓
-- **Joinery and assembly**: Needs 2-3 dedicated weekends
+The crown jewel of projects-that-aren't-done-yet: a traditional [[Roubo Workbench]].
 
 It's been "2-3 weekends away" for about three years now. In my defense: two house moves and having a kid will vaporize your hobby bandwidth.
+
+The full roadmap is now documented. Time to break the chicken-egg cycle.
 
 ## The Chicken and Egg Problem
 
