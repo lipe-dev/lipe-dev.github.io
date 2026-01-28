@@ -55,13 +55,13 @@ All the loose ends. The chickens and eggs. A clear picture of works in progress,
 
 **Next:** Assemble when parts arrive
 
-### [[Woodworking]] - Roubo Workbench
-**Status:** Major components done, needs assembly
-- Tops glued up ✓
+### [[Roubo Workbench]]
+**Status:** Major components done, joinery phase next
+- Tops glued up and planed ✓
 - Legs glued up (from vigas) ✓
-- **Needs:** 2-3 dedicated weekends for joinery and assembly
+- **Needs:** Joinery, stretchers, top attachment, vise hardware
 
-**Next:** Find the weekends
+**Next:** Square up tops, cut leg mortises. Full roadmap in the note.
 
 ## Planned - Not Yet Started
 
