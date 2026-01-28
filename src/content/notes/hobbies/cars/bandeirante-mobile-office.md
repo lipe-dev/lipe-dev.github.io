@@ -34,6 +34,7 @@ As a remote software developer, the idea of working from a scenic overlook, a qu
 - Comfortable seating position
 - Shade/cover from elements
 - Good ventilation
+- **Quick release steering wheel** - remove the wheel to free up cabin space (see [[Bandeirante Power Steering]] for the custom hub plan)
 
 ### Comfort
 - [[bandeirante-ac]] becomes even more important

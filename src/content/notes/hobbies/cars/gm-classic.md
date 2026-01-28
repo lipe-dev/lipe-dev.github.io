@@ -9,40 +9,20 @@ growth: seedling
 
 # GM Classic (2010)
 
-The Chevrolet Classic (also known as Corsa Classic in some markets) is a compact sedan that served as my daily driver. It's become my car audio project car where I experiment with speaker placement, amplifiers, and sound tuning.
-
-## About the Classic
-
-The Classic is a practical, reliable sedan that's perfect for daily driving and commuting. Its relatively quiet cabin makes it a good platform for a car audio build.
-
-Key specs:
-- **Engine**: GM 1.0L VHC-E Flex
-- **Transmission**: 5-speed manual
-- **Body Style**: 4-door sedan
-
-## Audio Project
-
-### [[classic-sound-system|Sound System Build]]
-
-The goal is to build a well-balanced audio system that sounds great for daily listening while still having the ability to impress. Focus areas:
-
-- **Source**: Quality head unit with good DAC
-- **Front Stage**: Component speakers with proper sound staging
-- **Subwoofer**: Modest but impactful bass that doesn't overwhelm
-- **Amplification**: Clean power with headroom
-- **Sound Treatment**: Deadening and acoustic treatment
-
-### Completed Upgrades
-- [ ] Head unit upgrade
-- [ ] Front component speakers
-- [ ] Rear speakers
-- [ ] Subwoofer installation
-- [ ] Amplifier installation
-- [ ] Sound deadening
-- [ ] Tuning and DSP
+my first car
+bought from my grandfather about 10 years ago
+2010 chevrolet classic - successor to the corsa/corsa classic, kind of a celta sedan
+drove it daily for years
+moved across the country a couple of times in it (stories for another note)
+was the scout vehicle during the [[Chevette]] heist - dad drove it as our headlights
+now my backup car, kept in memory of my grandfather
+[[Toyota Corolla Hybrid]] is now my daily
+also my car audio project - [[Classic Sound System]]
 
 ## Related
 
-- [[cars]] - Back to my car collection
-- [[electronics]] - Audio electronics and wiring
-- [[woodworking]] - Custom enclosures
+- [[Cars]] - The car hobby hub
+- [[Chevette]] - The heist story
+- [[Classic Sound System]] - Audio build
+- [[Electronics]] - Audio wiring
+- [[Woodworking]] - Custom enclosures

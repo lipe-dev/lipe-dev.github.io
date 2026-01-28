@@ -12,7 +12,7 @@ Computer hardware and building systems has been an interest since I first opened
 
 ## PC Building
 
-### [[gaming-pc|Gaming PC]]
+### [[Gaming PC]]
 My current build serves as both gaming rig and development workstation. Built it myself, choosing components for the right balance of performance, noise, and value.
 
 ### Building Philosophy

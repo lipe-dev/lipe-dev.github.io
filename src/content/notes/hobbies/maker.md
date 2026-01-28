@@ -12,10 +12,10 @@ I enjoy building things - both physical and digital. There's something deeply sa
 
 ## Current Projects
 
-### [[dactyl-manuform|Dactyl Manuform Keyboard]]
+### [[Dactyl Manuform]]
 Building an ergonomic split mechanical keyboard from scratch. A project that combines [[3d-printing]], [[electronics]], and firmware programming.
 
-### [[opengrid|OpenGrid Organization System]]
+### [[OpenGrid]]
 A modular organization system inspired by Gridfinity, designed for organizing workshop tools and components.
 
 ## Skills & Tools
