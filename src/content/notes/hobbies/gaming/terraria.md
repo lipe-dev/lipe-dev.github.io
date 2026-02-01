@@ -23,13 +23,13 @@ This is where Terraria gets special.
 
 Me (33), my brother (23), and now our little sister (13) play together. That's a 20-year age gap between me and her, 10 years between each of us. Finding something we can all enjoy together isn't easy.
 
-Terraria works. We've done multiple playthroughs over the years - me and my brother first, and now the party has grown. She's learning the ropes, we're helping her gear up, and we're all having a blast.
+Terraria works. We've done multiple playthroughs over the years, me and my brother first, and now the party has grown. She's learning the ropes, we're helping her gear up, and we're all having a blast.
 
 There's something nice about having a game that bridges those gaps. No matter how different our lives are at these ages, we can all dig tunnels, fight bosses, and argue about base design together.
 
 ## The Modded Rabbit Hole
 
-Vanilla is great, but the modding scene is insane. Calamity, Thorium, quality-of-life mods - there's basically infinite content if you want it. Some of my 800 hours are definitely from modded runs that added entire new progression systems.
+Vanilla is great, but the modding scene is insane. Calamity, Thorium, quality-of-life mods. There's basically infinite content if you want it. Some of my 800 hours are definitely from modded runs that added entire new progression systems.
 
 ## Related
 

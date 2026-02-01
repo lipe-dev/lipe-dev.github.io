@@ -16,25 +16,25 @@ The story of how "maybe I should get a smaller keyboard" turned into learning Op
 
 ## The Rabbit Hole
 
-It started innocently enough. I've had my Corsair K90 (the original, not the newer ones) for about 10 years. 18 macro keys, full layout, rotary volume control - it's a beast and I love it. But it's getting old, and honestly it's a pain to carry around.
+It started innocently enough. I've had my Corsair K90 (the original, not the newer ones) for about 10 years. 18 macro keys, full layout, rotary volume control. It's a beast and I love it. But it's getting old, and honestly it's a pain to carry around.
 
-So I figured I'd look into something smaller. [[LoadSmart]] had given me a free WASD keyboard back in the day, but I hated it. Brown switches feel mushy to me - I'm a linear guy, used to reds and low-effort keystrokes.
+So I figured I'd look into something smaller. [[LoadSmart]] had given me a free WASD keyboard back in the day, but I hated it. Brown switches feel mushy to me. I'm a linear guy, used to reds and low-effort keystrokes.
 
 One thing led to another. r/mechanicalkeyboards led to r/ergomechkeyboards, and suddenly I was looking at curved split keyboards and thinking "yeah, I need that."
 
 ## Why Dactyl Manuform Specifically
 
-I looked at a bunch of ergo splits - Corne, Lily58, Kyria, and others. The Dactyl Manuform won me over for a few reasons.
+I looked at a bunch of ergo splits: Corne, Lily58, Kyria, and others. The Dactyl Manuform won me over for a few reasons.
 
-First, it's not really a 3D model - it's a code project. The whole thing is parametrically generated. You don't download an STL and print it; you configure a script and it generates exactly what you need. That modularity and customization tickles my engineering brain in all the right ways. It's the same reason I gravitate toward code over no-code tools.
+First, it's not really a 3D model. It's a code project. The whole thing is parametrically generated. You don't download an STL and print it; you configure a script and it generates exactly what you need. That modularity and customization tickles my engineering brain in all the right ways. It's the same reason I gravitate toward code over no-code tools.
 
 Second, the ergonomics looked genuinely promising. The curved key wells follow your finger arcs, the thumb clusters are actually usable, and the split design lets you position your hands at shoulder width instead of hunched over a single board.
 
-Will it actually make work more comfortable? I don't know yet. There's definitely a learning curve - columnar layouts and thumb clusters require retraining muscle memory. But I'm willing to put in the time to find out. Spending 8+ hours a day typing makes it worth experimenting with.
+Will it actually make work more comfortable? I don't know yet. There's definitely a learning curve. Columnar layouts and thumb clusters require retraining muscle memory. But I'm willing to put in the time to find out. Spending 8+ hours a day typing makes it worth experimenting with.
 
 ## The First Attempt
 
-A few years back I actually tried building a Dactyl Manuform. Had a friend print the case on his Ender 3 - the print quality was rough, lots of artifacts, but it worked. I hand-wired the whole thing on an original Pro Micro.
+A few years back I actually tried building a Dactyl Manuform. Had a friend print the case on his Ender 3. The print quality was rough, lots of artifacts, but it worked. I hand-wired the whole thing on an original Pro Micro.
 
 I never actually daily drove it. The jankiness was too much, and I think deep down I knew I wanted to do it properly.
 
@@ -69,7 +69,7 @@ The logic made sense at the time. Why pay someone else when I could own the prin
 
 ### The Print
 
-Matte black filament. 0.08mm layer height - the finest my A1 could do. If I was going to do this, I was going to do it right.
+Matte black filament. 0.08mm layer height, the finest my A1 could do. If I was going to do this, I was going to do it right.
 
 Had a few failures along the way:
 - One random layer shift ruined a 20-hour print
@@ -94,7 +94,7 @@ The cases are done. Now I'm in the AliExpress/Keycapsss waiting game.
 
 ### The Color Scheme
 
-Black and yellow to match my desk setup - KRK Rokit Classic 5 monitors and Scarlett Solo interface. The red keycap accents tie it together. Cohesive aesthetic matters when you're staring at something all day.
+Black and yellow to match my desk setup: KRK Rokit Classic 5 monitors and Scarlett Solo interface. The red keycap accents tie it together. Cohesive aesthetic matters when you're staring at something all day.
 
 ## Planned Features
 

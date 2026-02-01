@@ -81,3 +81,12 @@ Notes link to each other via `[[Note Name]]` or `[[slug]]` syntax. The mdsvex co
 - `mdsvex.config.js` - Markdown processing with wikilink plugin
 - `src/routes/[slug]/+page.server.ts` - Dynamic note pages with prerender entries
 - `src/lib/generated/notes-data.ts` - Auto-generated, do not edit manually
+
+## Writing Guidelines for Notes
+
+When writing or editing note content:
+
+- **Avoid mid-sentence dashes** like "this is something - and here's more." This pattern is a dead giveaway of AI-generated text. Use periods, commas, colons, or parentheses instead.
+- **Use simple wikilinks** like `[[Note Name]]` without pipe syntax. Don't use `[[slug|display text]]`.
+- **Keep the tone casual but serious** with occasional jokes. No corporate speak.
+- **Ask for info rather than inventing** when details aren't available in existing notes.

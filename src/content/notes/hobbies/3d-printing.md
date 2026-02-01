@@ -9,63 +9,78 @@ growth: budding
 
 # 3D Printing
 
-3D printing has become an essential tool in my maker workflow. What started as a curiosity has become a go-to method for creating custom parts, prototypes, and practical objects.
+I've wanted a 3D printer for about 15 years. The tech always seemed too complicated, I was moving across country and states for work, and the timing never felt right. I spent years watching YouTubers like Zack Freedman and daydreaming about getting an Ender 3 and upgrading it to hell.
 
-## My Setup
+Then I saw a video from SuperFastMatt saying "now is the time to get into 3D printing." And you know what? He was right. It's finally a solved problem. Plug and play in a way I never thought it would be.
 
-### Printer
-Running an FDM (Fused Deposition Modeling) printer - the most common and practical type for hobbyist use. FDM works by melting plastic filament and depositing it layer by layer.
+## The Setup
 
-### Slicing Software
-Using modern slicing software to convert 3D models into printer instructions (G-code). The slicer settings make a huge difference in print quality.
+### [[Bambu Lab A1]]
 
-### Materials
-- **PLA** - Easy to print, good for prototypes and decorative items
-- **PETG** - Stronger, more heat resistant, my go-to for functional parts
-- **TPU** - Flexible material for gaskets and grips
-- **ABS** - When heat resistance is critical
+The A1 fit my needs and budget. Got the AMS Lite too, though I don't use multicolor much since it generates a lot of waste (the "poop" everyone talks about).
+
+The machine is dead simple. Maintenance is basically:
+- Occasional lubing
+- Wash the build plate with soap
+
+That's it. Very few failed prints, and the ones that did fail were mostly my fault.
+
+### Before the A1
+
+Never owned a printer before this. My cousin and her girlfriend run a 3D printing business (figurines, painting, the whole deal) so when I needed a piece here and there I'd just order from them.
+
+The [[Dactyl Manuform]] keyboard build was what finally pushed me over the edge. I knew I'd be doing a lot of back and forth before nailing the final design, and outsourcing every iteration wasn't going to work.
+
+## Favorite Prints
+
+### The [[Dactyl Manuform]] Keyboard
+
+My pride and joy, even though it's not done yet. Custom case with OLED housing, rotary encoder mount, analog stick mounts. Printed at 0.08mm layer height in matte black. The whole reason I bought the printer.
+
+### AMS Lite 4.0 Rebuild
+
+This project completely rebuilds the AMS Lite into a top-mounted container that looks like the actual AMS. Way easier to swap filaments, cleaner setup, and it was a ton of fun to build. Probably the most useful upgrade I've done.
+
+### Pokemon Figurines with My Daughter
+
+She got into Pokemon recently, and printing figurines for her to paint has become a hobby we share. Finding the right models, printing them, then watching her paint them. This is the kind of stuff that makes the hobby worth it.
+
+## Materials
+
+I keep it simple:
+
+- **PLA** - 90% of what I print. Easy, reliable, good enough for most things.
+- **PETG** - For car parts that would melt in the sun. Higher heat resistance for anything living in a hot vehicle.
+
+## Lessons Learned the Hard Way
+
+### Tall + Thin Layers = Disaster
+
+Tried printing an ocarina at super fine layer heights. Complete failure. Reprinted at regular layer heights and it worked fine. Thin layers on tall prints are asking for trouble.
+
+### Split Prints to Avoid Supports
+
+A technique I've been enjoying is finding creative ways to split prints in two so I can completely avoid supports and waste. All the Pokemon figurines were done this way. Cleaner results, less post-processing.
+
+### Don't Stack OpenGrid Boards
+
+Tried printing multiple [[OpenGrid]] boards at once by stacking them. Bad idea. With PLA, the grids stuck to each other. With PETG as interface material, they didn't stick at all and the whole print failed. Just print them one at a time.
 
 ## What I Print
 
-### Functional Parts
-- [[opengrid]] organization bins
+- [[OpenGrid]] / [[Gridfinity]] organization bins
+- [[Dactyl Manuform]] keyboard parts
+- [[Bandeirante Camping Setup]] accessories
+- [[Classic Sound System]] mounts
+- [[Electronics]] enclosures
 - Car mounts and holders
-- Tool holders
-- [[dactyl-manuform]] keyboard case
-- Cable management
-- Replacement parts for broken items
-
-### Prototypes
-- Testing designs before committing to other materials
-- Iterating on fit and form
-- Proof of concept parts
-
-### Projects
-- [[bandeirante-camping]] accessories
-- [[classic-sound-system]] mounts
-- Custom enclosures for [[electronics]] projects
-
-## Design Workflow
-
-1. **Identify the need** - What problem am I solving?
-2. **Measure carefully** - Calipers are essential
-3. **Design in CAD** - Fusion 360 or OpenSCAD
-4. **Export and slice** - Configure print settings
-5. **Print prototype** - Test fit and function
-6. **Iterate** - Adjust design as needed
-7. **Print final version** - Use appropriate material
-
-## Tips I've Learned
-
-- **Bed leveling is everything** - Get it right, or nothing else matters
-- **Design for printing** - Consider overhangs, support needs, layer orientation
-- **Temperature matters** - Ambient temperature affects print quality
-- **Calibrate regularly** - E-steps, flow rate, temperature tower
-- **Dry your filament** - Moisture is the enemy of quality prints
+- Replacement parts for broken household items
+- Pokemon figurines for painting
 
 ## Related
 
-- [[maker]] - Maker projects hub
-- [[woodworking]] - Another fabrication method
-- [[electronics]] - Often combined with 3D printed enclosures
-- [[cars]] - Many car-related parts
+- [[Maker]] - The broader maker hobby
+- [[Woodworking]] - Different fabrication, same mindset
+- [[Electronics]] - Enclosures and mounts
+- [[Cars]] - Lots of car-related prints
+- [[Bambu Lab A1]] - The printer itself
