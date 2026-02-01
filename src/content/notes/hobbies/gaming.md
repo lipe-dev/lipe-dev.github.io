@@ -13,7 +13,7 @@ Gaming has been a constant companion throughout my life. From early PC gaming to
 ## My Gaming Setup
 
 ### [[Gaming PC]]
-My primary gaming platform - a custom-built PC that handles modern games and doubles as my development workstation.
+My primary gaming platform. A custom-built PC that handles modern games and doubles as my development workstation.
 
 ### [[Gaming on Linux]]
 I primarily game on Linux, which has become surprisingly viable thanks to Proton and the Steam Deck driving improvements.
@@ -36,11 +36,11 @@ I maintain a collection of games across various platforms, with a focus on games
 
 ## Gaming With Family
 
-Gaming bridges age gaps. [[Terraria]] is the perfect example - 800+ hours across playthroughs with my brother (10 years younger) and now our little sister (20 years younger). Finding something a 33, 23, and 13 year old can all enjoy together isn't easy, but digging tunnels and fighting bosses works.
+Gaming bridges age gaps. [[Terraria]] is the perfect example: 800+ hours across playthroughs with my brother (10 years younger) and now our little sister (20 years younger). Finding something a 33, 23, and 13 year old can all enjoy together isn't easy, but digging tunnels and fighting bosses works.
 
 ## Gaming Philosophy
 
-I tend to prefer single-player experiences over multiplayer, with exceptions for co-op with family and close friends. I enjoy games that respect my time and offer meaningful progression. Quality over quantity - I'd rather finish fewer games than have a massive backlog of unfinished ones (though the backlog is real).
+I tend to prefer single-player experiences over multiplayer, with exceptions for co-op with family and close friends. I enjoy games that respect my time and offer meaningful progression. Quality over quantity. I'd rather finish fewer games than have a massive backlog of unfinished ones (though the backlog is real).
 
 ## Related
 

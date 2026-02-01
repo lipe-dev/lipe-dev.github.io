@@ -10,15 +10,15 @@ growth: budding
 
 # Bass & Music
 
-Playing bass guitar has been with me since the high school rock band days. There's something unique about the bass's role in music - you're the bridge between rhythm and harmony, providing the foundation that everything else builds on. Everyone notices the guitar solo, but they feel the bass line.
+Playing bass guitar has been with me since the high school rock band days. There's something unique about the bass's role in music. You're the bridge between rhythm and harmony, providing the foundation that everything else builds on. Everyone notices the guitar solo, but they feel the bass line.
 
 ## My Setup
 
 ### Bass Guitars
 
-**Giannini Bass** - The OG. This is my high school rock band bass, a $50 instrument I've since modified heavily and tuned to perfection. Well, as perfect as a $50 bass can get. There's something satisfying about taking a cheap instrument and making it play better than it has any right to. New pickups, proper setup, action dialed in just right - it's become a completely different instrument.
+**Giannini Bass:** The OG. This is my high school rock band bass, a $50 instrument I've since modified heavily and tuned to perfection. Well, as perfect as a $50 bass can get. There's something satisfying about taking a cheap instrument and making it play better than it has any right to. New pickups, proper setup, action dialed in just right. It's become a completely different instrument.
 
-**Squier Jazz Bass** - Picked this up used and fell in love with it. The Jazz Bass design is a classic for a reason - versatile tone, comfortable neck, sits perfectly in a mix. This is my go-to for actually playing these days.
+**Squier Jazz Bass:** Picked this up used and fell in love with it. The Jazz Bass design is a classic for a reason: versatile tone, comfortable neck, sits perfectly in a mix. This is my go-to for actually playing these days.
 
 ### Amplification
 
@@ -26,7 +26,7 @@ Playing bass guitar has been with me since the high school rock band days. There
 
 ### Effects
 
-Here's the thing: I only buy Boss pedals. It's an OCD thing. The uniformity, the reliability, that classic Boss look on a pedalboard. You should see my tool collection - full DeWalt yellow, no exceptions. Brand consistency is a sickness I've chosen to embrace.
+Here's the thing: I only buy Boss pedals. It's an OCD thing. The uniformity, the reliability, that classic Boss look on a pedalboard. You should see my tool collection: full DeWalt yellow, no exceptions. Brand consistency is a sickness I've chosen to embrace.
 
 **The Board:**
 - **Boss Tuner** - Because playing in tune is non-negotiable
@@ -37,7 +37,7 @@ Here's the thing: I only buy Boss pedals. It's an OCD thing. The uniformity, the
 
 ### The Custom Pedalboard
 
-I built my own pedalboard out of wood, because of course I did. Used fancy Brazilian hardwoods - Tamarindo and Peroba - with traditional woodworking joinery. No screws, proper joints, the whole deal.
+I built my own pedalboard out of wood, because of course I did. Used fancy Brazilian hardwoods (Tamarindo and Peroba) with traditional woodworking joinery. No screws, proper joints, the whole deal.
 
 It's overdue for a rebuild. Need something bigger now that the pedal collection has grown. But that means finishing my [[woodworking]] workbench first, and that project has been sitting in the backlog for three years now...
 
@@ -51,7 +51,7 @@ I gravitate toward:
 
 ## The Luthier Itch
 
-I've caught the bug for instrument building and repair. Already rebuilt my dad's 12-string guitar almost from scratch - new frets, new nut, new bridge, the works. Bringing an old instrument back to life is incredibly satisfying.
+I've caught the bug for instrument building and repair. Already rebuilt my dad's 12-string guitar almost from scratch: new frets, new nut, new bridge, the works. Bringing an old instrument back to life is incredibly satisfying.
 
 The long-term plan is to build my own custom bass from scratch. Design the body, pick the wood, wind the pickups, the whole process. But first I need to finish that damn workbench.
 

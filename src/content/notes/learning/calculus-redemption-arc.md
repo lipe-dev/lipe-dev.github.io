@@ -9,13 +9,13 @@ growth: budding
 
 # Calculus Redemption Arc
 
-Failed the first two calculus exams at [[UNIFEI]]. Not "barely passed" - failed. The kind of failure that makes you question why you thought engineering school was a good idea.
+Failed the first two calculus exams at [[UNIFEI]]. Not "barely passed," just failed. The kind of failure that makes you question why you thought engineering school was a good idea.
 
 ## Professor Tião
 
 First, credit where it's due: Professor Sebastião (Tião to his students) was a badass. After 30+ years teaching calculus, all he needed was a piece of chalk and his epic mustache.
 
-He'd walk into class and ask "what volume and chapter were we on last time?" Someone would say "2.3" and he'd just start writing on the board: "2.4 - Differentials using [whatever] method." No notes, no slides, no textbook. He had it all memorized. There was no textbook - he taught everything from the heart.
+He'd walk into class and ask "what volume and chapter were we on last time?" Someone would say "2.3" and he'd just start writing on the board: "2.4 - Differentials using [whatever] method." No notes, no slides, no textbook. He had it all memorized. There was no textbook. He taught everything from the heart.
 
 Watching him go nuts on the board was genuinely amazing. Pure math, everything made logical sense. I could follow along, understand the derivations, see how one step led to the next. And therein lay my problem.
 
@@ -37,7 +37,7 @@ This was the era of flash drive culture. Downloaded materials passed hand to han
 
 ## The Mystery Professor
 
-One day, someone handed me a flash drive with hundreds of videos. Some professor from somewhere - I have no idea who he was or where the recordings came from. Just a voice and a screen.
+One day, someone handed me a flash drive with hundreds of videos. Some professor from somewhere. I have no idea who he was or where the recordings came from. Just a voice and a screen.
 
 The setup was beautifully primitive: some paint program on Linux, and he'd draw out the calculations with his mouse. Differentials, integrals, one after another. No fancy animations, no production value. Just a guy methodically working through problem after problem, mouse-drawn equations appearing on screen.
 
@@ -45,7 +45,7 @@ It was exactly what I needed.
 
 ## The Grind
 
-I spent two weeks watching those videos almost 24/7. Pausing, rewinding, working through problems alongside the mystery professor. When I ran out of his examples, I hunted down veterans - older students who'd already passed the class - and got them to hand over their old exams for practice.
+I spent two weeks watching those videos almost 24/7. Pausing, rewinding, working through problems alongside the mystery professor. When I ran out of his examples, I hunted down veterans (older students who'd already passed the class) and got them to hand over their old exams for practice.
 
 I studied like I'd never had to study before. Not because I suddenly loved calculus, but because failure wasn't an option and I'd finally found a method that worked for my brain.
 
