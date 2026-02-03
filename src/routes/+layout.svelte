@@ -19,6 +19,7 @@
 
 	// Check if we're on a note page (not homepage)
 	const isNotePage = $derived($page.route.id === '/[slug]');
+	const isHomePage = $derived($page.route.id === '/');
 
 	const wordPool = {
 		developer: [
@@ -70,10 +71,10 @@
 		<div
 			class="flex md:flex-col flex-row justify-center flex-wrap md:flex-nowrap items-start w-full md:w-[520px] shrink-0 gap-2 dotted border-gray-900 border-solid border-r-2 md:fixed md:h-screen sticky -top-20 z-[9999999] md:top-0"
 		>
-			<!-- Header row with pic and text side by side -->
-			<div class="flex flex-row items-center gap-4 md:px-8 md:pt-4 m-2 md:m-0">
+			<!-- Header row with pic and text -->
+			<div class="flex items-center gap-4 m-2 md:m-0 {isHomePage ? 'md:flex-col md:px-16 md:pt-12' : 'md:flex-row md:px-8 md:pt-4'}">
 				<div
-					class="rounded-full gradient w-20 h-20 md:w-24 md:h-24 p-1 relative overflow-hidden shrink-0"
+					class="rounded-full gradient p-1 relative overflow-hidden shrink-0 {isHomePage ? 'w-20 h-20 md:w-40 md:h-40 md:mb-4' : 'w-20 h-20 md:w-24 md:h-24'}"
 					use:sheen
 					role="presentation"
 				>
@@ -84,9 +85,9 @@
 					</div>
 				</div>
 
-				<div class="my-auto">
+				<div class="my-auto {isHomePage ? 'text-center' : ''}">
 					<h1
-						class="font-display md:text-2xl text-xl font-normal text-white tracking-wider uppercase"
+						class="font-display text-xl font-normal text-white tracking-wider uppercase {isHomePage ? 'md:text-4xl' : 'md:text-2xl'}"
 					>
 						I'm <span
 							class="gradient-text"
@@ -95,7 +96,7 @@
 						>.
 					</h1>
 
-					<h2 class="font-display md:text-lg text-lg text-stone-300 font-bold">
+					<h2 class="font-display text-lg text-stone-300 font-bold {isHomePage ? 'md:text-2xl' : 'md:text-lg'}">
 						<span use:textScramble={wordPool.langs}>Front-End</span>
 						<span use:textScramble={wordPool.developer}>Developer</span>
 					</h2>
@@ -103,17 +104,17 @@
 			</div>
 
 			<!-- Navigation Menu -->
-			<nav class="hidden md:flex flex-col gap-0 px-8 w-full" use:sideShine>
-				<a href="/" class="menu-item">
-					<iconify-icon icon="line-md:home" class="text-xl"></iconify-icon>
+			<nav class="hidden md:flex flex-col gap-0 w-full {isHomePage ? 'px-16 mt-4' : 'px-8'}" use:sideShine>
+				<a href="/" class="menu-item {isHomePage ? 'menu-item-lg' : ''}">
+					<iconify-icon icon="line-md:home" class="{isHomePage ? 'text-2xl' : 'text-xl'}"></iconify-icon>
 					<span>Home</span>
 				</a>
-				<a href="/sitemap" class="menu-item">
-					<iconify-icon icon="line-md:document-list" class="text-xl"></iconify-icon>
+				<a href="/sitemap" class="menu-item {isHomePage ? 'menu-item-lg' : ''}">
+					<iconify-icon icon="line-md:document-list" class="{isHomePage ? 'text-2xl' : 'text-xl'}"></iconify-icon>
 					<span>Sitemap</span>
 				</a>
-				<a href="/random" class="menu-item">
-					<iconify-icon icon="line-md:compass-loop" class="text-xl"></iconify-icon>
+				<a href="/random" class="menu-item {isHomePage ? 'menu-item-lg' : ''}">
+					<iconify-icon icon="line-md:compass-loop" class="{isHomePage ? 'text-2xl' : 'text-xl'}"></iconify-icon>
 					<span>Random</span>
 				</a>
 			</nav>
@@ -211,6 +212,15 @@
 		color: theme(colors.orange.400);
 		background: rgba(251, 146, 60, 0.1);
 		padding-left: 1rem;
+	}
+
+	.menu-item-lg {
+		font-size: 1.25rem;
+		padding: 0.5rem 0.75rem;
+	}
+
+	.menu-item-lg:hover {
+		padding-left: 1.25rem;
 	}
 
 	@keyframes cool-img {

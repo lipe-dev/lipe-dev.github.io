@@ -1,7 +1,7 @@
 ---
 name: University of Maryland
 slug: university-of-maryland
-tags: [android, ui-ux, education]
+tags: [learning, android, ui-ux]
 growth: budding
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: Material-UI
 slug: material-ui
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

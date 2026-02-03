@@ -1,7 +1,7 @@
 ---
 name: GIS
 slug: gis
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

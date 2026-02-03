@@ -1,7 +1,7 @@
 ---
 name: UI/UX
 slug: uiux
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

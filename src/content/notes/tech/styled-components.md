@@ -1,7 +1,7 @@
 ---
 name: Styled Components
 slug: styled-components
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

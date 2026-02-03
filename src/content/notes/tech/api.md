@@ -1,7 +1,7 @@
 ---
 name: API
 slug: api
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

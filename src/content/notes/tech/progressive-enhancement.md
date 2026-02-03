@@ -1,7 +1,7 @@
 ---
 name: Progressive Enhancement
 slug: progressive-enhancement
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

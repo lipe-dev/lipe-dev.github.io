@@ -1,7 +1,7 @@
 ---
 name: CI/CD
 slug: cicd
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

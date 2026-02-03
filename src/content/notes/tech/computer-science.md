@@ -1,7 +1,7 @@
 ---
 name: Computer Science
 slug: computer-science
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

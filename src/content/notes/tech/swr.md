@@ -1,7 +1,7 @@
 ---
 name: SWR
 slug: swr
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

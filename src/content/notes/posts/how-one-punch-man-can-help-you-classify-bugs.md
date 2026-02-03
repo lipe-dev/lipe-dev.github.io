@@ -1,7 +1,7 @@
 ---
 name: "Bug Smashing Strategies: Using One Punch Man's Threat Levels for Effective Prioritization"
 slug: how-one-punch-man-can-help-you-classify-bugs
-tags: []
+tags: [ideas]
 growth: evergreen
 date: "2022-11-03 14:14:14 -0300"
 image: /images/posts/threat-levels.png
@@ -12,7 +12,7 @@ image: /images/posts/threat-levels.png
 
 ## Punching Through Bug Prioritization
 
-Enter the world of One Punch Man, where Saitama's legendary one-punch victories have turned the hero trope on its head. But today, we're not here to discuss manga antics or kaiju-sized battles. We're diving into the realm of software bugs and how the threat levels from this anime can help us classify and prioritize bugs more effectively.
+Enter the world of One Punch Man, where Saitama's legendary one-punch victories have turned the hero trope on its head. But today, we're not here to discuss manga antics or kaiju-sized battles. We're diving into the realm of software bugs and how the threat levels from this anime can help us classify and prioritize bugs more effectively. Whether you're working with [[React]], [[TypeScript]], or any other stack, this framework applies.
 
 ## Defining Threat Levels
 

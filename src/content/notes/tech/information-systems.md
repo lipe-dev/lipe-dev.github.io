@@ -1,7 +1,7 @@
 ---
 name: Information Systems
 slug: information-systems
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

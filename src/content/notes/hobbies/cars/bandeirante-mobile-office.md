@@ -4,7 +4,7 @@ slug: bandeirante-mobile-office
 tags:
   - cars
   - remote-work
-  - project
+  - projects
 growth: seedling
 ---
 

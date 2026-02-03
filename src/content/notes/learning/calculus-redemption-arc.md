@@ -2,7 +2,7 @@
 name: Calculus Redemption Arc
 slug: calculus-redemption-arc
 tags:
-  - education
+  - learning
   - unifei
 growth: budding
 ---

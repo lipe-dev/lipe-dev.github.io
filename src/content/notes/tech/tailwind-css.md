@@ -1,7 +1,7 @@
 ---
 name: Tailwind CSS
 slug: tailwind-css
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

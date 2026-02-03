@@ -1,7 +1,7 @@
 ---
 name: Giphy
 slug: giphy
-tags: [react, typescript, django, python, styled-components, cypress]
+tags: [work, react, typescript, django, python, styled-components, cypress]
 growth: budding
 ---
 

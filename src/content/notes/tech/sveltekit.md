@@ -1,7 +1,7 @@
 ---
 name: SvelteKit
 slug: sveltekit
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

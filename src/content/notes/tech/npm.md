@@ -1,7 +1,7 @@
 ---
 name: NPM
 slug: npm
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

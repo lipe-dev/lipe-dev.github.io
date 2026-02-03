@@ -1,7 +1,7 @@
 ---
 name: Utyl Business Platforms
 slug: utyl-business-platforms
-tags: [seo, html, css, javascript]
+tags: [work, seo, html, css, javascript]
 growth: budding
 ---
 

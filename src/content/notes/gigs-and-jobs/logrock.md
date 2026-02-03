@@ -1,7 +1,7 @@
 ---
 name: LogRock
 slug: logrock
-tags: [react, typescript, next-js, gatsby, tailwind-css, github-actions, vercel, ci-cd]
+tags: [work, react, typescript, next-js, gatsby, tailwind-css, github-actions, vercel, ci-cd]
 growth: budding
 ---
 

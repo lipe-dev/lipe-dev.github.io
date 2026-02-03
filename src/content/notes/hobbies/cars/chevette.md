@@ -3,7 +3,7 @@ name: Chevette
 slug: chevette
 tags:
   - cars
-  - project
+  - projects
   - drifting
 growth: budding
 ---

@@ -9,9 +9,20 @@
 	interface Props {
 		graph: Graph;
 		highlightSlug?: string;
+		highlightTag?: string | null;
 	}
 
-	let { graph, highlightSlug }: Props = $props();
+	let { graph, highlightSlug, highlightTag = null }: Props = $props();
+
+	// Tag highlight colors
+	const tagColors: Record<string, string> = {
+		projects: '#f97316', // orange
+		hobby: '#8b5cf6', // purple
+		work: '#3b82f6', // blue
+		learning: '#22c55e', // green
+		ideas: '#ec4899', // pink
+		tech: '#06b6d4' // cyan
+	};
 
 	// Use all nodes and edges (no filtering for now)
 	let visibleNodes = $derived(graph.nodes);
@@ -69,6 +80,7 @@
 		feMerge.append('feMergeNode').attr('in', 'SourceGraphic');
 
 
+
 		// Create zoom container
 		const g = svgSelection.append('g').attr('class', 'zoom-container');
 
@@ -106,6 +118,24 @@
 			return sourceSlug === highlightSlug || targetSlug === highlightSlug;
 		};
 
+		// Helper to check if node matches the highlight tag
+		const nodeMatchesTag = (node: GraphNode) => {
+			if (!highlightTag) return true;
+			return node.tags.includes(highlightTag);
+		};
+
+		// Helper to check if edge connects to a node with the highlight tag
+		const edgeMatchesTag = (l: GraphEdge) => {
+			if (!highlightTag) return true;
+			const sourceNode = typeof l.source === 'string'
+				? visibleNodes.find(n => n.slug === l.source)
+				: l.source as GraphNode;
+			const targetNode = typeof l.target === 'string'
+				? visibleNodes.find(n => n.slug === l.target)
+				: l.target as GraphNode;
+			return (sourceNode?.tags.includes(highlightTag) || targetNode?.tags.includes(highlightTag));
+		};
+
 		// Create edges
 		const links = g
 			.append('g')
@@ -114,7 +144,7 @@
 			.data(visibleEdges)
 			.join('line')
 			.attr('stroke', (l) => isHighlightedEdge(l) ? 'url(#Gradient1)' : '#374151')
-			.attr('stroke-opacity', 0.6)
+			.attr('stroke-opacity', (l) => highlightTag ? (edgeMatchesTag(l) ? 0.6 : 0.15) : 0.6)
 			.attr('stroke-width', (l) => isHighlightedEdge(l) ? 2 : 1);
 
 		// Create node groups
@@ -126,6 +156,7 @@
 			.join('g')
 			.attr('class', 'node-group')
 			.style('cursor', 'pointer')
+			.style('opacity', (d) => highlightTag ? (nodeMatchesTag(d) ? 1 : 0.2) : 1)
 			.on('click', (event, d) => {
 				window.location.href = `/${d.slug}`;
 			});
@@ -155,6 +186,8 @@
 			const group = d3Selection.select(this);
 			const radius = getNodeRadius(d);
 			const isHighlighted = d.slug === highlightSlug;
+			const isTagHighlighted = highlightTag && nodeMatchesTag(d);
+			const tagColor = highlightTag ? tagColors[highlightTag] : null;
 			const effectiveRadius = isHighlighted ? radius + 4 : radius;
 
 			if (d.image) {
@@ -172,8 +205,8 @@
 					.append('circle')
 					.attr('r', effectiveRadius)
 					.attr('fill', '#1f2937')
-					.attr('stroke', isHighlighted ? 'url(#Gradient1)' : getNodeColor(d))
-					.attr('stroke-width', isHighlighted ? 4 : 2);
+					.attr('stroke', isHighlighted ? 'url(#Gradient1)' : (isTagHighlighted && tagColor ? tagColor : getNodeColor(d)))
+					.attr('stroke-width', isHighlighted ? 4 : (isTagHighlighted ? 3 : 2));
 
 				if (isHighlighted) {
 					circle.attr('filter', 'url(#glow)');
@@ -195,8 +228,8 @@
 					.append('circle')
 					.attr('r', effectiveRadius)
 					.attr('fill', '#1f2937')
-					.attr('stroke', isHighlighted ? 'url(#Gradient1)' : getNodeColor(d))
-					.attr('stroke-width', isHighlighted ? 4 : 2);
+					.attr('stroke', isHighlighted ? 'url(#Gradient1)' : (isTagHighlighted && tagColor ? tagColor : getNodeColor(d)))
+					.attr('stroke-width', isHighlighted ? 4 : (isTagHighlighted ? 3 : 2));
 
 				if (isHighlighted) {
 					circle.attr('filter', 'url(#glow)');
@@ -222,9 +255,9 @@
 				const circle = group
 					.append('circle')
 					.attr('r', effectiveRadius)
-					.attr('fill', getNodeColor(d))
-					.attr('stroke', isHighlighted ? 'url(#Gradient1)' : null)
-					.attr('stroke-width', isHighlighted ? 4 : 0);
+					.attr('fill', isTagHighlighted && tagColor ? tagColor : getNodeColor(d))
+					.attr('stroke', isHighlighted ? 'url(#Gradient1)' : (isTagHighlighted && tagColor ? tagColor : null))
+					.attr('stroke-width', isHighlighted ? 4 : (isTagHighlighted ? 3 : 0));
 
 				if (isHighlighted) {
 					circle.attr('filter', 'url(#glow)');
@@ -301,13 +334,22 @@
 		});
 	}
 
-	// Track previous highlightSlug to detect changes
+	// Track previous highlightSlug and highlightTag to detect changes
 	let prevHighlightSlug = $state(highlightSlug);
+	let prevHighlightTag = $state(highlightTag);
 
 	$effect(() => {
 		// Reinitialize when highlightSlug changes (navigation between notes)
 		if (highlightSlug !== prevHighlightSlug && svg) {
 			prevHighlightSlug = highlightSlug;
+			initSimulation();
+		}
+	});
+
+	$effect(() => {
+		// Reinitialize when highlightTag changes (filter button clicked)
+		if (highlightTag !== prevHighlightTag && svg) {
+			prevHighlightTag = highlightTag;
 			initSimulation();
 		}
 	});

@@ -1,7 +1,7 @@
 ---
 name: Mapbox
 slug: mapbox
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

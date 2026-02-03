@@ -1,7 +1,7 @@
 ---
 name: GitHub Actions
 slug: github-actions
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

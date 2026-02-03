@@ -3,7 +3,7 @@ name: Toyota Bandeirante
 slug: toyota-bandeirante
 tags:
   - cars
-  - project
+  - projects
 growth: budding
 ---
 

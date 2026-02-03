@@ -5,6 +5,7 @@ tags:
   - hobby
   - maker
   - diy
+  - projects
 growth: budding
 ---
 

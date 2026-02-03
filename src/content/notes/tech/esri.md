@@ -1,7 +1,7 @@
 ---
 name: ESRI
 slug: esri
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

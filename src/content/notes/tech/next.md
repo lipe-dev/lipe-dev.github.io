@@ -1,7 +1,7 @@
 ---
 name: Next.js
 slug: next
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

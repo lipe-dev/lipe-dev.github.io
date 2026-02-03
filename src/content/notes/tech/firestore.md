@@ -1,7 +1,7 @@
 ---
 name: Firestore
 slug: firestore
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

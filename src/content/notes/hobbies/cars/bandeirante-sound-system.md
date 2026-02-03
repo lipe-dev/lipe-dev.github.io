@@ -4,7 +4,7 @@ slug: bandeirante-sound-system
 tags:
   - cars
   - car-audio
-  - project
+  - projects
   - build-log
 growth: seedling
 ---

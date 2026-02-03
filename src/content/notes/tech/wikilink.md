@@ -1,7 +1,7 @@
 ---
 name: wikilink
 slug: wikilink
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

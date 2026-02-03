@@ -1,7 +1,7 @@
 ---
 name: Enterprise E-Commerce Platform
 slug: enterprise-ecommerce
-tags: [react, typescript, ci-cd]
+tags: [work, react, typescript, ci-cd]
 growth: budding
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: Empreguei
 slug: empreguei
-tags: [react, django, python, android, firebase, material-design, mui, machine-learning, ci-cd]
+tags: [work, react, django, python, android, firebase, material-design, mui, machine-learning, ci-cd]
 growth: budding
 ---
 

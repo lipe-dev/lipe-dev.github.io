@@ -1,7 +1,7 @@
 ---
 name: GeoJSON
 slug: geojson
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

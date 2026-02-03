@@ -1,7 +1,7 @@
 ---
 name: LoadSmart
 slug: loadsmart
-tags: [react, django, typescript, javascript, redux, styled-components, ci-cd]
+tags: [work, react, django, typescript, javascript, redux, styled-components, ci-cd]
 growth: budding
 ---
 

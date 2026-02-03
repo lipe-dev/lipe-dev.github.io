@@ -1,7 +1,7 @@
 ---
 name: JavaScript
 slug: javascript
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

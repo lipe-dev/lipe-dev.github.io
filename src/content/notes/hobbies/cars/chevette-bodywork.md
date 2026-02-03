@@ -3,7 +3,7 @@ name: Chevette Body Work
 slug: chevette-bodywork
 tags:
   - cars
-  - project
+  - projects
   - build-log
   - drifting
 growth: seedling

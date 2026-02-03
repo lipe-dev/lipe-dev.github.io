@@ -1,7 +1,7 @@
 ---
 name: Lighthouse
 slug: lighthouse
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

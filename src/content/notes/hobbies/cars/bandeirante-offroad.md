@@ -4,7 +4,7 @@ slug: bandeirante-offroad
 tags:
   - cars
   - offroad
-  - project
+  - projects
 growth: seedling
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: UNIFEI
 slug: unifei
-tags: [data-mining, machine-learning, python, education]
+tags: [learning, data-mining, machine-learning, python]
 growth: budding
 ---
 

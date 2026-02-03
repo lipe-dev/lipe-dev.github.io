@@ -1,7 +1,7 @@
 ---
 name: Instituto Eldorado
 slug: instituto-eldorado
-tags: [android, python]
+tags: [work, android, python]
 growth: budding
 ---
 

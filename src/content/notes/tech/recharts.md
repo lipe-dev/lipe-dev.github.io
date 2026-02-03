@@ -1,7 +1,7 @@
 ---
 name: Recharts
 slug: recharts
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

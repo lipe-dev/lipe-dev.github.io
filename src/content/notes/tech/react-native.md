@@ -1,7 +1,7 @@
 ---
 name: React Native
 slug: react-native
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

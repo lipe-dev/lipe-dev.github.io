@@ -1,7 +1,7 @@
 ---
 name: SEO
 slug: seo
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

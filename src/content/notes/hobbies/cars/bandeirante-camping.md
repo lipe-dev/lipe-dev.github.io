@@ -4,7 +4,7 @@ slug: bandeirante-camping
 tags:
   - cars
   - camping
-  - project
+  - projects
   - overlanding
 growth: seedling
 ---

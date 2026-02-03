@@ -1,7 +1,7 @@
 ---
 name: GraphQL
 slug: graphql
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: Repunzel
 slug: repunzel
-tags: [react, ci-cd, github-actions, firebase]
+tags: [work, react, ci-cd, github-actions, firebase]
 growth: budding
 ---
 

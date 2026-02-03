@@ -1,7 +1,7 @@
 ---
 name: Accessibility
 slug: accessibility
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

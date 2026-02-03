@@ -1,7 +1,7 @@
 ---
 name: DOM
 slug: dom
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

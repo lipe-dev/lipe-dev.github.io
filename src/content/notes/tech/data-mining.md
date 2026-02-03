@@ -1,7 +1,7 @@
 ---
 name: Data Mining
 slug: data-mining
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

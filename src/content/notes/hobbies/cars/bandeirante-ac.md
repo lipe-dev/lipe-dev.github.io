@@ -3,7 +3,7 @@ name: Bandeirante Air Conditioning
 slug: bandeirante-ac
 tags:
   - cars
-  - project
+  - projects
   - build-log
 growth: seedling
 ---

@@ -3,6 +3,7 @@ name: Toyota Corolla Hybrid
 slug: corolla
 tags:
   - cars
+  - projects
 growth: seedling
 ---
 

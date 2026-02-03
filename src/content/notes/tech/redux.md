@@ -1,7 +1,7 @@
 ---
 name: Redux
 slug: redux
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

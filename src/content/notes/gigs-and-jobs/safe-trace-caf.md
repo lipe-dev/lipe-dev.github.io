@@ -1,7 +1,7 @@
 ---
 name: Safe Trace Café
 slug: safe-trace-caf
-tags: [react, javascript]
+tags: [work, react, javascript]
 growth: budding
 ---
 

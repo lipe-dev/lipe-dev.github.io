@@ -3,7 +3,7 @@ name: Bandeirante Power Steering
 slug: bandeirante-power-steering
 tags:
   - cars
-  - project
+  - projects
   - build-log
 growth: budding
 ---

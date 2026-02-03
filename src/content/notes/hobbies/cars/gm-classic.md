@@ -4,6 +4,7 @@ slug: gm-classic
 tags:
   - cars
   - car-audio
+  - projects
 growth: seedling
 ---
 

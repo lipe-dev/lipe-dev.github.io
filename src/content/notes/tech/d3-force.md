@@ -1,7 +1,7 @@
 ---
 name: d3-force
 slug: d3-force
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

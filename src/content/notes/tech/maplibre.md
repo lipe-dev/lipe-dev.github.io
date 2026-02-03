@@ -1,7 +1,7 @@
 ---
 name: MapLibre
 slug: maplibre
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

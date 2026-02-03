@@ -3,7 +3,7 @@ name: Roubo Workbench
 slug: roubo-workbench
 tags:
   - woodworking
-  - project
+  - projects
 growth: budding
 ---
 

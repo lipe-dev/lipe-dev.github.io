@@ -1,7 +1,7 @@
 ---
 name: Machine Learning
 slug: machine-learning
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

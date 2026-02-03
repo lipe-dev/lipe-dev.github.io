@@ -1,7 +1,7 @@
 ---
 name: CSS
 slug: css
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

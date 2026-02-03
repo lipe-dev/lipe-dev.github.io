@@ -1,7 +1,7 @@
 ---
 name: Firebase
 slug: firebase
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

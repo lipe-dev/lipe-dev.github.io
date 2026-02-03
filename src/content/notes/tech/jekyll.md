@@ -1,7 +1,7 @@
 ---
 name: Jekyll
 slug: jekyll
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

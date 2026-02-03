@@ -2,7 +2,7 @@
 name: Welding
 slug: welding
 tags:
-  - education
+  - learning
   - maker
 growth: budding
 ---

@@ -1,7 +1,7 @@
 ---
 name: SSR
 slug: ssr
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

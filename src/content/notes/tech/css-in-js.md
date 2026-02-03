@@ -1,7 +1,7 @@
 ---
 name: CSS-in-JS
 slug: css-in-js
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

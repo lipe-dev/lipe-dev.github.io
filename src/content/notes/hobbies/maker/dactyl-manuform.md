@@ -7,6 +7,7 @@ tags:
   - build-log
   - electronics
   - 3d-printing
+  - projects
 growth: budding
 ---
 

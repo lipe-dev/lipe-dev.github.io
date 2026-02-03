@@ -2,7 +2,7 @@
 name: Frontend Masters
 slug: frontend-masters
 tags:
-  - education
+  - learning
   - javascript
   - typescript
   - react

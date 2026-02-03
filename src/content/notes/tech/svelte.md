@@ -1,7 +1,7 @@
 ---
 name: Svelte
 slug: svelte
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

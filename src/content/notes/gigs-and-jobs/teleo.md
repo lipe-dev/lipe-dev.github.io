@@ -1,7 +1,7 @@
 ---
 name: Teleo
 slug: teleo
-tags: [react, graphql, node-js]
+tags: [work, react, graphql, node-js]
 growth: budding
 ---
 

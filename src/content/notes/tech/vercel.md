@@ -1,7 +1,7 @@
 ---
 name: Vercel
 slug: vercel
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

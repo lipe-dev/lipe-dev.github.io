@@ -1,7 +1,7 @@
 ---
 name: Supabase
 slug: supabase
-tags: []
+tags: [tech]
 growth: seedling
 ---
 

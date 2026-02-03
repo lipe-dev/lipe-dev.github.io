@@ -1,7 +1,7 @@
 ---
 name: Traço Leal Communication
 slug: trao-leal-communication
-tags: [html, css, javascript]
+tags: [work, html, css, javascript]
 growth: budding
 ---
 
