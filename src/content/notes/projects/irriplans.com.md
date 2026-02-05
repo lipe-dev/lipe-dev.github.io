@@ -1,40 +1,55 @@
 ---
 name: Irriplans.com
 slug: irriplans.com
-tags: [projects, svelte, sveltekit, maplibre]
+tags: [projects, svelte, sveltekit, maplibre, firestore]
 growth: budding
-description: Irrigation system mapping tool
+description: Real-time collaborative irrigation mapping tool
 images: ['/images/projects/legacy_irriplans.com/1.png']
 ---
 
-# Navigating Waters with Irriplans: Mapping Success, One Drop at a Time
+# Irriplans.com
 
-## Table of Contents
+Mapping software for irrigation contractors. Draw systems on a map, generate
+prints, share links for real-time collaboration.
 
-## Introduction
+## The Starting Point
 
-Welcome to the tale of **[[Irriplans.com]]**, where we irrigate your mapping needs with a splash of innovation! This mapping software, tailor-made for irrigation champs and contractors, dives deep into simplifying the complex choreography of irrigation planning. The pièce de résistance? A map-drawing feature that's the heartbeat of this aqua-inspired application.
+The client, John, had a working tool. "Working" is generous. It was a single
+JavaScript file stitched together from code found on Google. It could draw
+on a map and export images. The export method? Screenshots. Literally
+screenshotting the browser.
 
-Imagine this: clients surfing a dynamic map, powered by the swanky [[MapLibre]] (let's not mention [[Mapbox]]'s closed-source shindig), embellishing it with irrigation gems. And wait, there's more! These water wizards can summon prints straight from their browser and even whip up shareable links for their clients. Talk about making a splash!
+He hired me to add features and make it maintainable.
 
-## Conquering Challenges
+## First Rewrite: Next.js
 
-Ahoy, matey! The treacherous challenge that stared us down? Blending a real-time database ([[Firestore]]) with the majestic [[MapLibre]]. But alas, our sails got caught in a breeze! Storing [[GeoJSON]] in [[Firestore]]? That's a no-go, thanks to [[Firestore]]'s array-related quirks.
+I rebuilt it properly in [[Next.js]]. Real architecture. Data handling with
+[[Firestore]] for real-time sync. User authentication. Multiple pages.
+Actual image export instead of screenshots.
 
-Our workaround? Crafting bespoke data models and whipping up Firestore's `withConverter` spells to shape the data just right. It was like wielding a magic wand, only digital!
+The core challenge was storing [[GeoJSON]] in Firestore. The database doesn't
+handle nested arrays well, and GeoJSON is nothing but nested arrays. Custom
+data models with Firestore's `withConverter` solved it - transform on the
+way in, transform on the way out.
 
-The outcome? Victory! Collaborative real-time map drawing, where users dance in harmony with the changing landscape, as their clients watch the magic unfold.
+Task done, client happy, long-term contract signed for ongoing features.
 
-## Unveiling Wisdom
+## Second Rewrite: SvelteKit
 
-The treasure chest of wisdom I unearthed from this venture was mastering the art of advanced [[MapLibre]] maneuvers. Custom events, layer styling galore to tame the wild [[GeoJSON]] data we conjured – it was a cartographer's dream. And here's the twist: I seamlessly wove custom map controls into [[Svelte]] components. The secret sauce? [[Svelte]]'s knack for direct [[DOM]] enchantment.
+Then I learned [[Svelte]]. Loved it. Realized it was perfect for this project.
 
-Oh, did I mention? This voyage marked my [[Svelte]] debut, with [[SvelteKit]] cruising at the helm! A full-blown production software set sail, and I'm riding the waves of excitement.
+Map libraries like [[MapLibre]] want direct DOM access for custom controls.
+React's virtual DOM makes that awkward - you're always fighting the
+abstraction. Svelte compiles away, so you work with the DOM directly.
 
-## Grand Finale
+I rebuilt the entire app in [[SvelteKit]] overnight. For free. Partly to
+practice, partly because I knew it would be better. The client loved it
+even more. The code was so simple that he - not a developer - could read
+and understand it.
 
-Ladies and gentlemen, presenting a rebirth story! The phoenix of projects, rising anew as **[[Irriplans.com]]**, shed its [[Next.js]] cocoon for a dazzling [[Svelte]] metamorphosis. [[Svelte]]'s [[DOM]] dexterity added a delightful twist, making [[DOM]] manipulation a breeze – not to diss [[React]], but [[Svelte]] had me at 'Hello.'
+## Stack
 
-No more [[Mapbox]] wrappers! The sea of [[MapLibre]] rocked smoother without the [[Mapbox]] tantrums. Smooth sailing, indeed!
-
-In the grand symphony of software, **[[Irriplans.com]]** hits the high notes. Wishing my client-turned-comrade, John, bon voyage in his watery exploits with **[[Irriplans.com]]**. Here's to more collaborations and mapping marvels on the horizon!
+- [[SvelteKit]]
+- [[MapLibre]]
+- [[Firestore]] for real-time sync
+- Custom GeoJSON data converters

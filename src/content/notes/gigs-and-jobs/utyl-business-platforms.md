@@ -35,6 +35,32 @@ The site integrated with an online education platform for course sales. The flow
 
 This project hammered home that a website isn't just about looking good. It's about being found, loading fast, converting visitors, and actually serving business goals. All the pretty designs in the world don't matter if nobody can find you.
 
+## The Startup That Wasn't: Lyst
+
+Utyl wasn't just client work. We also tried to build our own product: Lyst.
+
+The idea was solid: crowdsourced supermarket prices. Users scan products,
+report prices at their local stores, everyone benefits from price transparency.
+The app would optimize your shopping list by price AND location - "buy milk
+at Store A, bread at Store B, save $X total."
+
+We built an [[Android]] app with Java, Sugar ORM, the whole mid-2010s stack.
+The tech worked fine.
+
+The business didn't.
+
+We tried partnering with supermarket owners. Turns out, they don't want price
+transparency. When your competitor across the street charges less for eggs,
+you'd rather customers not know that. Our value proposition to consumers was
+a threat to the retailers we needed to partner with.
+
+Classic startup mistake: building something users want but the market
+structure doesn't support. The idea was ahead of its time - nowadays price
+comparison is everywhere - but we didn't have the runway or the strategy to
+make it work back then.
+
+Still think it's a cool idea. Maybe I'll revisit it someday.
+
 ## Related
 
 - [[SEO]] - The main challenge

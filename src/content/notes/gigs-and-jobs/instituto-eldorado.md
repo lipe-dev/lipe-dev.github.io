@@ -27,6 +27,31 @@ Built several test setups to collect data and diagnostics from mobile devices. O
 
 Created a catalog system for over 3,000 devices to speed up testing workflows. When you're testing across that many device variants, you need good tooling to keep track of what's been tested, what failed, and what needs attention.
 
+## The Hackathon That Kinda Sucked
+
+Eldorado ran internal hackathons. I entered one with a teammate - I did the
+tech, they handled the presentation.
+
+The idea: remote tech support for family. You know how grandma calls because
+her phone is "broken" and you can't figure out what she's seeing? We built
+an app that combined screen sharing with location tracking. See her screen,
+take control if needed, know where she is if she wanders.
+
+I forked an open-source screen streaming app (ScreenStream) and added:
+- Family location tracking via Firebase
+- Google Maps visualization with family member photos
+- Screen sharing for remote troubleshooting
+- Remote takeover capability
+
+Built it solo over the hackathon period. It worked.
+
+The frustrating part: most other participants just demoed projects they were
+already working on day-to-day. We actually built something new, which was
+supposedly the point. But polished slides about existing work apparently
+score better than scrappy prototypes of novel ideas.
+
+We didn't win. Still salty about it.
+
 ## Why I Left
 
 Here's the thing: Eldorado is genuinely a great place to work. Good benefits, interesting projects, smart colleagues. But the work leaned heavily toward QA, testing, and analysis rather than building products from scratch.
