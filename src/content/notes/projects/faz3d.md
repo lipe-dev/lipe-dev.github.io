@@ -12,7 +12,7 @@ A platform for automating 3D printing quotes. The name is a triple reference:
 "faz" is Portuguese for "makes", the .xyz domain maps to the three axes of
 3D space, and well, it's about 3D printing.
 
-I own a printer. The quote process for custom prints is tedious - someone
+I own a printer. The quote process for custom prints is tedious. Someone
 sends a file, you slice it, estimate time and material, factor in costs,
 reply manually. Both sides wait. I wanted to automate that.
 

@@ -12,7 +12,7 @@ This website. You're looking at it.
 
 I got tired of the corporate portfolio template: hero section, three bullet
 points, testimonials, blog page, footer. Every dev site looks the same. I
-missed the old internet - when personal sites were weird and personal.
+missed the old internet, when personal sites were weird and personal.
 
 So I built something different. A digital garden where everything is
 connected, the homepage is a force-directed graph, and notes grow from
@@ -21,7 +21,7 @@ a living document of how I think and what I know.
 
 ## The Build Pipeline
 
-The interesting engineering isn't in the frontend - it's in what happens
+The interesting engineering isn't in the frontend. It's in what happens
 before the site even loads.
 
 ### Compile-Time Over Runtime
@@ -70,7 +70,7 @@ tokenizes it as `[` + `linkReference` + `]`. The plugin walks the AST,
 finds this pattern, looks up the slug from the generated data, and replaces
 the nodes with a proper `link` node pointing to `/${slug}`.
 
-Backlinks come for free - they're computed during the build, so each note
+Backlinks come for free. They're computed during the build, so each note
 knows what links to it without any runtime work.
 
 ### Implicit Edges from Tags
@@ -85,7 +85,7 @@ graph became denser and more useful without touching any content.
 ## The Graph Visualization
 
 The homepage is a force-directed graph. Not a list of posts, not a grid of
-cards - a living visualization of how everything connects.
+cards. A living visualization of how everything connects.
 
 ### D3 Force Simulation
 
@@ -146,17 +146,17 @@ missing notes, run sow, get 20 new files with frontmatter ready to fill.
 Lists all notes grouped by growth stage. Quick way to see how many
 seedlings need attention versus how much is already budding or evergreen.
 
-The scripts are simple - just TypeScript files in `/scripts` that import
+The scripts are simple. Just TypeScript files in `/scripts` that import
 the generated data and do their thing. No framework, no dependencies
 beyond what the build already uses.
 
 ## Stack Summary
 
 - [[SvelteKit]] - Framework, static adapter for [[GitHub Pages]]
-- [[Svelte]] 5 - Runes, `$effect` for reactive D3 bindings
+- [[Svelte]] 5 (Runes, `$effect` for reactive D3 bindings)
 - [[TypeScript]] - Throughout, including generated data
 - [[d3-force]] - Graph simulation
-- mdsvex - Markdown with Svelte components
+- mdsvex (Markdown with Svelte components)
 - [[Tailwind CSS]] - Styling
 
 ## The Old Internet Vibes

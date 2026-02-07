@@ -35,8 +35,8 @@ different failure modes than software.
 
 ## Current State
 
-Abandoned WIP. It worked - controlling a 3DS with a GameCube controller felt
-great - but the wiring was a mess and I moved on to other projects.
+Abandoned WIP. It worked: controlling a 3DS with a GameCube controller felt
+great. But the wiring was a mess and I moved on to other projects.
 
 If I revisit this, I'd probably use a [[BlueRetro]] adapter instead of
 building from scratch. Same outcome, less soldering, any Bluetooth controller.

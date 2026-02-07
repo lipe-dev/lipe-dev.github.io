@@ -43,7 +43,7 @@ for confirmation if they have dependents, preventing orphaned records.
 
 ### Passwordless Auth
 
-Nobody wants another password. Magic links via [[Supabase]] Auth - enter your
+Nobody wants another password. Magic links via [[Supabase]] Auth: enter your
 email, click the link, you're in. OAuth for Google and Facebook as fallbacks.
 The authentication flow was one of the first things I built because it
 touches everything else.
