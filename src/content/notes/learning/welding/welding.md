@@ -81,6 +81,43 @@ By the end of the first week (3 days of practice), we moved on to building up ma
 
 The hands are getting steadier. The beads are getting more consistent. That initial nervousness of "am I doing this right?" is fading into actual confidence. The groove fill especially. Seeing the layers stack up clean is satisfying in a way that's hard to explain.
 
+#### Week 2: Building Confidence
+
+More multi-pass practice. Stacking beads, filling grooves, building up material.
+
+![Multi-pass practice Jan 31](class-jan31-practice-1.jpeg)
+![More practice Jan 31](class-jan31-practice-2.jpeg)
+
+At this point I was feeling pretty good about myself. 1F (flat fillet), 1G (flat groove), 2G (horizontal groove). All clicking. Consistent beads, good penetration, nice stacking. The teacher kept using my work as examples.
+
+![Feb 04 multipass work](class-feb04-multipass-1.jpeg)
+![Groove fill practice](class-feb04-multipass-2.jpeg)
+![Stacked beads](class-feb04-multipass-3.jpeg)
+
+Classic Dunning-Kruger territory. I thought I was getting good at this.
+
+![More Feb 04 practice](class-feb04-multipass-5.jpeg)
+![Clean bead stacking](class-feb04-multipass-7.jpeg)
+
+#### Week 3: The Humbling (3G Vertical)
+
+Then came 3G. Vertical ascending weld in a groove. Welding upward against gravity.
+
+I hereby motion to rename "ascending welds" to "humbling welds."
+
+![First 3G vertical attempt](class-feb05-3g-vertical.jpeg)
+
+That's my first attempt at 3G. After feeling like a badass on all my flat and horizontal work, this one showed me I don't know shit yet. The puddle wants to drip. The bead wants to sag. Everything you thought you knew about torch angle and travel speed? Different now.
+
+Hit me right in the Dunning-Kruger.
+
+The horizontal work from the same class still came out fine:
+
+![Feb 05 horizontal multipass](class-feb05-multipass-1.jpeg)
+![More Feb 05 practice](class-feb05-multipass-2.jpeg)
+
+But that 3G attempt is a reminder that there's always another level. Flat welds are the tutorial. Vertical is where the real game starts.
+
 ### SMAW (Next Month)
 
 Stick welding. The classic. Joining next month to round out the skill set.
