@@ -47,9 +47,9 @@ Not perfect, but a far cry from day one. And honestly, my best work wasn't even 
 
 Should have gotten more pics, but there'll be more chances. I have my own TIG machine sitting at home now - just need to buy the argon tank and I can practice whenever. The two-year wait for that machine is finally paying off.
 
-### MIG/MAG (Current)
+### MIG/MAG (January 2026)
 
-Currently enrolled. Learning a different process: wire-fed, faster, more forgiving. Good for the heavier structural work the car projects will need.
+Second certification complete. Wire-fed, faster, more forgiving than TIG. Good for the heavier structural work the car projects will need.
 
 #### The Boys Are Back
 
@@ -118,9 +118,9 @@ The horizontal work from the same class still came out fine:
 
 But that 3G attempt is a reminder that there's always another level. Flat welds are the tutorial. Vertical is where the real game starts.
 
-### SMAW (Next Month)
+### SMAW (Planned)
 
-Stick welding. The classic. Joining next month to round out the skill set.
+Stick welding. The classic. Planning to take this one at a later date to round out the skill set. SENAI offers it a few times throughout the year, so no rush.
 
 ## SENAI
 
@@ -152,7 +152,7 @@ This is the curse of learning a trade. You start noticing every shortcut and mis
 4. Machine sat unused for about a year until SENAI opened welding classes.
 5. Joined TIG class because my machine does that.
 6. Joined MIG class because that's probably what we'll use most on car projects.
-7. SMAW class next month to round out the skill set.
+7. SMAW class planned for later to round out the skill set.
 
 ### Still Need To
 

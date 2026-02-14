@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs:*)",
+      "Bash(pnpm info:*)",
+      "Bash(for f in *.md)",
+      "Bash(ls:*)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm generate:*)",
+      "Bash(pnpm survey:*)",
+      "Bash(git add:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Bash(grep:*)",
+      "Bash(pnpm compost:*)",
+      "Bash(pnpm notes-data)",
+      "Bash(cat:*)"
+    ]
+  }
+}

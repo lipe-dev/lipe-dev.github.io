@@ -31,6 +31,21 @@ I've already redone all the electrics. Here's the beautiful thing about old simp
 
 It's running and functional, but needs work in several areas to become the adventure vehicle I envision.
 
+## Black Plate Registration
+
+Currently prepping the truck for a "black plate" inspection. In Brazil, vehicles over 20 years old with 80+ points on an originality assessment can earn historic vehicle registration. The black plates are a badge of honor for well-preserved classics.
+
+This means temporarily removing some of my mods to pass inspection:
+- Custom steering wheel (back to stock)
+- LED interior lighting
+- Any other non-original additions
+
+The inspection repeats every 5 years, so my approach going forward is **plug-and-play only**. No permanent modifications. Everything I add needs to be reversible when inspection time comes around.
+
+Currently waiting on a replacement windshield washer nozzle. Broke the original (brittle 35-year-old plastic) while prepping. Classic restoration setback.
+
+The goal: official recognition that this truck is worth preserving, plus the cool plates. Then the mods go right back on.
+
 ## Project Roadmap
 
 ### Done ✓
