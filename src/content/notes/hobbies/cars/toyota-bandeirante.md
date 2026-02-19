@@ -42,8 +42,6 @@ This means temporarily removing some of my mods to pass inspection:
 
 The inspection repeats every 5 years, so my approach going forward is **plug-and-play only**. No permanent modifications. Everything I add needs to be reversible when inspection time comes around.
 
-Currently waiting on a replacement windshield washer nozzle. Broke the original (brittle 35-year-old plastic) while prepping. Classic restoration setback.
-
 The goal: official recognition that this truck is worth preserving, plus the cool plates. Then the mods go right back on.
 
 ## Project Roadmap
