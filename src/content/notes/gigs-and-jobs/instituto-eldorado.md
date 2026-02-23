@@ -19,6 +19,8 @@ Instituto Eldorado is a research and development institute that partners with bi
 
 Worked closely with Motorola on customizing Android for new phone launches. This isn't app development - it's lower level stuff, tweaking the OS itself for specific hardware configurations. When a new Motorola phone was about to hit the market, we were part of making sure the software worked properly on that specific device.
 
+If you used a Moto G or Moto Z around 2018, you have quite literally touched my code every day. I tweaked the haptic feedback that fires when you type on the on-screen keyboard. Every single keystroke. You're welcome.
+
 ### Test Infrastructure
 
 Built several test setups to collect data and diagnostics from mobile devices. One project I'm particularly proud of was an audio quality testing system for call performance. Measuring audio quality programmatically is trickier than it sounds - you need consistent test environments, proper signal analysis, and automated ways to detect issues that a human ear would catch.

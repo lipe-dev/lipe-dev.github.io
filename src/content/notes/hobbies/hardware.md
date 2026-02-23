@@ -8,59 +8,42 @@ growth: budding
 
 # Hardware
 
-Computer hardware and building systems has been an interest since I first opened up a computer as a kid. Understanding how the physical machines work makes me a better developer.
+## The Arc
 
-## PC Building
+**Eighth grade.** A Pentium-something with 10GB of HDD and 128MB of RAM. GTA Vice City running at a heroic 5fps. Every emulator I could find. That machine introduced me to computers as something you could actually do things with, not just look at.
 
-### [[Gaming PC]]
-My current build serves as both gaming rig and development workstation. Built it myself, choosing components for the right balance of performance, noise, and value.
+**High school.** Dad got us a better one. 80GB HDD, 512MB RAM, still no dedicated GPU. But the onboard graphics could handle GTA San Andreas and emulate GameCube and Nintendo DS. That PC was my entire high school life.
 
-### Building Philosophy
-- Research components thoroughly
-- Don't overspend on marginal gains
-- Plan for upgradability
-- Cable management matters
-- Good airflow is essential
+**College.** A cheap Kelow laptop my dad got me. Kelow sounds like it should be a cereal brand, but I'm genuinely grateful for it. That's the machine where I first installed Linux. Then upgraded to an Acer, which was a step up.
 
-## Interests
+**Scholarship.** Part of the funding for studying abroad was earmarked for a computer. That's when I got my first Avell.
 
-### CPUs & Architecture
-- Understanding performance characteristics
-- Architecture differences (x86, ARM)
-- How CPU design affects software
+**Seven years later.** Still on Avell for mobile. First real desktop build.
 
-### GPUs
-- Graphics processing and compute
-- CUDA/OpenCL basics
-- GPU acceleration for development tasks
+## Current Setup
 
-### Storage
-- SSD vs HDD use cases
-- NVMe performance
-- Data storage and backup
+### Desktop
 
-### Networking
-- Home network setup
-- Understanding protocols
-- Performance optimization
+My first proper build. Everything before this was store-bought or a laptop.
 
-## DIY Repair & Upgrade
+- **CPU**: AMD Ryzen 9 9950X3D
+- **GPU**: Gigabyte RTX 5080
+- **RAM**: 64GB Corsair Dominator Platinum DDR5
+- **Motherboard**: ASUS B870E-E Gaming WiFi
+- **Cooler**: Peerless Assassin
+- **Fans**: Lian Li wireless LCD
 
-- Laptop upgrades (RAM, storage)
-- Desktop maintenance
-- Diagnosing hardware issues
-- Thermal paste replacement
+Used for gaming and personal dev work. My current job provides an M3 Mac for work stuff, so the desktop is fully mine.
 
-## Connected Hobbies
+I care about aesthetics and I'm not ashamed of leaning full gamer. Current setup is black and yellow, RGB all set to match. The KRK Classic 5 studio monitors anchor the color scheme and everything else follows.
 
-Hardware knowledge connects to:
-- [[gaming]] - Understanding performance
-- [[electronics]] - Lower level hardware
-- [[3d-printing]] - Printer hardware
-- [[gaming-pc]] - My main build
+### Laptop
+
+Avell A70 MOB with RTX 3060 and 32GB RAM. Avell is a Brazilian brand: high performance at an actually reasonable price, and genuinely repairable. Just recently I needed replacement fans that aren't even listed on their website. Emailed them, they sent a couple for free. Seven years out of the first one before upgrading, and that kind of support is exactly why.
 
 ## Related
 
-- [[gaming-pc]] - Current build
-- [[gaming]] - What the hardware is for
-- [[electronics]] - Related skills
+- [[Gaming PC]] - The build in more detail
+- [[Gaming]] - What most of the hardware is for
+- [[Electronics]] - The lower level stuff
+- [[Dotfiles]] - The software side of the setup

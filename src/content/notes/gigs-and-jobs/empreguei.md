@@ -7,58 +7,51 @@ growth: budding
 
 # Empreguei
 
-Tinder, but for jobs. You swipe right on opportunities, companies swipe right on you, and when there's a match - boom, you're chatting about employment instead of dinner plans.
+Tinder for jobs. A friend from [[Utyl]] and I were brought in as freelancers to build it. When Utyl dissolved, we both went full time there.
 
-## The Product
+For most of the run I was the only engineer. At the time that felt normal. In retrospect, it was a lot to put on a junior.
 
-[[Empreguei]] was a job matching platform with mobile apps for job seekers (swipe interface) and a web app for companies to post positions and manage candidates. The magic was in the matching algorithm - not just filtering by keywords, but actually trying to connect the right people with the right opportunities.
+## War Stories
 
-Check out [[empreguei.com.br]] for the full technical deep-dive.
+### The Actress Effect
 
-## The Numbers
+A famous actress became an investor and ambassador. Great for the company, stressful for the lone engineer. User numbers spiked hard. I scaled everything up on the fly and kept the lights on, but some of the choices I made under pressure are not what I'd reach for today. Junior me was figuring it out in real time.
 
-- **100k+** Google Play downloads (CV says 100k, my notes said 50k - memory is fuzzy but it was a lot)
-- **1000+** companies actively hiring through the platform
+### Empreguito
+
+I created the company mascot. Originally named Jobot, which turned out to be taken. We renamed it Empreguito as a nod to Chesperito (everyone at the office was a fan). Did the design, the animations, and integrated the character into the UI.
+
+### The PostgreSQL Bug
+
+Spent a week hunting a bug that turned out to be an actual PostgreSQL issue. Not our code. A long week.
+
+## What I Shipped
+
+- The entire Android app, including the Tinder-like swipe interface
+- Test-taking system on both web and Android: companies could set up written interview questions and candidates would answer in-app
+- Video interview upload area: async video responses, no scheduling needed
+- Empreguito: mascot design, animations, UI integration
+
+Team size ranged from just me to a peak of three engineers total.
+
+## Stats
+
+- 100k+ Play Store downloads
+- 1000+ companies actively hiring
+- Near zero crash and error rate on Firebase throughout
+- Cloud costs consistently the lowest in the company's history
 - Endorsed by one of Brazil's largest mall groups
-- Eventually acquired
-
-## What Made It Special
-
-### The Matching Algorithm
-
-The core challenge was building a matching system that actually worked. We considered location, salary ranges, required skills, experience levels - the usual stuff. But as user data grew, we built a [[Machine Learning]] model that ranked matches based on actual outcomes. Which matches led to hires? Which candidates engaged with which types of jobs? The algorithm learned and improved.
-
-### Real-Time Everything
-
-After a match, the app opened a chat interface. But not just text - we had automated interview features with voice and video responses. Companies could set up async interviews, candidates could respond on their own time. All of this needed real-time sync across three different apps (two mobile, one web).
-
-[[Firebase]] was the backbone for the real-time stuff.
-
-## Tech Stack Firsts
-
-This project was my introduction to several technologies that became staples of my career:
-- [[React]] for the web app - turned out to be a great bet
-- [[Django]] and DRF for the backend - also a great bet
-- [[Material Design]] and [[MUI]] for UI consistency
-- Native [[Android]] Java for the mobile app
-- [[CI/CD]] pipelines with automated deployments
-
-## The Solo Engineer Life
-
-For most of the company's existence, I was the only engineer. Every feature, every bug fix, every deployment, every 3 AM "the server is down" panic - all me.
-
-It was exhausting and educational in equal measure. You learn fast when there's no one else to ask for help.
+- Backed by [Endeavor Brasil](https://endeavor.org.br)
+- Covered by [TecMundo](https://www.tecmundo.com.br/carreira/115681-tinder-emprego-empreguei-app-achar-o-trabalho-perfeito.htm) and [Consumidor Moderno](https://www.consumidormoderno.com.br/2017/05/03/app-tinder-trabalho/)
 
 ## The Ending
 
-The company eventually shut down. Even with a solid product, strong traction, and a team that believed in the mission, startups can fail. Market timing, funding, competition - a million factors beyond code quality.
-
-It's a humbling reminder that building something great isn't enough. But I'm still proud of what we built and grateful for what it taught me.
+I left. Sometime after, the company was acquired and eventually shut down. Good product, real traction, still didn't make it. That's startups.
 
 ## Related
 
-- [[empreguei.com.br]] - Technical project page
-- [[React]] - First professional contact
+- [[empreguei.com.br]] - Technical breakdown
+- [[Utyl]] - Where the story started
+- [[React]] - First professional use
 - [[Django]] - Backend framework
 - [[Firebase]] - Real-time infrastructure
-- [[Machine Learning]] - Matching algorithm
