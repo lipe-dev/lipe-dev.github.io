@@ -20,7 +20,7 @@ on my plate in 2016. React was still figuring itself out: mixins, class
 components, the whole mess. Watched the ecosystem evolve through HOCs,
 render props, and finally hooks. Led a zero-downtime migration from a Django
 monolith to modular React at [[LoadSmart]] while hundreds of users depended
-on it daily. Built enterprise tooling at [[Enterprise E-Commerce Platform]] from scratch (no existing
+on it daily. Built enterprise tooling at [[eBay]] from scratch (no existing
 frontend, just me and a blank repo).
 
 These days I reach for [[Svelte]] when I can (this site runs on [[SvelteKit]]),
@@ -112,7 +112,7 @@ any custom components. Keeps related code together.
 ## Styling
 
 I've done the rounds: [[Styled Components]] at [[Giphy]] and [[LoadSmart]],
-[[Tailwind CSS]] at [[LogRock]], and now a custom Less setup at [[Enterprise E-Commerce Platform]]
+[[Tailwind CSS]] at [[LogRock]], and now a custom Less setup at [[eBay]]
 with their proprietary SSR stack. Back to classnames like it's 2015.
 
 They're all fine. CSS modules feel too disconnected from components.

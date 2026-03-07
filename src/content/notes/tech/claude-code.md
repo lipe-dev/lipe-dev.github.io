@@ -42,7 +42,7 @@ control.
 
 ### Managing Context
 
-At [[Enterprise E-Commerce Platform]] I have plenty of API usage available (billing plus in-house
+At [[eBay]] I have plenty of API usage available (billing plus in-house
 models), which makes multi-agent workflows practical. The strategy:
 
 - **Research agents** stay separate. They dig through docs and forums, then

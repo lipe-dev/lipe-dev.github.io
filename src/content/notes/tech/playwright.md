@@ -9,7 +9,7 @@ description: Modern browser automation that just works
 # Playwright
 
 My go-to for browser automation and e2e testing. Currently setting up e2e
-infrastructure at [[Enterprise E-Commerce Platform]] with it.
+infrastructure at [[eBay]] with it.
 
 ## Why Playwright
 
@@ -28,7 +28,7 @@ Playwright every time.
 The primary use case. Real browser, hitting real APIs, using the app like a
 user would. No mocking the world. If the test passes, the feature works.
 
-[At my current gig], I'm building out the e2e test infrastructure with Playwright. Clean
+At eBay, I'm building out the e2e test infrastructure with Playwright. Clean
 slate, modern tooling, no legacy baggage.
 
 ### Writing Reliable Tests

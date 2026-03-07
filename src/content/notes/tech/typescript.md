@@ -16,7 +16,7 @@ I'm `any`-allergic. If I wrote the code, it gets typed properly. No shortcuts,
 no "I'll fix it later" comments. Types are documentation that the compiler
 enforces. Why would I give that up?
 
-That said, I'm not religious about it. At [[Enterprise E-Commerce Platform]], there are microservice
+That said, I'm not religious about it. At [[eBay]], there are microservice
 payloads that pass through our frontend from god-knows-where in their
 architecture. Spending a week typing some legacy mystery object that we
 just forward along? That's not engineering, that's busywork. `unknown` with
@@ -243,7 +243,7 @@ dev server would fail immediately if anything in the API contract changed.
 Deployments were set to hard-fail if the API was unreachable, so stale types
 could never reach production.
 
-At my current gig, many internal API endpoints aren't versioned since they're
+At eBay, many internal API endpoints aren't versioned since they're
 only consumed by our own app. TypeScript is the contract enforcement layer.
 When a backend developer changes a field, as soon as I update the type the
 compiler shows every place in the frontend that needs updating. Price fields

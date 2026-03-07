@@ -30,7 +30,7 @@ form schema into parts and merging them. Sounds clean in theory. In practice,
 conditional validations across merged schemas turned into hack city. The code
 is in the Sapphire project if you want to see the scars.
 
-**Large forms need discipline.** At [[Enterprise E-Commerce Platform]], we have massive forms where you
+**Large forms need discipline.** At [[eBay]], we have massive forms where you
 have to be careful not to mess with form state too much. It gets tricky when
 fields trigger async calls that require refetching and reinitializing the
 form. The validation stays solid, but the state management around it demands

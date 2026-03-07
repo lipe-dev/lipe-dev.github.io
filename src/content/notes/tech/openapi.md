@@ -11,9 +11,9 @@ description: API contracts that both humans and machines can read
 The spec format for REST APIs. I use it both for documenting APIs I build and
 consuming APIs others provide.
 
-## Spec-First [at my current gig]
+## Spec-First at eBay
 
-At [[Enterprise E-Commerce Platform]], I started the internal project frontend before a backend developer was
+At [[eBay]], I started the Showroom frontend before a backend developer was
 even hired. Rather than guess at the API shape, I wrote the OpenAPI spec
 myself. When the backend dev joined, they had a contract to implement against.
 Both sides knew exactly what to expect.

@@ -29,8 +29,8 @@ Remotely from Brazil
 
 ## Companies I've worked at, with, and for
 
-### [[Enterprise E-Commerce Platform]]
-- Primary front-end developer on internal project, replacing the client's automotive division' legacy internal tooling for bulk vehicle listings
+### [[eBay]]
+- Primary front-end developer on Showroom, replacing eBay Motors' legacy internal tooling for bulk vehicle listings
 - Built React + TypeScript portals with permissions, feed configs, async monitoring, listing CRUD
 - Integrated microservices for real-time bulk operations at scale
 

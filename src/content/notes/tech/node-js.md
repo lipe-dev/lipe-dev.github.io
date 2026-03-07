@@ -15,7 +15,7 @@ server-side work, build tooling, and scripting.
 
 ### Backend for Frontend (BFF)
 
-At [[Enterprise E-Commerce Platform]], Node.js sits between the frontend and the actual backend services.
+At [[eBay]], Node.js sits between the frontend and the actual backend services.
 The frontend calls Node APIs, which call the real backends. This abstraction
 layer handles authentication, data transformation, and keeps the frontend
 decoupled from internal service details.
@@ -23,7 +23,7 @@ decoupled from internal service details.
 ### Build Tooling
 
 Custom build scripts for things that can't be configured declaratively. At
-the client, we handle internal vs external authentication at build time through
+eBay, we handle internal vs external authentication at build time through
 Node scripts. When the build system needs logic, Node is there.
 
 ### Standalone Backends
@@ -39,7 +39,7 @@ Node is the next step.
 
 ## Frameworks
 
-I've mostly used Express because that's what the [[Enterprise E-Commerce Platform]] stack has, plus
+I've mostly used Express because that's what the [[eBay]] stack has, plus
 serverless environments like Google Cloud Functions. Haven't explored
 Fastify, Hono, or the newer options yet. Recognized gap, future experiment.
 
