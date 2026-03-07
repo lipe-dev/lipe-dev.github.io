@@ -405,3 +405,39 @@ if (!fs.existsSync(outputDir)) {
 
 fs.writeFileSync(outputPath, tsContent);
 console.log(`Written to ${outputPath}`);
+
+// Copy co-located images from note directories to static/{slug}/
+const imageExtensions = new Set(['.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg']);
+const staticDir = path.join(process.cwd(), 'static');
+let imagesCopied = 0;
+
+for (const note of notes) {
+	const noteFileDir = path.join(notesDir, path.dirname(note.filePath));
+	const targetDir = path.join(staticDir, note.slug);
+
+	let dirEntries: fs.Dirent[];
+	try {
+		dirEntries = fs.readdirSync(noteFileDir, { withFileTypes: true });
+	} catch {
+		continue;
+	}
+
+	const imageFiles = dirEntries.filter(
+		(e) => e.isFile() && imageExtensions.has(path.extname(e.name).toLowerCase())
+	);
+
+	if (imageFiles.length === 0) continue;
+
+	if (!fs.existsSync(targetDir)) {
+		fs.mkdirSync(targetDir, { recursive: true });
+	}
+
+	for (const imgFile of imageFiles) {
+		const src = path.join(noteFileDir, imgFile.name);
+		const dest = path.join(targetDir, imgFile.name);
+		fs.copyFileSync(src, dest);
+		imagesCopied++;
+	}
+}
+
+console.log(`Copied ${imagesCopied} co-located images to static/{slug}/ directories`);

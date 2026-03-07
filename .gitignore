@@ -9,5 +9,8 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
-# Generated files (rebuild with pnpm generate)
+# Generated files (rebuild with pnpm compost)
 src/lib/generated/
+
+# Playwright screenshots
+.playwright-mcp/
