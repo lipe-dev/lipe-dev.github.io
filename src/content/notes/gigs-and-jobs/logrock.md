@@ -7,52 +7,56 @@ growth: budding
 
 # LogRock
 
-A tale of two companies, really. The early days were some of the best engineering work of my career. The later days... well, every startup has to grow up eventually.
+A founding engineer role that turned into a front-row seat to watch a company find its identity through three pivots.
 
-## The Company
+## How It Started
 
-[[LogRock]] started as a compliance software for the trucking industry - document storage, analysis, inspection reminders, that kind of thing. Trucking has a mountain of regulatory paperwork, and LogRock helped companies stay on top of it.
+A former CTO and VP from [[LoadSmart]] were starting a company and invited me and a fellow ex-LoadSmarter before it was even officially founded. That kind of invitation means something. We were the entire engineering team for a while before eventually growing to around 10 engineers.
 
-But compliance software alone wasn't printing money, and since the end goal was always insurance anyway, they pivoted. LogRock became a trucking insurance company powered by the compliance data they'd been collecting. Makes sense strategically, even if it changed the nature of the work.
+## The Company's Journey
 
-## The Early Days
+**Phase 1: Compliance tool.** Helping trucking companies stay on top of regulation, document storage, inspection reminders. The regulatory paperwork in trucking is enormous. Solid idea, but hard to monetize.
 
-This was hardcore engineering with some of the best people I've worked with. Complex problems, elegant solutions, the kind of work that makes you excited to open your laptop in the morning.
+**Phase 2: Tech platform for agencies.** The end goal was always insurance anyway, so they pivoted toward supporting insurance agencies with tech, and started acquiring partners: three agencies with very different approaches but similar problems.
+
+**Phase 3: Becoming the agency.** Eventually absorbed the partner agencies and became an insurance company in its own right, powered by the compliance data and tech they'd been building all along.
+
+## What I Built
 
 ### The Quote System
 
-I built a scalable quote system driven by finite state machines. Insurance quoting is surprisingly complex - there are dozens of paths a quote can take depending on driver history, vehicle types, coverage needs, and a million other variables. The FSM approach kept it maintainable as the business logic inevitably got more complicated.
+An insurance quoting FSM serving all three agencies simultaneously. Insurance quoting is deceptively complex: dozens of paths depending on driver history, vehicle types, coverage needs, and business rules that kept evolving with every pivot.
 
-The system served three different agencies and hit a conversion rate 6x above industry benchmark. When your quote flow converts that well, people notice.
+The three agencies each had their own flavor: one built around a trucking YouTuber/influencer who used his platform to sell insurance, one a younger team that made cold calling work through sheer intensity, and one a traditional broker. All three had similar baseline conversion rates before the new system. After: 6x above that benchmark, validated by all three agencies.
 
 ### CI/CD Pipeline
 
-Set up the entire deployment infrastructure using [[GitHub Actions]], Terraform, and [[Vercel]]. Parallel deploys finishing in under 2 minutes. The kind of pipeline where you push to main and go grab coffee knowing it'll be in production before you're back.
+Set up the entire deployment infrastructure with [[GitHub Actions]], Terraform, and [[Vercel]]. Parallel deploys in under 2 minutes.
+
+### TypeScript Enum Generation
+
+A pre-start script that hit the APIs, fetched all enums and object shapes, and generated TypeScript files automatically. Local dev server would fail immediately if anything in the API contract changed. Deployments hard-failed if the API was unreachable. Stale types could never reach production.
 
 ### Email Template System
 
-Created a modular email templating tool that powered over 150 marketing campaigns plus all transactional emails. Before this, email templates were scattered everywhere, inconsistent, and a pain to update. After? One source of truth, reusable components, happy marketing team.
+Modular email templating tool powering 150+ marketing campaigns plus all transactional emails. One source of truth, reusable components, consistent output across the board.
 
 ### AI Initiatives
 
-Led the company's early AI experiments - built a custom ChatGPT client for sales reps to help with customer interactions, and set up Devin.ai for the engineering team. This was before everyone and their grandmother had an AI strategy.
+Led early AI experiments before everyone had an AI strategy: a custom ChatGPT client for sales reps and Devin.ai setup for the engineering team.
 
 ## The Later Days
 
-As the company matured and the insurance pivot took hold, the work changed. Most of what I was building became forms and tables. Important stuff for the business, but not exactly the kind of engineering puzzles that get your blood pumping.
+As the insurance pivot matured the work shifted. Complex FSMs gave way to forms and tables. Important for the business, not the kind of engineering that keeps you sharp.
 
-Forms. Tables. More forms. Tables about forms. Forms to edit tables.
+## The Ending
 
-You get the idea.
-
-## Why I Left
-
-When your daily work shifts from "interesting technical challenges" to "yet another CRUD form," it's time to evaluate. I'm grateful for the experience and the people, but I need problems that make me think. No hard feelings - companies evolve, and sometimes you evolve in a different direction.
+My stock option vesting period was coming to an end and I was already thinking about moving on for new challenges. The company ran a broad layoff that cleared out most of the senior engineering staff. The timing lined up.
 
 ## Related
 
-- [[LogRock.com - Website]] - The marketing site I built
+- [[LogRock.com - Website]] - The marketing site
 - [[React]] - Primary framework
+- [[TypeScript]] - Including the enum generation tooling
 - [[CI/CD]] - Pipeline architecture
 - [[GitHub Actions]] - Automation backbone
-

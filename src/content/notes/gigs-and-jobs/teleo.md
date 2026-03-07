@@ -1,48 +1,40 @@
 ---
 name: Teleo
 slug: teleo
-tags: [work, react, graphql, node-js]
+tags: [work, react, graphql, hasura, livekit]
 growth: budding
 ---
 
 # Teleo
 
-A short contract gig, but an interesting one. Telehealth with a twist.
+Teleo builds a telehealth platform for psychologists. Video sessions, real-time collaborative activities, and the infrastructure to make therapy work remotely in a way that actually feels like therapy.
 
-## The Company
+## The Engagement
 
-Teleo is a telehealth platform, but unlike the standard "video call with your doctor" setup, they specialize in therapy - including group therapy sessions. Group therapy over video is a completely different beast than one-on-one calls.
+Brought in on a contract to help close out group session support: extending the platform from one-on-one sessions to multiple patients at once. Small team of around five engineers, the kind of size where everyone knows what everyone else is working on.
 
-## What I Built
+## What I Worked On
 
-I contributed to the launch of their group therapy session framework. This isn't just "Zoom but for therapy" - it's purpose-built for therapeutic contexts.
+### Group Sessions
 
-### Facilitator Controls
-
-The therapist running the session needs controls that regular video conferencing doesn't provide. Managing who can speak, guiding exercises, handling sensitive moments when someone needs extra support - the UX had to support all of this without getting in the way of the actual therapy happening.
+The core deliverable. LiveKit handles the video layer, but supporting multiple participants in a session goes beyond just adding video streams. Session state, permissions, activities syncing across all participants in real time.
 
 ### Real-Time Activities
 
-This was the interesting part. Group therapy often involves interactive exercises:
-- Collaborative drawing boards
-- Guided activities and games
-- Shared prompts and reflections
+The collaborative layer where therapists and patients can draw, play games, and interact during sessions. Activities run in specialized backend containers handling the real-time sync. On the frontend, everything is [[React]] connected via [[GraphQL]] through [[Hasura]].
 
-All of this had to work in real-time with multiple participants, staying synchronized while people are also on video. The [[GraphQL]] subscriptions through Hasura made the real-time sync manageable, but getting the UX right for therapeutic contexts required careful thought.
+## The Stack
 
-## Tech Stack
+- [[React]]
+- [[GraphQL]] + [[Hasura]]
+- LiveKit for video
+- Specialized real-time containers for activity sync
 
-- [[React]] on the frontend
-- Node.js backend
-- Hasura for [[GraphQL]] and real-time subscriptions
+## Looking Back
 
-## The Challenge
-
-Building software for healthcare - especially mental healthcare - comes with extra considerations. Reliability matters more when someone's having a breakthrough moment in therapy. Privacy and security aren't just checkboxes. The tech has to disappear so the human connection can happen.
+Short engagement but genuinely interesting work. The product solves a real problem and the team was great to work with. I'd love to work with them again in a more permanent role someday.
 
 ## Related
 
 - [[React]] - Frontend framework
-- [[GraphQL]] - API layer
-- [[Node.js]] - Backend
-
+- [[GraphQL]] - Data layer
