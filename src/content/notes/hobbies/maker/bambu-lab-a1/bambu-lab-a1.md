@@ -18,12 +18,15 @@ The A1 is a bedslinger (bed moves Y, head moves X) unlike the coreXY P1/X1 serie
 
 It's magic. Works flawlessly out of the box. Coming from stories of Ender 3 struggles and constant calibration, this thing just... prints.
 
+![First calibration run](first-calibration.jpg)
+
 ## What I Print
 
 - [[Dactyl Manuform]] keyboard case (0.08mm layer height, matte black)
 - [[OpenGrid]] organization bins
 - [[Gridfinity]] baseplates and bins
 - [[Underware]] desk management parts
+- [[Toyota Bandeirante]] custom parts (Hot Wheels dashboard holder, and more to come)
 - Random functional prints as needed
 
 ## Related

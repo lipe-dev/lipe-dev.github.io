@@ -9,6 +9,8 @@ growth: budding
 
 # Toyota Bandeirante (1989)
 
+![The truck](the-truck.jpg)
+
 The Toyota Bandeirante is a Brazilian-made variant of the Toyota Land Cruiser, produced from 1958 to 2001. My 1989 model is powered by a Mercedes-Benz OM-364 4-cylinder diesel engine, which is incredibly reliable and relatively easy to work on.
 
 ## About the Bandeirante
@@ -53,6 +55,9 @@ The goal: official recognition that this truck is worth preserving, plus the coo
 - [x] 3-point seatbelts
 - [x] LED headlights
 - [x] Door rubber seals
+- [x] 3D printed Hot Wheels dashboard holder — designed and printed on the [[Bambu Lab A1]], featuring a Hot Wheels that looks exactly like the truck
+
+![Hot Wheels holder on the dashboard](hotwheels-dashboard-holder.jpg)
 
 ### Steering & Controls (In Progress)
 - [ ] Horn fix

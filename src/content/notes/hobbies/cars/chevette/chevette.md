@@ -80,6 +80,10 @@ The floor situation needs attention. And by attention I mean it needs to exist.
 
 We're not trying to make this thing pretty. We're learning to weld (that's a [[Welding]] note for another day) and will stitch it back together with visible patch panels. The scars become the aesthetic. Raw metal, exposed welds, functional ugly.
 
+The V0 inspiration. This is the Nomad car from Cyberpunk 2077 and it captures exactly the vibe: beat up, patched together, character over polish.
+
+![Nomad V0 inspiration](nomad-v0-inspiration.jpg)
+
 ### Engine - AP Swap
 
 The VW AP engine is the move in Brazil. High availability, massive aftermarket support, and you can make decent power without selling organs. The stock Chevette motor will get replaced when it inevitably gives up.

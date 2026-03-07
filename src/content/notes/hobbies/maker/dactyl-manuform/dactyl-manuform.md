@@ -68,6 +68,8 @@ Instead I bought a [[Bambu Lab A1]].
 
 The logic made sense at the time. Why pay someone else when I could own the printer and make whatever I want? Classic maker brain.
 
+![First calibration run, wife photobombing in the background](../bambu-lab-a1/first-calibration.jpg)
+
 ### The Print
 
 Matte black filament. 0.08mm layer height, the finest my A1 could do. If I was going to do this, I was going to do it right.
@@ -79,19 +81,9 @@ Had a few failures along the way:
 
 Eventually got both halves printed perfectly.
 
-## Current Status: Waiting on Parts
+## Current Status: One Half Wired
 
-The cases are done. Now I'm in the AliExpress/Keycapsss waiting game.
-
-### What's Here
-- **Printed cases** - matte black, beautiful
-- **Switches** - Cherry MX Speed Silvers (like reds but shorter actuation - 1.2mm vs 2mm)
-- **Controller** - RP2040 Pro Micro (USB-C) from AliExpress. Way more capable than the old ATmega32U4 ones, and cheap
-
-### What's Incoming
-- **Individual switch PCBs** - from Keycapsss. Way cleaner than hand-wiring spaghetti, plus they have LED footprints
-- **Per-key RGB LEDs** - upgraded from my original zone lighting plan
-- **Keycaps** - blank DSA profile, black and yellow with red accents
+First half is fully wired. Second half still to go, then firmware.
 
 ### The Color Scheme
 
@@ -115,13 +107,15 @@ Volume control. Some things you don't give up.
 
 | Part | Details |
 |------|---------|
-| Layout | 5x6 with custom thumb cluster |
+| Layout | 31 keys per half — 4×6 main body + extra keys + thumb cluster |
+| Wiring matrix | 6×6 per half |
 | Switches | Cherry MX Speed Silver |
 | Keycaps | Blank DSA - black/yellow/red |
 | Controller | RP2040 Pro Micro USB-C |
 | LEDs | Per-key RGB (SK6812 mini) |
-| OLEDs | Yellow monochrome |
-| Extras | Rotary encoder, Nintendo Switch analog sticks |
+| OLED | 1 yellow monochrome per hand |
+| Rotary encoder | 1 per hand, with push button |
+| Analog stick | 1 Nintendo Switch stick per hand, with push button (L3) |
 | Case | Custom OpenSCAD design, matte black, 0.08mm layers |
 
 ## What I Learned
@@ -138,7 +132,95 @@ I started this because I wanted something smaller and more portable than my K90.
 
 I now have a full [[3D Printing]] setup, a custom-designed split keyboard with OLED screens and analog sticks, and several months invested in the project.
 
-Still no daily driver keyboard though. Waiting on those parts.
+Still no daily driver keyboard though. Parts are here now, so the excuse is gone.
+
+## Build Log
+
+### Stage 1: Design and Generation — Done
+
+Two weeks of tweaking `generate_configuration_mklasklasd.py`. Column offsets tuned to my finger lengths, thumb cluster angles dialed in, OLED clip mount configured, EXTERNAL controller tray for the RP2040. Generated the OpenSCAD files, added the custom OLED housing and encoder mount on top.
+
+### Stage 2: Printing — Done
+
+Both halves printed in matte black at 0.08mm layer height on the [[Bambu Lab A1]]. Three failed attempts before clean results: one layer shift, one adhesion failure overnight, one deliberate reprint after changing a detail.
+
+![First look at the printed half](print-first-look.jpg)
+
+The support material situation was something else. The curves and overhangs that make the ergonomics work are exactly the kind of geometry that requires a lot of support.
+
+![Support material still inside](print-support-inside.jpg)
+
+![The aftermath](print-support-removed.jpg)
+
+![That was a lot of support material](print-support-pile.jpg)
+
+The custom parts (analog stick holders, rotary encoder mount, OLED enclosures) went through many more iterations than the photo suggests. Most test prints went straight to the bin. The ones that survived long enough to be photographed got claimed by my daughter as toys.
+
+![Custom parts iterations](print-custom-parts-iterations.jpg)
+
+Also printed a custom holder for the RP2040 controller with a dedicated slot for the TRRS jack.
+
+![Controller board holder with TRRS slot](controller-holder.jpg)
+
+### Stage 3: Parts — Done
+
+Everything arrived. Cherry MX Speed Silvers, RP2040 Pro Micro, individual switch PCBs from Keycapsss, SK6812 mini per-key RGB LEDs, blank DSA keycaps in black and yellow with red accents.
+
+### Stage 4: Assembly — In Progress
+
+Both halves test-fitted with switches, OLED screens, and rotary encoder just to see how it all looks:
+
+![First look with switches and screens inserted](assembly-first-look.jpg)
+
+#### Soldering (first half)
+
+Soldered the individual PCBs to the switches first, then populated the rest. In hindsight, fully assembling the switches into the case before soldering would have been easier.
+
+![PCBs soldered to switches](solder-pcbs-to-switches.jpg)
+
+Then the diodes on each PCB:
+
+![Diodes soldered](solder-diodes.jpg)
+
+Then the LEDs. Four solder points each, one per key, across both halves. A lot of work.
+
+![LEDs soldered](solder-leds.jpg)
+
+#### Wiring
+
+The scrapped diode legs got a second life as row/column bridges between PCBs. Zero waste.
+
+![Diode legs prepped as bridges](solder-diode-leg-bridges.jpg)
+
+Went with bare copper wire for the bridges instead of insulated wire. No practical reason, it just looks like exposed piping and that's cool.
+
+![Final wiring with bare copper bridges](wiring-final.jpg)
+
+The thumb cluster area got tight. The geometry is awkward and the wiring had to get creative.
+
+![Thumb cluster wiring chaos](wiring-thumb-cluster.jpg)
+
+But from the front it looks clean:
+
+![Clean from the front](wiring-clean.jpg)
+
+#### Wiring Matrix
+
+The electrical matrix is 6 rows × 6 columns per half. It doesn't map 1:1 to the physical layout:
+
+- **Rows 1–4:** 6 keys each, the main curved key well
+- **Row 5:** the 2 extra keys from the middle columns plus 2 thumb cluster keys
+- **Row 6:** the remaining 3 thumb cluster keys. The rotary encoder push button and the Nintendo Switch analog stick L3 will wire into this row as well
+
+![Row x col wiring diagram](image.png)
+
+### Stage 5: Wire Second Half — Up Next
+
+Same process as the first. Then firmware.
+
+### Stage 6: Firmware — Pending
+
+Flash QMK on both halves, configure the 6×6 matrix, set up the OLED displays, encoder, and analog sticks.
 
 ## Related
 
