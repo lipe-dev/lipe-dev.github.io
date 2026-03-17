@@ -16,54 +16,58 @@ I own a printer. The quote process for custom prints is tedious. Someone
 sends a file, you slice it, estimate time and material, factor in costs,
 reply manually. Both sides wait. I wanted to automate that.
 
-## The Engineering Challenges
+## The Architecture
 
-### 3D Model Processing at the Edge
+The interesting constraint: 3D slicing is CPU-intensive and requires the
+actual slicer software (OrcaSlicer) installed locally. You can't run OrcaSlicer
+in a Lambda function. So the cloud handles coordination, and my printer's PC
+does the work.
 
-The core problem: take an uploaded 3D model and figure out what it costs to
-print. That means calculating layer count, estimating print time, determining
-how much support material the geometry requires. Computational geometry, not
-typical web dev.
+```
+Cloud (Vercel + Supabase)
+  ↕ poll every few seconds
+My Printer's PC (Node.js worker)
+  → download model from Supabase Storage
+  → slice with OrcaSlicer CLI
+  → calculate price
+  → report results back
+```
 
-This runs on Cloudflare Workers. Edge compute for something CPU-intensive
-sounds counterintuitive, but it means the processing happens close to the
-user and scales automatically. The tradeoff is you're constrained by worker
-limits, so the slicing algorithm had to be optimized for that environment.
+This means the worker only runs when the PC is on. That's fine: the printer
+only works when the PC is on anyway. The two are the same machine.
 
 ### Pricing That Isn't Hardcoded
 
-The pricing logic lives in the backend, not the frontend. Material costs
-change. Machine rates vary. Margins get tweaked. Keeping this server-side
-means the business can adjust pricing without touching the apps.
-
-There's a caching layer keyed on model hash plus settings. Re-slicing
-identical requests wastes compute, and edge compute isn't free.
+Pricing lives server-side, not in the frontend. Material costs change. Machine
+rates vary. The worker fetches pricing from the API and caches it so it's not
+hitting the database on every job. Change a price in the admin panel, next job
+picks it up.
 
 ### Dependent Form State
 
 The quote form has cascading dependencies. Material choice affects available
-quality options. Quality affects estimated time. Quantity affects bulk
-discounts. Managing this without the form becoming a tangled mess of
-useEffects took some thought.
+colors. Quality preset affects layer height and infill defaults. Quantity could
+affect bulk pricing. Managing this without the form becoming a mess of useEffects
+took thought.
 
-### Monorepo Structure
+### The Monorepo
 
-Four apps managed with pnpm workspaces - landing page, quote form, admin
-dashboard, and the worker backend. Each app deploys independently, shares
-types and utilities, stays focused on one job.
+Three apps in pnpm workspaces: the quotes frontend (customer-facing), admin
+dashboard, and the worker. Each deploys or runs independently but shares types.
 
 ## Current State
 
-MVP. The quote flow works end-to-end, but it's not deployed yet. Still
-iterating on the pricing model and validating the business assumptions
-before going live.
+The quote flow works end-to-end: upload STL, configure settings, worker slices
+it, price appears. Not deployed yet. Still nailing the pricing model before
+going live.
 
 ## Stack
 
 - [[Next.js]] + [[React]] 19 + [[TypeScript]]
 - [[Tailwind CSS]] 4
-- Cloudflare Workers
-- React Query for server state
+- Supabase (Postgres + Storage)
+- Node.js worker running on my printer's PC
+- OrcaSlicer CLI for slicing
 - pnpm workspaces
 
 ## Why I'm Building This
