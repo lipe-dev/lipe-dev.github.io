@@ -81,9 +81,9 @@ Had a few failures along the way:
 
 Eventually got both halves printed perfectly.
 
-## Current Status: One Half Wired
+## Current Status: Right Half Hardware All Working
 
-First half is fully wired. Second half still to go, then firmware.
+Matrix, all 31 RGB LEDs, and OLED confirmed working. Encoder next.
 
 ### The Color Scheme
 
@@ -134,73 +134,83 @@ I now have a full [[3D Printing]] setup, a custom-designed split keyboard with O
 
 Still no daily driver keyboard though. Parts are here now, so the excuse is gone.
 
-## Build Log
+## Dev Log
 
-### Stage 1: Design and Generation — Done
+### Entry 1: Design and Generation
 
 Two weeks of tweaking `generate_configuration_mklasklasd.py`. Column offsets tuned to my finger lengths, thumb cluster angles dialed in, OLED clip mount configured, EXTERNAL controller tray for the RP2040. Generated the OpenSCAD files, added the custom OLED housing and encoder mount on top.
 
-### Stage 2: Printing — Done
+Everything now lives under `lipe-dev/keyboards` on GitHub: a parent repo with two submodules, `keyboards_dactyl-manuform` for the 3D print files and `keyboards_qmk-userspace` for the firmware.
+
+### Entry 2: Printing
 
 Both halves printed in matte black at 0.08mm layer height on the [[Bambu Lab A1]]. Three failed attempts before clean results: one layer shift, one adhesion failure overnight, one deliberate reprint after changing a detail.
 
+All SCAD and print files are versioned V0–V7 in `keyboards_dactyl-manuform`, named by modification date with descriptions. The final printed file was `DM_left_V7_final`. The right hand is just V7 mirrored horizontally in the slicer — no separate SCAD needed. `DM_right.scad` exists as a reference for the original unmodified generated output and was never used for printing. `run_config.json` is backed up alongside the print files.
+
+First look at the first printed hand of the keyboard:
+
 ![First look at the printed half](print-first-look.jpg)
 
-The support material situation was something else. The curves and overhangs that make the ergonomics work are exactly the kind of geometry that requires a lot of support.
+Then came the support removal. LOTS of support material to remove.
 
 ![Support material still inside](print-support-inside.jpg)
 
+So much support material.
+
 ![The aftermath](print-support-removed.jpg)
+
+THAT WAS A LOT OF SUPPORT MATERIAL.
 
 ![That was a lot of support material](print-support-pile.jpg)
 
-The custom parts (analog stick holders, rotary encoder mount, OLED enclosures) went through many more iterations than the photo suggests. Most test prints went straight to the bin. The ones that survived long enough to be photographed got claimed by my daughter as toys.
+Every part got a few iterations and test prints, from analog stick holders to rotary encoder fittings and OLED screen enclosures. Way more than what's in the photo — most went straight to the bin, and the ones that survived long enough got claimed by my daughter as toys.
 
 ![Custom parts iterations](print-custom-parts-iterations.jpg)
 
-Also printed a custom holder for the RP2040 controller with a dedicated slot for the TRRS jack.
+Also designed and printed the holder for the controller board, with a special place for the TRRS jack:
 
 ![Controller board holder with TRRS slot](controller-holder.jpg)
 
-### Stage 3: Parts — Done
+### Entry 3: Parts Arrive
 
 Everything arrived. Cherry MX Speed Silvers, RP2040 Pro Micro, individual switch PCBs from Keycapsss, SK6812 mini per-key RGB LEDs, blank DSA keycaps in black and yellow with red accents.
 
-### Stage 4: Assembly — In Progress
+### Entry 4: Assembly, Right Half
 
-Both halves test-fitted with switches, OLED screens, and rotary encoder just to see how it all looks:
+First look at the printed parts with switches and screen and rotary inserted. Just basking in it, no wiring yet.
 
 ![First look with switches and screens inserted](assembly-first-look.jpg)
 
-#### Soldering (first half)
+#### Soldering (right half)
 
-Soldered the individual PCBs to the switches first, then populated the rest. In hindsight, fully assembling the switches into the case before soldering would have been easier.
+First I soldered all the individual PCBs to the switches. Should have fully assembled them into the case first, but oh well.
 
 ![PCBs soldered to switches](solder-pcbs-to-switches.jpg)
 
-Then the diodes on each PCB:
+Then soldered the diodes:
 
 ![Diodes soldered](solder-diodes.jpg)
 
-Then the LEDs. Four solder points each, one per key, across both halves. A lot of work.
+Then all the LEDs. Four solder points on each. Lots of work.
 
 ![LEDs soldered](solder-leds.jpg)
 
 #### Wiring
 
-The scrapped diode legs got a second life as row/column bridges between PCBs. Zero waste.
+Reusing the scrapped diode legs as bridges for the PCBs. Zero waste.
 
 ![Diode legs prepped as bridges](solder-diode-leg-bridges.jpg)
 
-Went with bare copper wire for the bridges instead of insulated wire. No practical reason, it just looks like exposed piping and that's cool.
+Final wiring with all the bridges inserted. Decided to go with a cool hard wire style with no insulation on them — looks like piping.
 
 ![Final wiring with bare copper bridges](wiring-final.jpg)
 
-The thumb cluster area got tight. The geometry is awkward and the wiring had to get creative.
+The thumb cluster area got a bit chaotic and I had to get creative:
 
 ![Thumb cluster wiring chaos](wiring-thumb-cluster.jpg)
 
-But from the front it looks clean:
+But this looks so clean!
 
 ![Clean from the front](wiring-clean.jpg)
 
@@ -210,17 +220,51 @@ The electrical matrix is 6 rows × 6 columns per half. It doesn't map 1:1 to the
 
 - **Rows 1–4:** 6 keys each, the main curved key well
 - **Row 5:** the 2 extra keys from the middle columns plus 2 thumb cluster keys
-- **Row 6:** the remaining 3 thumb cluster keys. The rotary encoder push button and the Nintendo Switch analog stick L3 will wire into this row as well
+- **Row 6:** the remaining 3 thumb cluster keys
+
+The rotary encoder push button and analog stick L3 will be wired directly to free GPIO pins, not through the matrix. Pin assignments TBD (GP21 is now taken by RGB).
 
 ![Row x col wiring diagram](image.png)
 
-### Stage 5: Wire Second Half — Up Next
+### Entry 5: Firmware, Right Half
 
-Same process as the first. Then firmware.
+QMK CLI installed, `qmk setup` done, userspace configured at `keyboards_qmk-userspace`. Keyboard scaffolded as `dactyl_manuform_lipe_dev`.
 
-### Stage 6: Firmware — Pending
+6×6 matrix defined with rows on GP0–GP5 and columns on GP6–GP11. Full pin assignment documented in `pinout.md`.
 
-Flash QMK on both halves, configure the 6×6 matrix, set up the OLED displays, encoder, and analog sticks.
+#### RGB
+
+SK6812 Mini-E on GP21, LED VCC on 5V. A few things that needed manual fixing for QMK 1.2.0 on RP2040:
+
+- `g_led_config` has to be defined manually in `dactyl_manuform_lipe_dev.c` — QMK 1.2.0 doesn't auto-generate it from JSON
+- `rgb_matrix: true` in features
+- WS2812 driver set to `vendor` — RP2040 needs the PIO driver, not the default bit-bang
+- `solid_color` animation enabled
+- `keyboard_post_init_user` in `keymap.c` forces solid red for testing
+
+First 12 LEDs (rows 1–2) lit up, rows 2–5 silent. Chain was broken in two places: one bad LED die in row 2, one loose leg in row 4. Bypassed the bad die, resoldered the leg. All 31 LEDs working.
+
+Note: GP21 is now the RGB data pin. The tentative GP21/GP22 assignment for encoder push button and analog stick L3 needs to move to other free pins.
+
+#### OLED
+
+128×32 SSD1306 (0.91"), I2C1 on GP14/GP15, driver `I2CD1`. Fix was SDA/SCL wires swapped. `mcuconf.h` needs `RP_I2C_USE_I2C1` enabled — not on by default. Shows "dactyl manuform / lipe-dev". Working.
+
+#### Right Half Status
+
+| Component | Status |
+|-----------|--------|
+| Matrix (31 keys) | ✅ |
+| RGB LEDs (31) | ✅ |
+| OLED | ✅ |
+| Encoder | next |
+| Analog stick | pending |
+
+## What's Next
+
+- **Entry 6:** Wire + firmware, left half. Same process as the right. Don't start until entry 5 is done.
+- **Entry 7:** Connect both halves. TRRS link, split keyboard config in QMK.
+- **Entry 8:** Extra features. Encoder push button and analog stick L3 direct GPIO, their own QMK mappings.
 
 ## Related
 
