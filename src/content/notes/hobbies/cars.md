@@ -18,6 +18,9 @@ My pride and joy - a Brazilian-built Toyota Land Cruiser variant with a Mercedes
 ### [[Chevette]]
 My drift project car. A classic Brazilian GM compact that I'm building for track days and drift events.
 
+### [[Opala Diplomata]]
+Apagão, a 1988 Opala Diplomata with a swapped 250S six. Rough but running, getting restored with deep black paint, Cragar wheels, and a PS2 in the trunk.
+
 ### [[GM Classic]]
 My daily driver and car audio project. A reliable sedan that I've upgraded with a custom sound system.
 
