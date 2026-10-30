@@ -79,34 +79,45 @@ It was smoking a lot, and we got some intel that there was diesel in the tank. I
 
 Regardless, everything runs somewhat smoothly now.
 
-## The Plan
+## Project Roadmap
 
-The roadmap is simple:
+Four phases: make it run, make it legal, start over with full body work, then make it perfect with everything else.
 
-1. Make it run
-2. Make it legal (ready for the title transfer inspection)
-3. Start over with full body work
-4. Make it perfect with everything else
+### 1. Get It Running (Mostly Done)
+- [x] Rebuild the carburetor
+- [x] Replace leaking coolant hoses
+- [x] New throttle cable
+- [x] Fix the shifter, move it 7cm forward for the six, and install the chrome Iron Fort shifter
+- [x] Replace the fuel tank and lines
+- [x] Exhaust: it came with NO exhaust at all, loud like a plane. Slapped a simple muffler on it
+- [ ] Engine rebuild: piston rings and valve stem seals, maybe a full machine shop job on the block and head. Maybe forged pistons and connecting rods while I'm in there
+- [ ] Brakes
+- [ ] Cooling and radiator
+- [ ] Replace the cut springs with a full [Dori Kich](https://www.dorikich.com.br/) setup with coilovers, kept at factory height
 
-### Engine
+### 2. Get It Legal
+- [ ] [[Opala Rewire]]: brand new harness, every light working
+- [ ] Title transfer and inspection
+- [ ] Hopefully also legalize the engine swap and the coilovers
 
-The smoke means piston rings and valve stem seals, maybe a full machine shop rebuild of the block and head. And while I'm in there, I might go forged pistons and connecting rods.
+### 3. Body Work
+- [ ] Full body work and paint, deep black
+- [ ] New Cragar wheels
 
-### Suspension
-
-It currently sits on cut springs. Those are getting replaced with a full [Dori Kich](https://www.dorikich.com.br/) setup with coilovers, kept at factory height. The goal is to ride well, not to scrape the ground.
-
-### Wiring
-
-I have a project to redo all the wiring so it's ready for the title transfer inspection. Almost 40 year old harness, thrown out entirely and rebuilt from scratch. The whole plan lives in [[Opala Rewire]].
-
-### Looks
-
-Classic all the way. A proper paint job in deep black, with Cragar wheels.
-
-### Comfort and Audio
-
-Modern parts where comfort matters: suspension, electronics, power seats. Classic parts where character matters: an era appropriate Pioneer head unit with a CD changer for multiple discs, and a PS2 with a TV in the trunk. Because why not.
+### 4. Make It Perfect
+- [ ] Full interior
+  - [ ] Restore the dash panel
+  - [ ] Restore the headliner
+  - [ ] Restore the seats
+  - [ ] Thermal and acoustic treatment
+  - [ ] Lights
+- [ ] Swap in the Omega CD digital instrument panel
+- [ ] Install an A/C system
+- [ ] Sound system: era appropriate Pioneer head unit with a CD changer
+- [ ] PS2 and TV in the trunk, with an inverter and a secondary battery
+- [ ] New custom exhaust
+- [ ] Rear disc brakes (calipers instead of drums)
+- [ ] Rework the handbrake to work as a drift e-brake when I need it
 
 Once it's done, I'll drive it often. It won't be the daily, though.
 
